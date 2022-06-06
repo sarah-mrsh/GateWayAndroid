@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewmodel"
+            type="com.example.fanp.presentation.ble.BleViewModel" />
+    </data>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/main_back"
+    tools:context=".presentation.ble.BleActivity">
+
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:orientation="vertical">
+
+            <Switch
+                android:id="@+id/switch2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:switchMinWidth="56dp"
+                tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+            <com.example.fanp.utils.Shabnambold
+                android:id="@+id/title_port_activity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="@string/blesetting"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:textColor="#ffd505"
+                android:textSize="30sp" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_weight=".44"
+                    android:gravity="right"
+                    android:orientation="horizontal"
+                    tools:ignore="RtlHardcoded">
+
+                    <TextView
+                        android:id="@+id/text_port_header_bullet"
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:layout_gravity="start|top"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/yellow_bullet"
+                        android:shadowColor="@android:color/white"
+                        android:shadowRadius="10.0"
+                        android:textColor="@android:color/black" />
+
+                    <com.example.fanp.utils.Shabnammid
+                        android:id="@+id/title_port_rule1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:width="0dp"
+                        android:lineSpacingExtra="5dp"
+                        android:maxLines="3"
+                        android:text="@string/enterblesetting"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_weight=".55"
+                    android:orientation="horizontal">
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="20dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight=".5"
+                    android:orientation="vertical">
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginBottom="20dp"
+                        android:gravity="bottom"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:layout_width="220dp"
+                            android:layout_height="70dp"
+                            android:layout_gravity="center_horizontal|bottom"
+                            android:layout_marginStart="0dp"
+                            android:layout_marginEnd="0dp">
+
+                            <Button
+                                android:id="@+id/button_port_history1"
+                                android:layout_width="match_parent"
+                                android:layout_height="70dp"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginEnd="5dp"
+                                android:background="@drawable/transparent_yellow_border"
+                                android:textAlignment="textEnd"
+                                android:textColor="@color/white" />
+
+                            <com.example.fanp.utils.Shabnammid
+                                android:id="@+id/button_port_save_text"
+                                android:layout_width="match_parent"
+                                android:layout_height="70dp"
+                                android:gravity="center|center_vertical"
+                                android:maxLines="1"
+                                android:text="@string/save"
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                                android:textColor="@color/white"
+                                android:textSize="22sp" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="220dp"
+                            android:layout_height="70dp"
+                            android:layout_gravity="center_horizontal|bottom"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp">
+
+                            <Button
+                                android:id="@+id/button_port_history"
+                                android:layout_width="match_parent"
+                                android:layout_height="70dp"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginEnd="5dp"
+                                android:background="@drawable/transparent_yellow_border"
+                                android:textAlignment="textEnd"
+                                android:textColor="@color/white"
+                                tools:ignore="SpeakableTextPresentCheck" />
+
+                            <com.example.fanp.utils.Shabnammid
+                                android:id="@+id/button_port_history_text"
+                                android:layout_width="match_parent"
+                                android:layout_height="70dp"
+                                android:gravity="center|center_vertical"
+                                android:maxLines="1"
+                                android:text="@string/back"
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                                android:textColor="@color/white"
+                                android:textSize="22sp" />
+                        </RelativeLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="5dp"
+                    android:layout_weight=".5"
+                    android:layoutDirection="ltr"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight=".9"
+                        android:orientation="vertical">
+
+                        <ListView
+                            android:id="@+id/simpleListView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:divider="@color/material_blue_grey_800"
+                            android:dividerHeight="1dp" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</layout>

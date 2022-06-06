@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <com.example.fanp.utils.Shabnambold
+            android:id="@+id/txtbrokername"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:gravity="center"
+            android:text="@string/brokerName" />
+
+        <com.example.fanp.utils.Shabnambold
+            android:layout_width="wrap_content"
+            android:id="@+id/txtaddress"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:gravity="center"
+            android:text="@string/address" />
+
+        <com.example.fanp.utils.Shabnambold
+            android:id="@+id/txtport"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:gravity="center"
+            android:text="@string/port" />
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_weight="0.5"
+            android:gravity="center"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/imgdelete"
+                android:layout_width="35dp"
+                android:layout_weight="0.5"
+                android:src="@drawable/delete"
+                android:layout_height="32dp"/>
+            <ImageView
+                android:id="@+id/imgedit"
+                android:layout_width="35dp"
+                android:layout_weight="0.5"
+                android:src="@drawable/edit"
+                android:layout_height="32dp"/>
+            <ImageView
+                android:id="@+id/imgtopic"
+                android:layout_width="35dp"
+                android:layout_weight="0.5"
+                android:src="@drawable/topic"
+                android:layout_height="32dp"/>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

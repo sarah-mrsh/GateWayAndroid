@@ -1,0 +1,108 @@
+syntax = "proto3";
+
+
+option java_multiple_files = true;
+option java_package = "com.example.fanp";
+option java_outer_classname = "modbuspro";
+option objc_class_prefix = "HLW";
+
+
+
+enum Parity{
+    ODD = 0;
+    EVEN = 1;
+    NONE = 2;
+}
+    
+enum BaudRate{
+    B110 = 0;
+    B300 = 1;
+    B600 = 2;
+    B1200 =3;
+    B2400 =4;
+    B4800 =5;
+    B9600 =6;
+    B14400=7;
+    B19200=8;
+    B38400=9;
+    B56000=10;
+    B57600=11;
+    B115200=12;
+    B125000=13;
+    B256000=14;
+}
+
+enum FunctionCode{
+    RRAD_COIL=0;
+    READ_DISCRETE_INPUTS=1;
+    READ_MULTIPLE_HOLDING_REGISTERS=2;
+    READ_INPUT_REGISTERS=3;    
+    WRITE_SINGLE_COIL=4;
+    WRITE_SINGLE_HOLDING_REGISTER=5;
+    WRITE_MULTIPLE_COILS=6;
+    WRITE_MULTIPLE_HLDING_REGISTERS=7;
+}
+
+enum ModbusDataType{
+    MBOOLEAN = 0;
+    MINT8=1;
+    MUINT8=2;
+    MINT16=3;
+    MUINT16=4;
+    MINT32=5;
+    MUINT32=6;
+    MINT64=7;
+    MUINT64=8;
+    MFLOAT32=9;
+    MFLOAT64=10;
+    MSTRING=11;
+}
+
+message ModbusConfigResponse {
+    bool Success = 1;
+    int32 errorCode = 2;
+    string errorDesc = 3;
+}
+
+
+message ModbusConfig {
+    message ModbusDevice{
+        string clientName = 1;
+        string clientID = 2;
+        bool rtuOrTcp = 3;
+        message ModbusRTUSlaves {
+            BaudRate baudRate = 1;
+            Parity parity = 2;
+            int32 startBit = 3;
+            int32 stopBit = 4;
+            int32 dataBit = 5;
+        }
+        message ModbusTCPSlaves{
+            string deviceId=1;
+            string deviceName=2;
+            string IP = 3;
+            int32 port = 4;
+        }
+        ModbusRTUSlaves modbusRTUSlaves = 4;
+        ModbusTCPSlaves modbusTCPSlaves = 5;
+        message ModbusTag{
+            string tagName = 1;
+            string tagId = 2;
+            string serverId = 3;
+            ModbusDataType dataType = 4;
+            FunctionCode functionCode = 5;
+            int32 intervalTime = 6;
+            int32 startingAddress = 7;
+            int32 numberOfRegisters = 8;
+        }
+        repeated  ModbusTag modbusTag =6;
+    }
+    repeated ModbusDevice modbusDevice =1;
+}
+
+
+
+service SystemModbusConfig {
+  rpc SendSystemModbusConfig (ModbusConfig) returns (ModbusConfigResponse);
+}
+

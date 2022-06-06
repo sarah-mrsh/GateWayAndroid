@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="?attr/main_back"
+    android:orientation="vertical">
+
+
+    <ImageView
+        android:layout_width="25dp"
+        android:id="@+id/imgaddfree"
+        android:background="@color/purple_200"
+        android:layout_margin="20dp"
+        android:layout_height="25dp"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_above="@+id/relsave"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/title_engineering_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text="خدمات مهندسی"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+            android:textColor="#ffd505"
+            android:textSize="30dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            android:background="#c0c0c0" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recrtu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/relsave"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center_vertical">
+
+
+        <Button
+            android:id="@+id/button_engineering_history"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/transparent_yellow_border"
+            android:textAlignment="textEnd"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/button_port_history_text"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center|center_vertical"
+            android:maxLines="1"
+            android:text="@string/save"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+            android:textColor="@color/white"
+            android:textSize="16dp" />
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>

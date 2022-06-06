@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:id="@+id/lin_wifi"
+    android:layout_height="50dp"
+    android:layout_marginTop="5dp"
+    android:layout_alignParentTop="true"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/imgrate"
+        android:layout_width="35dp"
+        android:layout_marginStart="12dp"
+        android:layout_height="match_parent"
+        />
+
+    <ImageView
+        android:id="@+id/imgsettingwifi"
+        android:layout_width="35dp"
+        android:visibility="invisible"
+        android:layout_marginStart="12dp"
+        android:src="@drawable/ic_specialsetting"
+        android:layout_height="match_parent"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="@string/forget"
+        android:layout_marginEnd="12dp"
+        android:id="@+id/btnconnected"
+        android:layout_marginStart="12dp"
+        android:visibility="visible"
+        />
+
+    <com.example.fanp.utils.Shabnambold
+        android:layout_width="match_parent"
+        android:id="@+id/wifiname"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="12dp"
+        android:text="mohammad"
+        android:textSize="21sp" />
+
+
+
+
+
+
+</LinearLayout>
+

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="../../../../layout/custom_preview.xml" value="0.10182370820668693" />
+        <entry key="app/src/main/res/drawable/ic_reports.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_account.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_add_client.xml" value="0.615625" />
+        <entry key="app/src/main/res/layout/activity_add_data_block_plc.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_add_datat_block_tag.xml" value="0.17109375" />
+        <entry key="app/src/main/res/layout/activity_add_plc.xml" value="0.35625" />
+        <entry key="app/src/main/res/layout/activity_add_server_rtu.xml" value="0.18177083333333333" />
+        <entry key="app/src/main/res/layout/activity_add_tag_io.xml" value="1.0" />
+        <entry key="app/src/main/res/layout/activity_add_tag_mqtt_client.xml" value="0.49296875" />
+        <entry key="app/src/main/res/layout/activity_data_block_plc.xml" value="0.35625" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_main_mqtt_client.xml" value="0.6836628511966701" />
+        <entry key="app/src/main/res/layout/activity_main_s7.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/activity_main_tag.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_manage_plc.xml" value="0.14" />
+        <entry key="app/src/main/res/layout/activity_mqtt_brokers_list.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_plclist.xml" value="0.5" />
+        <entry key="app/src/main/res/layout/activity_tag_list_datablock.xml" value="0.21" />
+        <entry key="app/src/main/res/layout/activity_tag_list_io.xml" value="0.6836628511966701" />
+        <entry key="app/src/main/res/layout/activity_tag_list_mqtt_client.xml" value="0.67" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/fragment_special_setting.xml" value="0.615625" />
+        <entry key="app/src/main/res/layout/header.xml" value="0.67" />
+        <entry key="app/src/main/res/layout/row_datablock_list.xml" value="0.35625" />
+        <entry key="app/src/main/res/layout/row_datablock_plc_list.xml" value="0.35520833333333335" />
+        <entry key="app/src/main/res/layout/row_mqtt_client.xml" value="0.615625" />
+        <entry key="app/src/main/res/layout/row_plc_list.xml" value="0.35625" />
+        <entry key="app/src/main/res/layout/row_tag_mqtt.xml" value="0.75" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

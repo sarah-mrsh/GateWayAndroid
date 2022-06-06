@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout>
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="com.example.fanp.presentation.protocolmanagment.MprotocolManagmentViewModel" />
+    </data>
+
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?attr/main_back"
+        tools:context=".presentation.protocolmanagment.MProtocolManagment">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/title_protocol_fragmentm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="70dp"
+                android:gravity="center"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="@string/manageprotocol"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:textColor="#ffd505"
+                android:textSize="30sp" />
+
+
+            <ImageView
+                android:id="@+id/image_view_emptym"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                app:srcCompat="@drawable/bg_empty" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycle_view_protocol_fragmentm"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:scrollbars="vertical"
+                android:scrollingCache="true" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="30dp"
+            android:gravity="bottom"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="220dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center_horizontal|bottom"
+                android:layout_marginStart="0dp"
+                android:layout_marginEnd="0dp">
+
+                <Button
+                    android:id="@+id/button_port_history1"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/transparent_yellow_border"
+                    android:drawableEnd="@drawable/save"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/button_port_save_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:gravity="center|center_vertical"
+                    android:maxLines="1"
+                    android:text="@string/save"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/white"
+                    android:textSize="22sp" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="220dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center_horizontal|bottom"
+                android:layout_marginStart="0dp"
+                android:layout_marginEnd="0dp">
+
+                <Button
+                    android:id="@+id/btnadd"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/transparent_yellow_border"
+                    android:drawableEnd="@drawable/save"
+                    android:onClick="@{()->viewmodel.add()}"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/txtadd"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:gravity="center|center_vertical"
+                    android:maxLines="1"
+                    android:text="@string/add"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/white"
+                    android:textSize="22sp" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="220dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center_horizontal|bottom"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp">
+
+                <Button
+                    android:id="@+id/button_back"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/transparent_yellow_border"
+                    android:drawableEnd="@drawable/cancel"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/white"
+                    tools:ignore="SpeakableTextPresentCheck" />
+
+                <TextView
+                    android:id="@+id/button_port_history_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:gravity="center|center_vertical"
+                    android:maxLines="1"
+                    android:onClick="@{()->viewmodel.cls_app()}"
+                    android:text="@string/back"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/white"
+                    android:textSize="22sp" />
+            </RelativeLayout>
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+</layout>

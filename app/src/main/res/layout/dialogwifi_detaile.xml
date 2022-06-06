@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="?attr/main_back"
+    android:layoutDirection="rtl"
+    android:padding="12dp">
+
+    <LinearLayout
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.5"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:weightSum="6">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.example.fanp.utils.Shabnamlight
+                    android:layout_width="53dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginEnd="12dp"
+                    android:gravity="end"
+                    android:text="@string/ip" />
+
+                <EditText
+                    android:id="@+id/editIP"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="@string/ip"
+                    android:padding="15dp"
+                    android:text="@={viewmodel.ip_wifi}" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.example.fanp.utils.Shabnamlight
+                    android:layout_width="53dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+
+                    android:layout_marginEnd="12dp"
+                    android:gravity="end"
+                    android:text="@string/mask" />
+
+                <EditText
+                    android:id="@+id/editMask"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="@string/mask"
+                    android:padding="15dp"
+                    android:text="@={viewmodel.mask}" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.example.fanp.utils.Shabnamlight
+                    android:layout_width="53dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+
+                    android:layout_marginEnd="12dp"
+                    android:gravity="end"
+                    android:text="@string/gateway" />
+
+                <EditText
+                    android:id="@+id/editGateway"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/gateway"
+                    android:padding="15dp"
+                    android:text="@={viewmodel.gateway}" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.example.fanp.utils.Shabnamlight
+                    android:layout_width="53dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginEnd="12dp"
+                    android:gravity="end"
+                    android:text="@string/dns" />
+
+                <EditText
+                    android:id="@+id/editDNS"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="@string/dns"
+                    android:padding="15dp"
+                    android:text="@={viewmodel.dns}" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <CheckBox
+                    android:id="@+id/ckAuoConnect"
+                    android:layout_width="match_parent"
+                    android:layoutDirection="rtl"
+                    android:textDirection="rtl"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="15dp"
+                    android:text="@string/autoconnect" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <CheckBox
+                    android:id="@+id/ckDHCP"
+                    android:layout_width="match_parent"
+                    android:layoutDirection="rtl"
+                    android:textDirection="ltr"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="15dp"
+                    android:text="@string/dhcp"
+                    android:textAlignment="textEnd" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <RelativeLayout
+
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:layout_gravity="center_horizontal|bottom"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/relsave"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:background="@drawable/transparent_yellow_border"
+                android:textAlignment="textEnd"
+                android:textColor="@color/white" />
+
+            <com.example.fanp.utils.Shabnamlight
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:gravity="center|center_vertical"
+                android:maxLines="1"
+                android:text="@string/save"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:textColor="@color/white"
+                android:textSize="18dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:layout_gravity="center_horizontal|bottom"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/relexit"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:background="@drawable/transparent_yellow_border"
+                android:textAlignment="textEnd"
+                android:textColor="@color/white" />
+
+            <com.example.fanp.utils.Shabnamlight
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:gravity="center|center_vertical"
+                android:text="@string/back"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:textColor="@color/white"
+                android:textSize="18dp" />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+</RelativeLayout>

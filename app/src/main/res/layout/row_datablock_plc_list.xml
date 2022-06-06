@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent">
+
+    <com.example.fanp.utils.Shabnambold
+        android:id="@+id/plcname"
+        android:layout_width="wrap_content"
+        android:layout_height="55dp"
+        android:layout_weight="0.5"
+        android:gravity="center"
+        android:text="@string/plcname" />
+
+    <com.example.fanp.utils.Shabnambold
+        android:layout_width="wrap_content"
+        android:layout_height="55dp"
+        android:id="@+id/plcid"
+        android:layout_weight="0.5"
+        android:gravity="center"
+        android:text="@string/plcid" />
+
+    <com.example.fanp.utils.Shabnambold
+        android:layout_width="wrap_content"
+        android:layout_height="55dp"
+        android:layout_weight="0.5"
+        android:gravity="center"
+        android:text="@string/plcid"
+        android:visibility="invisible" />
+
+</LinearLayout>

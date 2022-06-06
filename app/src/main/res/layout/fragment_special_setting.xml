@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layoutDirection="rtl"
+    android:background="?attr/main_back"
+    android:layout_height="match_parent">
+
+
+    <include layout="@layout/header" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/bottom_navigation_height"
+        android:paddingTop="100dp"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/building_button_port"
+                    android:layout_width="250dp"
+                    android:layout_height="80dp"
+                    android:gravity="center_horizontal">
+
+                    <ImageButton
+                        android:id="@+id/building_button_port_button"
+                        android:layout_width="250dp"
+                        android:layout_height="80dp"
+                        android:layout_gravity="center"
+                        android:adjustViewBounds="true"
+                        android:background="@color/transparent"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/portsetting" />
+
+                    <TextView
+                        android:id="@+id/setting_button_port_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="40dp"
+                        android:layout_marginTop="25dp"
+                        android:text="@string/managmentport"
+                        android:textColor="@color/white"
+                        android:textSize="20dp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/building_button_mainreserve"
+                    android:layout_width="250dp"
+                    android:layout_height="80dp"
+                    android:gravity="center_horizontal">
+
+                    <ImageButton
+                        android:id="@+id/setting_button_user_button"
+                        android:layout_width="250dp"
+                        android:layout_height="80dp"
+                        android:layout_gravity="center"
+                        android:adjustViewBounds="true"
+                        android:background="@color/transparent"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/memorymanagment"
+                        android:text="پست جدید" />
+
+                    <TextView
+                        android:id="@+id/setting_button_user_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="40dp"
+                        android:layout_marginTop="25dp"
+                        android:text="@string/memorymanagment"
+                        android:textColor="@color/white"
+                        android:textSize="20dp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/building_button_enterance"
+                    android:layout_width="250dp"
+                    android:layout_height="80dp"
+                    android:layout_below="@id/building_button_mainreserve"
+                    android:gravity="center_horizontal">
+
+                    <ImageButton
+                        android:id="@+id/building_button_enterance_button"
+                        android:layout_width="250dp"
+                        android:layout_height="80dp"
+                        android:layout_gravity="center"
+                        android:adjustViewBounds="true"
+                        android:background="@color/transparent"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/shell"
+                        android:text="پست جدید" />
+
+                    <TextView
+                        android:id="@+id/building_button_enterance_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="40dp"
+                        android:layout_marginTop="25dp"
+                        android:text="@string/craeateshell"
+                        android:textColor="@color/white"
+                        android:textSize="20dp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/building_button_mainhelp"
+                    android:layout_width="250dp"
+                    android:layout_height="80dp"
+                    android:gravity="center_horizontal">
+
+                    <ImageButton
+                        android:id="@+id/building_button_mainhelp_button"
+                        android:layout_width="250dp"
+                        android:layout_height="80dp"
+                        android:background="@color/transparent"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/node"
+                        android:text="پست جدید" />
+
+                    <TextView
+                        android:id="@+id/building_button_mainhelp_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="40dp"
+                        android:layout_marginTop="25dp"
+                        android:text="@string/craeatenode"
+                        android:textColor="@color/white"
+                        android:textSize="20dp" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="0.3"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/building_button_port1"
+                    android:layout_width="250dp"
+                    android:layout_height="80dp"
+                    android:gravity="center_horizontal">
+
+                    <ImageButton
+                        android:id="@+id/setting_button_edgeprocess_button"
+                        android:layout_width="250dp"
+                        android:layout_height="80dp"
+                        android:layout_gravity="center"
+                        android:adjustViewBounds="true"
+                        android:background="@color/transparent"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/edgeprocess" />
+
+                    <TextView
+                        android:id="@+id/setting_button_edgeprocess_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="40dp"
+                        android:layout_marginTop="25dp"
+                        android:text="@string/edgeprocess"
+                        android:textColor="@color/white"
+                        android:textSize="20dp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/building_button_mainreserve1"
+                    android:layout_width="250dp"
+                    android:layout_height="80dp"
+                    android:layout_below="@id/setting_button_monitoring_text"
+                    android:gravity="center_horizontal">
+
+                    <ImageButton
+                        android:id="@+id/setting_button_monitoring_button"
+                        android:layout_width="250dp"
+                        android:layout_height="80dp"
+                        android:layout_gravity="center"
+                        android:adjustViewBounds="true"
+                        android:background="@color/transparent"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/monitoring"
+                        android:text="پست جدید" />
+
+                    <TextView
+                        android:id="@+id/setting_button_monitoring_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="40dp"
+                        android:layout_marginTop="25dp"
+                        android:text="@string/monitoring"
+                        android:textColor="@color/white"
+                        android:textSize="20dp" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.3"
+                android:background="@drawable/yellowborder"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txtmqtt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#52FFFFFF"
+                    android:gravity="center"
+                    android:padding="6dp"
+                    android:text="@string/mqttbroker" />
+
+
+                <TextView
+                    android:id="@+id/txtmqttclient"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#52FFFFFF"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center"
+                    android:padding="6dp"
+                    android:text="@string/mqttclient" />
+
+
+
+                <TextView
+                    android:id="@+id/txtmodbus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="#52FFFFFF"
+                    android:gravity="center"
+                    android:padding="6dp"
+                    android:text="@string/modbustcp" />
+
+
+                <TextView
+                    android:id="@+id/txtmodbusrtu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="#52FFFFFF"
+                    android:gravity="center"
+                    android:padding="6dp"
+                    android:text="@string/modbusrtu" />
+
+                <TextView
+                    android:id="@+id/txts7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="#52FFFFFF"
+                    android:gravity="center"
+                    android:padding="6dp"
+                    android:text="@string/s7" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

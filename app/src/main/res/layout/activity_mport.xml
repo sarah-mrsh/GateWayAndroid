@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout>
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="com.example.fanp.presentation.mport.MportViewModel" />
+    </data>
+
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layoutDirection="rtl"
+        android:background="?attr/main_back"
+        tools:context=".presentation.mport.MportActivity">
+
+        <include layout="@layout/header" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="250dp"
+                    android:layout_height="80dp"
+                    android:layout_marginTop="120dp">
+
+                    <ImageView
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:foreground="@color/transparent"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/ble" />
+
+                    <TextView
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="25dp"
+                        android:maxLines="1"
+                        android:paddingBottom="5dp"
+                        android:singleLine="true"
+                        android:text="@string/bluetooth"
+                        android:textAlignment="center"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                        android:textColor="@android:color/white"
+                        android:textSize="24sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="250dp"
+                    android:layout_height="80dp"
+                    android:onClick="@{()->viewmodel.serial()}"
+                    android:layout_marginTop="120dp">
+
+                    <ImageView
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:foreground="@color/transparent"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/serial" />
+
+                    <TextView
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="25dp"
+                        android:maxLines="1"
+                        android:paddingBottom="5dp"
+                        android:singleLine="true"
+                        android:text="@string/serial"
+                        android:textAlignment="center"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                        android:textColor="@android:color/white"
+                        android:textSize="24sp" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="250dp"
+                    android:layout_height="80dp"
+                    android:layout_marginTop="120dp">
+
+                    <ImageView
+                        android:id="@+id/image"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="10dp"
+                        android:onClick="@{()->viewmodel.wifi()}"
+                        android:layout_marginBottom="5dp"
+                        android:foreground="@color/transparent"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/wifi" />
+
+                    <TextView
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="25dp"
+                        android:layout_marginTop="25dp"
+                        android:maxLines="1"
+                        android:paddingBottom="5dp"
+                        android:singleLine="true"
+                        android:text="@string/wifi"
+                        android:textAlignment="center"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                        android:textColor="@android:color/white"
+                        android:textSize="24sp" />
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="250dp"
+                    android:layout_height="80dp">
+
+                    <ImageView
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:foreground="@color/transparent"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/gps" />
+
+                    <TextView
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="25dp"
+                        android:layout_marginTop="25dp"
+                        android:maxLines="1"
+                        android:paddingBottom="5dp"
+                        android:singleLine="true"
+                        android:text="@string/gps"
+                        android:textAlignment="center"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                        android:textColor="@android:color/white"
+                        android:textSize="24sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="250dp"
+                    android:onClick="@{()->viewmodel.lan(1)}"
+                    android:layout_height="80dp">
+
+                    <ImageView
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:foreground="@color/transparent"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/lanit" />
+
+                    <TextView
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="25dp"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:text="@string/lanport1"
+                        android:textAlignment="center"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                        android:textColor="@android:color/white"
+                        android:textSize="24sp" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="250dp"
+                    android:onClick="@{()->viewmodel.lan(2)}"
+                    android:layout_height="80dp">
+
+                    <ImageView
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:foreground="@color/transparent"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/lanit" />
+
+                    <TextView
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="25dp"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:text="@string/lanport2"
+                        android:textAlignment="center"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                        android:textColor="@android:color/white"
+                        android:textSize="24sp" />
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="250dp"
+                    android:onClick="@{()->viewmodel.lan(3)}"
+                    android:layout_height="80dp">
+
+                    <ImageView
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:foreground="@color/transparent"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/lanit" />
+
+                    <TextView
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="25dp"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:text="@string/lanport3"
+                        android:textAlignment="center"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                        android:textColor="@android:color/white"
+                        android:textSize="24sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="250dp"
+                    android:onClick="@{()->viewmodel.lan(4)}"
+                    android:layout_height="80dp">
+
+                    <ImageView
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:foreground="@color/transparent"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/lanot" />
+
+                    <TextView
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="25dp"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:text="@string/lanport4"
+                        android:textAlignment="center"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                        android:textColor="@android:color/white"
+                        android:textSize="24sp" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="250dp"
+                    android:onClick="@{()->viewmodel.lan(5)}"
+                    android:layout_height="80dp">
+
+                    <ImageView
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:foreground="@color/transparent"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/lanot" />
+
+                    <TextView
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="25dp"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:text="@string/lanport5"
+                        android:textAlignment="center"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                        android:textColor="@android:color/white"
+                        android:textSize="24sp" />
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+
+
+            <RelativeLayout
+                android:layout_width="250dp"
+                android:gravity="center_horizontal"
+                android:onClick="@{()->viewmodel.lan(6)}"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="80dp">
+
+                <ImageView
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:foreground="@color/transparent"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/lanot" />
+
+                <TextView
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:text="@string/lanport6"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                    android:textColor="@android:color/white"
+                    android:textSize="24sp" />
+            </RelativeLayout>
+
+
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</layout>
