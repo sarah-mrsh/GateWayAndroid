@@ -47,6 +47,10 @@ public class AddDataBlockPlc extends DaggerAppCompatActivity {
     ActivityAddDataBlockPlcBinding binding;
     AddDataBlockPlcViewModel viewmodel;
 
+    public static boolean Update;
+    public static I4AllSetting item;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -76,6 +80,7 @@ public class AddDataBlockPlc extends DaggerAppCompatActivity {
                 this, android.R.layout.simple_spinner_item, plcs);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         binding.spplc.setAdapter(adapter);
+        viewmodel.main=this;
 
 
         binding.btnexit.setOnClickListener(new View.OnClickListener() {
@@ -85,6 +90,21 @@ public class AddDataBlockPlc extends DaggerAppCompatActivity {
             }
         });
 
+        if (Update){
+            Update=false;
+            binding.tagid.setEnabled(false);
+            try {
+                JSONObject object = new JSONObject(item.getItemsData());
+                viewmodel.id = object.getString("id");
+                viewmodel.plcname = object.getString("plcname");
+                viewmodel.name = object.getString("name");
+                viewmodel.functionblock = object.getString("functionblock");
+                viewmodel.description = object.getString("description");
+
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        }
     }
 
 

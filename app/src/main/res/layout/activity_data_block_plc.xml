@@ -20,6 +20,7 @@
 
 
         <include
+            app:title="@{@string/datablock}"
             android:id="@+id/include"
             layout="@layout/header"
             app:layout_constraintEnd_toEndOf="parent"
@@ -62,37 +63,33 @@
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerView"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
             android:background="@drawable/yellowborder"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             android:layout_marginEnd="12dp"
+            android:layout_marginBottom="4dp"
             android:layout_marginStart="12dp"
             app:layout_constraintBottom_toTopOf="@+id/lin_operation"
             app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
 
         <LinearLayout
-            android:id="@+id/lin_operation"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:orientation="horizontal"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-           >
-
+            android:id="@+id/lin_operation"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
             <RelativeLayout
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="50dp"
                 android:layout_gravity="center_vertical"
-
                 android:layout_marginBottom="10dp"
-                android:layout_weight="0.5">
+                android:layout_weight="0.3"
+                android:visibility="visible">
 
                 <Button
-                    android:id="@+id/bt_cancel"
+                    android:id="@+id/btnadd"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:layout_marginStart="15dp"
@@ -102,7 +99,6 @@
                     android:textColor="@color/white" />
 
                 <TextView
-                    android:id="@+id/button_protocol_cancelrequest_text"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:gravity="center|center_vertical"
@@ -112,14 +108,13 @@
                     android:textColor="@color/white"
                     android:textSize="16sp" />
             </RelativeLayout>
-
-
             <RelativeLayout
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="50dp"
                 android:layout_gravity="center_vertical"
                 android:layout_marginBottom="10dp"
-                android:layout_weight="0.5">
+                android:layout_weight="0.3"
+                android:visibility="invisible">
 
                 <Button
                     android:layout_width="match_parent"
@@ -128,7 +123,61 @@
                     android:layout_marginTop="5dp"
                     android:layout_marginEnd="15dp"
                     android:background="@drawable/transparent_yellow_border"
-                    android:onClick="@{()->viewmodel.exit()}"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="center|center_vertical"
+                    android:maxLines="1"
+                    android:text="@string/back"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="0.3"
+                android:visibility="invisible">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="15dp"
+                    android:background="@drawable/transparent_yellow_border"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="center|center_vertical"
+                    android:maxLines="1"
+                    android:text="@string/back"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="0.3">
+
+                <Button
+                    android:id="@+id/btncancell"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="15dp"
+                    android:background="@drawable/transparent_yellow_border"
                     android:textColor="@color/white" />
 
                 <TextView

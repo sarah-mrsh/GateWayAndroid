@@ -60,6 +60,9 @@ public interface I4AllSettingDao {
     List<I4AllSetting> getplc();
 
 
+    @Query("SELECT * FROM i4AllSetting where itemsRef=600")
+    List<I4AllSetting> getplcdatablocks();
+
 
     @Query("SELECT * FROM i4AllSetting where allSettingId=:id")
     I4AllSetting finditem(int id);

@@ -3,6 +3,7 @@ package com.example.fanp.presentation.s7.manageplc.datablockplc;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.ViewModelProviders;
+import androidx.recyclerview.widget.LinearLayoutManager;
 
 import android.content.Context;
 import android.content.Intent;
@@ -25,7 +26,9 @@ import java.util.List;
 
 import javax.inject.Inject;
 
-public class DataBlockPlc extends AppCompatActivity {
+import dagger.android.support.DaggerAppCompatActivity;
+
+public class DataBlockPlc extends DaggerAppCompatActivity implements ListDatablockplcImpl {
 
     @Inject
     ViewModelProviderFactory providerFactory;
@@ -43,6 +46,7 @@ public class DataBlockPlc extends AppCompatActivity {
     DatablockplcViewModel viewmodel;
 
 
+    public AdapterDataBlockPlcList adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,7 +58,7 @@ public class DataBlockPlc extends AppCompatActivity {
 
 
 
-        binding.btCancel.setOnClickListener(new View.OnClickListener() {
+        binding.btnadd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext(), AddDataBlockPlc.class));
@@ -62,34 +66,42 @@ public class DataBlockPlc extends AppCompatActivity {
         });
 
 
+        binding.btncancell.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
 
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        refresh();
+    }
+
     public void refresh() {
-        List<I4AllSetting> data = new ArrayList<>();
-        List<I4AllSetting> spdata = db.getplc();
-        List<String> plcs = new ArrayList<>();
-        for (I4AllSetting item : spdata) {
-            try {
-                JSONObject object = new JSONObject(item.getItemsData());
-                plcs.add(object.getString("deviceid"));
-            } catch (JSONException e) {
-                e.printStackTrace();
-            }
-        }
-        for (String item : plcs) {
-            List<I4AllSetting> items = db.getitembyitesref(Integer.parseInt(item));
-            for (I4AllSetting dataitem : items) {
 
-            }
+        List<I4AllSetting> spdata = db.getplcdatablocks();
 
-        }
+        LinearLayoutManager manager = new LinearLayoutManager(this);
+        adapter = new AdapterDataBlockPlcList(this, this, spdata);
+        binding.recyclerView.setLayoutManager(manager);
+        binding.recyclerView.setAdapter(adapter);
 
+    }
 
-//        LinearLayoutManager manager = new LinearLayoutManager(this);
-//        adapter = new AdapterIOtaglist(this, this, data);
-//        binding.recio.setLayoutManager(manager);
-//        binding.recio.setAdapter(adapter);
+    @Override
+    public void delete(I4AllSetting item) {
+        db.delete(item);
+        refresh();
+    }
 
+    @Override
+    public void edit(I4AllSetting item) {
+        AddDataBlockPlc.Update=true;
+        AddDataBlockPlc.item=item;
+        startActivity(new Intent(this,AddDataBlockPlc.class));
     }
 }

@@ -35,6 +35,8 @@ public class AddDataBlockPlcViewModel extends ViewModel {
     @Inject
     Context ctx;
 
+    AddDataBlockPlc main;
+
 
     @Inject
     public AddDataBlockPlcViewModel() {}
@@ -97,11 +99,25 @@ public class AddDataBlockPlcViewModel extends ViewModel {
             }
         }
 
+        List<I4AllSetting> datas = db.getplcdatablocks();
+        for (I4AllSetting item : datas){
+            try {
+                JSONObject object1 = new JSONObject(item.getItemsData());
+                if (object1.getString("id").equals(id)){//need to update
+                    item.setItemsData(object.toString());
+                    db.update(item);
+                    main.finish();
+                    return;
+                }
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        }
 //        I4AllSetting data = db.getitembyId(plcid);
         I4AllSetting data;
 //        if (data==null){
         String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
-        data = new I4AllSetting(0, plcid, object.toString(), false, timeStamp);
+        data = new I4AllSetting(0, 600, object.toString(), false, timeStamp);
         db.insert(data);
 //        }else{ // update data
 //            String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
@@ -109,6 +125,7 @@ public class AddDataBlockPlcViewModel extends ViewModel {
 //            data.setItemsData(object.toString());
 //            db.update(data);
 //        }
+        main.finish();
     }
 
 }

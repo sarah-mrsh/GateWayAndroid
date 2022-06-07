@@ -25,14 +25,13 @@ public class AdapterDataBlockPlcList extends RecyclerView.Adapter<AdapterDataBlo
 
 
     Context ctx;
-    PlcListImp listener;
     List<I4AllSetting> main;
+    ListDatablockplcImpl listener;
 
-
-    public AdapterDataBlockPlcList(Context ctx, PlcListImp listener, List<I4AllSetting> main) {
+    public AdapterDataBlockPlcList(Context ctx, ListDatablockplcImpl listener, List<I4AllSetting> main) {
         this.ctx = ctx;
-        this.listener = listener;
         this.main = main;
+        this.listener=listener;
     }
 
     @NonNull
@@ -47,6 +46,27 @@ public class AdapterDataBlockPlcList extends RecyclerView.Adapter<AdapterDataBlo
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         I4AllSetting model = main.get(position);
 
+        try {
+            JSONObject object = new JSONObject(model.getItemsData());
+            holder.plcname.setText(object.getString("plcname"));
+            holder.plcid.setText(object.getString("id"));
+
+
+            holder.imgedit.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    listener.edit(model);
+                }
+            });
+            holder.imfdelete.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    listener.delete(model);
+                }
+            });
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
 
     }
 
@@ -58,17 +78,16 @@ public class AdapterDataBlockPlcList extends RecyclerView.Adapter<AdapterDataBlo
 
     public class ViewHolder extends RecyclerView.ViewHolder {
 
-        TextView devicename,deviceid;
-        ImageView imfdelete,imgedit,imgtopic;
+        TextView plcname,plcid;
+        ImageView imfdelete,imgedit;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            deviceid=(TextView)itemView.findViewById(R.id.deviceid);
-            devicename=(TextView)itemView.findViewById(R.id.devicename);
+            plcname=(TextView)itemView.findViewById(R.id.plcname);
+            plcid=(TextView)itemView.findViewById(R.id.plcid);
 
             imfdelete = (ImageView) itemView.findViewById(R.id.imgdelete);
             imgedit = (ImageView) itemView.findViewById(R.id.imgedit);
-            imgtopic = (ImageView) itemView.findViewById(R.id.imgtopic);
         }
     }
 }

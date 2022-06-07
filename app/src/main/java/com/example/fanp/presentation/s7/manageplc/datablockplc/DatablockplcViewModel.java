@@ -21,13 +21,10 @@ public class DatablockplcViewModel extends ViewModel {
 
 
 
-    public void adddatablock(){
-    }
 
 
-    public void exit(){
 
-    }
+
 
 
 }
