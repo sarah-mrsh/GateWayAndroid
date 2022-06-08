@@ -7,18 +7,19 @@
         <entry key="app/src/main/res/drawable/ic_reports.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_account.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_add_client.xml" value="0.615625" />
-        <entry key="app/src/main/res/layout/activity_add_data_block_plc.xml" value="1.0" />
-        <entry key="app/src/main/res/layout/activity_add_datat_block_tag.xml" value="0.17109375" />
+        <entry key="app/src/main/res/layout/activity_add_data_block_plc.xml" value="0.6902730375426621" />
+        <entry key="app/src/main/res/layout/activity_add_datat_block_tag.xml" value="0.5" />
         <entry key="app/src/main/res/layout/activity_add_plc.xml" value="0.35625" />
         <entry key="app/src/main/res/layout/activity_add_server_rtu.xml" value="0.18177083333333333" />
         <entry key="app/src/main/res/layout/activity_add_tag_io.xml" value="1.0" />
         <entry key="app/src/main/res/layout/activity_add_tag_mqtt_client.xml" value="0.49296875" />
         <entry key="app/src/main/res/layout/activity_data_block_plc.xml" value="0.67" />
+        <entry key="app/src/main/res/layout/activity_function_block_plc.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_main_mqtt_client.xml" value="0.6836628511966701" />
         <entry key="app/src/main/res/layout/activity_main_s7.xml" value="0.75" />
         <entry key="app/src/main/res/layout/activity_main_tag.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/activity_manage_plc.xml" value="1.0" />
+        <entry key="app/src/main/res/layout/activity_manage_plc.xml" value="0.6315378610460578" />
         <entry key="app/src/main/res/layout/activity_mqtt_brokers_list.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_plclist.xml" value="0.5" />
         <entry key="app/src/main/res/layout/activity_tag_list_datablock.xml" value="0.21" />
@@ -31,6 +32,7 @@
         <entry key="app/src/main/res/layout/row_custom_adapter.xml" value="0.71171875" />
         <entry key="app/src/main/res/layout/row_datablock_list.xml" value="0.35625" />
         <entry key="app/src/main/res/layout/row_datablock_plc_list.xml" value="0.5" />
+        <entry key="app/src/main/res/layout/row_functionblock_plc_list.xml" value="0.5" />
         <entry key="app/src/main/res/layout/row_mqtt_client.xml" value="0.615625" />
         <entry key="app/src/main/res/layout/row_plc_list.xml" value="0.35625" />
         <entry key="app/src/main/res/layout/row_tag_mqtt.xml" value="0.75" />

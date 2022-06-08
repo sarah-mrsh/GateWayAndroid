@@ -178,5 +178,9 @@
     <string name="plclist">Plc List</string>
     <string name="deletedialog">Are you sure to delete  ?</string>
     <string name="deleteunavailable">In order to delete you have to delete tags and than try again later</string>
+    <string name="fbname">FB Name</string>
+    <string name="fbnumber">FB Number</string>
+    <string name="parametername">Parameter Name</string>
+    <string name="functionblocklist">FunctionBlock List</string>
 
 </resources>

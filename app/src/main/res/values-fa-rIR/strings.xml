@@ -152,13 +152,17 @@
     <string name="bytecount">  شماره بایت </string>
     <string name="bitcount">شماره بیت </string>
     <string name="forget">فراموش کردن</string>
-    <string name="blockdataid">شناسه بلوک داده</string>
+    <string name="blockdataid">شماره دیتا بلاک</string>
     <string name="timeout">Timeout</string>
     <string name="convertto">"تبدیل به "</string>
     <string name="s7setting">تنظیمات S7</string>
     <string name="plclist">PLC لیست</string>
     <string name="deletedialog">آیا از حذف اطمینان دارید ؟</string>
     <string name="deleteunavailable">جهت حذف ابتدا تگ های مربوطه را حذف کنید و دوباره سعی کنید</string>
+    <string name="fbname">نام FB</string>
+    <string name="fbnumber">شماره FB</string>
+    <string name="parametername">نام پارامترها</string>
+    <string name="functionblocklist">لیست function block</string>
 
 
 </resources>

@@ -6,6 +6,7 @@ import android.content.Intent;
 import androidx.lifecycle.ViewModel;
 
 import com.example.fanp.presentation.s7.manageplc.datablockplc.DataBlockPlc;
+import com.example.fanp.presentation.s7.manageplc.functionblock.FunctionBlockMainPlc;
 import com.example.fanp.presentation.s7.plclist.PLCList;
 
 import javax.inject.Inject;
@@ -29,6 +30,10 @@ public class ManagePLCViewModel extends ViewModel {
 
     public void datablockplc(){
         main.startActivity(new Intent(main, DataBlockPlc.class));
+    }
+
+    public void functionblock(){
+        main.startActivity(new Intent(main, FunctionBlockMainPlc.class));
     }
 
     public void finish(){

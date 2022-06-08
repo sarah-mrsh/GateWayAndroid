@@ -124,6 +124,9 @@
         <activity
             android:name=".presentation.lan.LanActivity"
             android:exported="false" />
+        <activity
+            android:name=".presentation.s7.manageplc.functionblock.FunctionBlockMainPlc"
+            android:exported="false" />
         <!--
              TODO: Before you run your application, you need a Google Maps API key.
 

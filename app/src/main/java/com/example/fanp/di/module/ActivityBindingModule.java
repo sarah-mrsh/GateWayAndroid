@@ -30,6 +30,7 @@ import com.example.fanp.presentation.s7.addplc.AddPlc;
 import com.example.fanp.presentation.s7.manageplc.ManagePLC;
 import com.example.fanp.presentation.s7.manageplc.adddatablockplc.AddDataBlockPlc;
 import com.example.fanp.presentation.s7.manageplc.datablockplc.DataBlockPlc;
+import com.example.fanp.presentation.s7.manageplc.functionblock.FunctionBlockMainPlc;
 import com.example.fanp.presentation.s7.plclist.PLCList;
 import com.example.fanp.presentation.s7.tag.MainTag;
 import com.example.fanp.presentation.s7.tag.datablock.AddDatatBlockTag;
@@ -231,6 +232,10 @@ public abstract class ActivityBindingModule {
     @ActivityScope
     @ContributesAndroidInjector
     abstract AddDataBlockPlc addDataBlockPlc();
+
+    @ActivityScope
+    @ContributesAndroidInjector
+    abstract FunctionBlockMainPlc functionBlockMainPlc();
 
 
 
