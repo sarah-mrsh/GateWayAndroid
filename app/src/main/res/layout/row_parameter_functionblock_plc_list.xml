@@ -10,20 +10,20 @@
     app:layout_constraintStart_toStartOf="parent">
 
     <com.example.fanp.utils.Shabnambold
-        android:id="@+id/txtfbname"
+        android:id="@+id/txtparametername"
         android:layout_width="wrap_content"
         android:layout_height="55dp"
         android:layout_weight="0.5"
         android:gravity="center"
-        android:text="@string/fbname" />
+        android:text="@string/parametername" />
 
     <com.example.fanp.utils.Shabnambold
-        android:id="@+id/txtfbnumber"
+        android:id="@+id/txtparametertype"
         android:layout_width="wrap_content"
         android:layout_height="55dp"
         android:layout_weight="0.5"
         android:gravity="center"
-        android:text="@string/fbnumber" />
+        android:text="@string/parametertype" />
 
     <com.example.fanp.utils.Shabnambold
         android:id="@+id/txtplcname"
@@ -35,12 +35,12 @@
         android:visibility="visible" />
 
     <com.example.fanp.utils.Shabnambold
-        android:id="@+id/txtparametername"
+        android:id="@+id/txtbitnumber"
         android:layout_width="wrap_content"
         android:layout_height="55dp"
         android:layout_weight="0.5"
         android:gravity="center"
-        android:text="@string/parametername"
+        android:text="@string/bitcount"
         android:visibility="visible" />
 
     <LinearLayout
@@ -62,13 +62,7 @@
             android:layout_height="32dp"/>
 
 
-        <ImageView
-            android:id="@+id/imgparameter"
-            android:layout_width="35dp"
-            android:layout_weight="0.5"
-            android:src="@drawable/topic"
-            android:layout_height="32dp"/>
-    </LinearLayout>
 
+    </LinearLayout>
 
 </LinearLayout>

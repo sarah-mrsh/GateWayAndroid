@@ -31,6 +31,9 @@ import com.example.fanp.presentation.s7.manageplc.ManagePLC;
 import com.example.fanp.presentation.s7.manageplc.adddatablockplc.AddDataBlockPlc;
 import com.example.fanp.presentation.s7.manageplc.datablockplc.DataBlockPlc;
 import com.example.fanp.presentation.s7.manageplc.functionblock.FunctionBlockMainPlc;
+import com.example.fanp.presentation.s7.manageplc.functionblock.addfunctionblock.AddFunctionBlockPlc;
+import com.example.fanp.presentation.s7.manageplc.functionblock.parameters.MainParameter;
+import com.example.fanp.presentation.s7.manageplc.functionblock.parameters.addparameter.AddParameterFunctionBlock;
 import com.example.fanp.presentation.s7.plclist.PLCList;
 import com.example.fanp.presentation.s7.tag.MainTag;
 import com.example.fanp.presentation.s7.tag.datablock.AddDatatBlockTag;
@@ -238,6 +241,17 @@ public abstract class ActivityBindingModule {
     abstract FunctionBlockMainPlc functionBlockMainPlc();
 
 
+    @ActivityScope
+    @ContributesAndroidInjector
+    abstract AddFunctionBlockPlc addFunctionBlockPlc();
 
+
+    @ActivityScope
+    @ContributesAndroidInjector
+    abstract AddParameterFunctionBlock addParameterFunctionBlock();
+
+    @ActivityScope
+    @ContributesAndroidInjector
+    abstract MainParameter mainParameter();
 
 }

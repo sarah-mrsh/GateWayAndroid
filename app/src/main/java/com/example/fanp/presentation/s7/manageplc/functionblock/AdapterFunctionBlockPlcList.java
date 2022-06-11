@@ -24,9 +24,9 @@ public class AdapterFunctionBlockPlcList extends RecyclerView.Adapter<AdapterFun
 
     Context ctx;
     List<I4AllSetting> main;
-    ListDatablockplcImpl listener;
+    ListFunctionBLockImpl listener;
 
-    public AdapterFunctionBlockPlcList(Context ctx, ListDatablockplcImpl listener, List<I4AllSetting> main) {
+    public AdapterFunctionBlockPlcList(Context ctx, ListFunctionBLockImpl listener, List<I4AllSetting> main) {
         this.ctx = ctx;
         this.main = main;
         this.listener=listener;
@@ -47,7 +47,7 @@ public class AdapterFunctionBlockPlcList extends RecyclerView.Adapter<AdapterFun
         try {
             JSONObject object = new JSONObject(model.getItemsData());
             holder.plcname.setText(object.getString("plcname"));
-//            holder.plcid.setText(object.getString("id"));
+            holder.txtfbnumber.setText(object.getString("functionblocknumber"));
 
 
             holder.imgedit.setOnClickListener(new View.OnClickListener() {
@@ -60,6 +60,12 @@ public class AdapterFunctionBlockPlcList extends RecyclerView.Adapter<AdapterFun
                 @Override
                 public void onClick(View v) {
                     listener.delete(model);
+                }
+            });
+            holder.imgparameter.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    listener.addparameter(model);
                 }
             });
         } catch (JSONException e) {
@@ -77,7 +83,7 @@ public class AdapterFunctionBlockPlcList extends RecyclerView.Adapter<AdapterFun
     public class ViewHolder extends RecyclerView.ViewHolder {
 
         TextView plcname,txtfbname,txtfbnumber,txtparametername;
-        ImageView imfdelete,imgedit;
+        ImageView imfdelete,imgedit,imgparameter;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -88,6 +94,7 @@ public class AdapterFunctionBlockPlcList extends RecyclerView.Adapter<AdapterFun
 
             imfdelete = (ImageView) itemView.findViewById(R.id.imgdelete);
             imgedit = (ImageView) itemView.findViewById(R.id.imgedit);
+            imgparameter = (ImageView) itemView.findViewById(R.id.imgparameter);
         }
     }
 }

@@ -167,7 +167,7 @@
     <string name="iotype">IO Type</string>
     <string name="wordcount">Word Count</string>
     <string name="bytecount">Byte Count</string>
-    <string name="bitcount">Bit Count</string>
+    <string name="bitcount">Bit Number</string>
     <string name="forget">Forget</string>
     <string name="blockdataid">DataBlockID</string>
     <string name="mqttbroker">Mqtt Broker</string>
@@ -182,5 +182,11 @@
     <string name="fbnumber">FB Number</string>
     <string name="parametername">Parameter Name</string>
     <string name="functionblocklist">FunctionBlock List</string>
+    <string name="slavename">Slave name</string>
+    <string name="slaveid">Slave id</string>
+    <string name="functionblockname">FunctionBlock Name</string>
+    <string name="Functionblocknumber">FunctionBlock Number</string>
+    <string name="addparameter">Add Parameter</string>
+    <string name="parametertype">Parameter Type</string>
 
 </resources>

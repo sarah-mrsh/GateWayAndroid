@@ -32,6 +32,9 @@ import com.example.fanp.presentation.s7.addplc.AddPlcViewModel;
 import com.example.fanp.presentation.s7.manageplc.ManagePLCViewModel;
 import com.example.fanp.presentation.s7.manageplc.adddatablockplc.AddDataBlockPlcViewModel;
 import com.example.fanp.presentation.s7.manageplc.datablockplc.DatablockplcViewModel;
+import com.example.fanp.presentation.s7.manageplc.functionblock.addfunctionblock.AddFunctionBlockPlcViewModel;
+import com.example.fanp.presentation.s7.manageplc.functionblock.parameters.MainParameterViewModel;
+import com.example.fanp.presentation.s7.manageplc.functionblock.parameters.addparameter.AddParameterViewModel;
 import com.example.fanp.presentation.s7.plclist.PLCListViewModel;
 import com.example.fanp.presentation.s7.tag.MainTagViewModel;
 import com.example.fanp.presentation.s7.tag.datablock.AddTagDataBlockViewModel;
@@ -253,6 +256,24 @@ public abstract class ViewModelModule {
     @IntoMap
     @ViewModelKey(MainMqttViewModel.class)
     public abstract ViewModel bindsMainMqttViewModel(MainMqttViewModel viewModel);
+
+
+    @Binds
+    @IntoMap
+    @ViewModelKey(AddFunctionBlockPlcViewModel.class)
+    public abstract ViewModel bindsAddFunctionBlockPlcViewModel(AddFunctionBlockPlcViewModel viewModel);
+
+    @Binds
+    @IntoMap
+    @ViewModelKey(AddParameterViewModel.class)
+    public abstract ViewModel bindsAddParameterViewModel(AddParameterViewModel viewModel);
+
+
+    @Binds
+    @IntoMap
+    @ViewModelKey(MainParameterViewModel.class)
+    public abstract ViewModel bindsMainParameterViewModel(MainParameterViewModel viewModel);
+
 
 
 }

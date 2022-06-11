@@ -19,6 +19,9 @@ import com.example.fanp.presentation.s7.manageplc.adddatablockplc.AddDataBlockPl
 import com.example.fanp.presentation.s7.manageplc.datablockplc.AdapterDataBlockPlcList;
 import com.example.fanp.presentation.s7.manageplc.datablockplc.DatablockplcViewModel;
 import com.example.fanp.presentation.s7.manageplc.datablockplc.ListDatablockplcImpl;
+import com.example.fanp.presentation.s7.manageplc.functionblock.addfunctionblock.AddFunctionBlockPlc;
+import com.example.fanp.presentation.s7.manageplc.functionblock.parameters.AdapterPrameterFunctionBloc;
+import com.example.fanp.presentation.s7.manageplc.functionblock.parameters.MainParameter;
 
 import java.util.List;
 
@@ -26,7 +29,7 @@ import javax.inject.Inject;
 
 import dagger.android.support.DaggerAppCompatActivity;
 
-public class FunctionBlockMainPlc extends DaggerAppCompatActivity implements ListDatablockplcImpl {
+public class FunctionBlockMainPlc extends DaggerAppCompatActivity implements ListFunctionBLockImpl {
 
     @Inject
     ViewModelProviderFactory providerFactory;
@@ -44,7 +47,7 @@ public class FunctionBlockMainPlc extends DaggerAppCompatActivity implements Lis
     DatablockplcViewModel viewmodel;
 
 
-    public AdapterDataBlockPlcList adapter;
+    public AdapterFunctionBlockPlcList adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,7 +62,7 @@ public class FunctionBlockMainPlc extends DaggerAppCompatActivity implements Lis
         binding.btnadd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), AddDataBlockPlc.class));
+                startActivity(new Intent(getApplicationContext(), AddFunctionBlockPlc.class));
             }
         });
 
@@ -84,7 +87,7 @@ public class FunctionBlockMainPlc extends DaggerAppCompatActivity implements Lis
         List<I4AllSetting> spdata = db.getplcfunctionblocks();
 
         LinearLayoutManager manager = new LinearLayoutManager(this);
-        adapter = new AdapterDataBlockPlcList(this, this, spdata);
+        adapter = new AdapterFunctionBlockPlcList(this, this, spdata);
         binding.recyclerView.setLayoutManager(manager);
         binding.recyclerView.setAdapter(adapter);
 
@@ -98,8 +101,14 @@ public class FunctionBlockMainPlc extends DaggerAppCompatActivity implements Lis
 
     @Override
     public void edit(I4AllSetting item) {
-        AddDataBlockPlc.Update=true;
-        AddDataBlockPlc.item=item;
-        startActivity(new Intent(this,AddDataBlockPlc.class));
+        AddFunctionBlockPlc.Update=true;
+        AddFunctionBlockPlc.item=item;
+        startActivity(new Intent(this,AddFunctionBlockPlc.class));
+    }
+
+    @Override
+    public void addparameter(I4AllSetting item) {
+        MainParameter.item=item;
+        startActivity(new Intent(this,MainParameter.class));
     }
 }

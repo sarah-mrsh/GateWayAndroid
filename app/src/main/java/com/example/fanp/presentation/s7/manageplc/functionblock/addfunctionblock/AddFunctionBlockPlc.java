@@ -11,6 +11,7 @@ import androidx.lifecycle.ViewModelProviders;
 
 import com.example.fanp.R;
 import com.example.fanp.databinding.ActivityAddDataBlockPlcBinding;
+import com.example.fanp.databinding.ActivityAddFunctionBlockPlcBinding;
 import com.example.fanp.di.injector.ViewModelProviderFactory;
 import com.example.fanp.domain.local.data.I4AllSettingDao;
 import com.example.fanp.domain.local.repository.I4AllSetting;
@@ -40,8 +41,8 @@ public class AddFunctionBlockPlc extends DaggerAppCompatActivity {
     I4AllSettingDao db;
 
 
-    ActivityAddDataBlockPlcBinding binding;
-    AddDataBlockPlcViewModel viewmodel;
+    ActivityAddFunctionBlockPlcBinding binding;
+    AddFunctionBlockPlcViewModel viewmodel;
 
     public static boolean Update;
     public static I4AllSetting item;
@@ -53,9 +54,10 @@ public class AddFunctionBlockPlc extends DaggerAppCompatActivity {
         super.onCreate(savedInstanceState);
 
 
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_add_data_block_plc);
-        viewmodel = ViewModelProviders.of(this, providerFactory).get(AddDataBlockPlcViewModel.class);
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_add_function_block_plc);
+        viewmodel = ViewModelProviders.of(this, providerFactory).get(AddFunctionBlockPlcViewModel.class);
         binding.setViewmodel(viewmodel);
+        viewmodel.main=this;
 
 
         List<I4AllSetting> spdata = db.getplc();
@@ -91,10 +93,9 @@ public class AddFunctionBlockPlc extends DaggerAppCompatActivity {
             binding.tagid.setEnabled(false);
             try {
                 JSONObject object = new JSONObject(item.getItemsData());
-                viewmodel.id = object.getString("id");
+                viewmodel.functionblocknumber = object.getString("functionblocknumber");
                 viewmodel.plcname = object.getString("plcname");
-                viewmodel.name = object.getString("name");
-                viewmodel.functionblock = object.getString("functionblock");
+                viewmodel.functionblockname = object.getString("functionblockname");
                 viewmodel.description = object.getString("description");
 
             } catch (JSONException e) {

@@ -117,7 +117,7 @@
     <string name="connected">Connected</string>
     <string name="devicename">نام دستگاه</string>
     <string name="deviceid">شناسه دستگاه</string>
-    <string name="serverlist">لیست سرورها</string>
+    <string name="serverlist">لیست slave</string>
     <string name="modbustcp">ModbusTCP</string>
     <string name="Baudrate">Baud rate</string>
     <string name="parity">بیت توازن</string>
@@ -163,6 +163,12 @@
     <string name="fbnumber">شماره FB</string>
     <string name="parametername">نام پارامترها</string>
     <string name="functionblocklist">لیست function block</string>
+    <string name="slavename">نام slave</string>
+    <string name="slaveid">شناسه slave</string>
+    <string name="functionblockname">نام functionblock</string>
+    <string name="Functionblocknumber">شماره functionblock</string>
+    <string name="addparameter">افزودن پارامتر</string>
+    <string name="parametertype">نوع پارامتر</string>
 
 
 </resources>

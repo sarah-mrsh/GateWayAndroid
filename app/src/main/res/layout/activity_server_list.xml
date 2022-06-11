@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 
-<layout>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
         <variable
@@ -12,9 +14,6 @@
     </data>
 
 <RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:background="?attr/main_back"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -36,13 +35,13 @@
         android:layout_height="50dp">
         <com.example.fanp.utils.Shabnambold
             android:layout_width="wrap_content"
-            android:text="@string/devicename"
+            android:text="@string/slavename"
             android:layout_weight="0.5"
             android:gravity="center"
             android:layout_height="match_parent"/>
         <com.example.fanp.utils.Shabnambold
             android:layout_width="wrap_content"
-            android:text="@string/deviceid"
+            android:text="@string/slaveid"
             android:layout_weight="0.5"
             android:gravity="center"
             android:layout_height="match_parent"/>
@@ -74,21 +73,84 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_above="@+id/lin_operation"
-        android:layout_below="@+id/mainheader" />
+        android:layout_below="@+id/mainheader"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginBottom="6dp"
+        android:background="@drawable/yellowborder" />
 
 
     <LinearLayout
         android:id="@+id/lin_operation"
-        android:layout_alignParentBottom="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
         android:orientation="horizontal">
+
+
+        <RelativeLayout
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="0.5">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="15dp"
+                android:onClick="@{()->viewmodel.add()}"
+                android:background="@drawable/transparent_yellow_border"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center|center_vertical"
+                android:maxLines="1"
+                android:text="@string/add"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:visibility="invisible"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="0.5">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="15dp"
+                android:background="@drawable/transparent_yellow_border"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center|center_vertical"
+                android:maxLines="1"
+                android:text="@string/back"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+        </RelativeLayout>
+
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_gravity="center_vertical"
-
+            android:visibility="invisible"
             android:layout_marginBottom="10dp"
             android:layout_weight="0.5">
 
@@ -98,7 +160,6 @@
                 android:layout_height="50dp"
                 android:layout_marginStart="15dp"
                 android:layout_marginTop="5dp"
-                android:onClick="@{()->viewmodel.add()}"
                 android:layout_marginEnd="15dp"
                 android:background="@drawable/transparent_yellow_border"
                 android:textColor="@color/white" />
@@ -116,7 +177,6 @@
         </RelativeLayout>
 
 
-
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="50dp"
@@ -128,8 +188,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginStart="15dp"
-                android:onClick="@{()->viewmodel.exit()}"
                 android:layout_marginTop="5dp"
+                android:onClick="@{()->viewmodel.exit()}"
                 android:layout_marginEnd="15dp"
                 android:background="@drawable/transparent_yellow_border"
                 android:textColor="@color/white" />
@@ -144,6 +204,12 @@
                 android:textColor="@color/white"
                 android:textSize="16sp" />
         </RelativeLayout>
+
+
+
+
+
+
 
 
     </LinearLayout>

@@ -14,8 +14,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Fanp"
         tools:targetApi="31">
-
-
+        <activity
+            android:name=".AddParameterFunctionBlock"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.s7.manageplc.functionblock.parameters.MainParameter"
+            android:exported="false" />
         <activity
             android:name=".presentation.mqtt.clientmqtt.addtag.AddTagMqttClient"
             android:exported="false" />
@@ -113,6 +117,9 @@
             android:name=".presentation.serialactivity.SerialActivity"
             android:exported="false" />
         <activity
+            android:name=".presentation.s7.manageplc.functionblock.addfunctionblock.AddFunctionBlockPlc"
+            android:exported="false" />
+        <activity
             android:name=".presentation.wifi.WifiActivity"
             android:exported="false" />
         <activity
@@ -151,7 +158,6 @@
         <activity
             android:name=".presentation.mqtt.broker.topic.Addtopic"
             android:exported="false" />
-
         <activity
             android:name=".presentation.main.MainActivity"
             android:exported="true">

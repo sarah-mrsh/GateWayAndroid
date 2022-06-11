@@ -42,8 +42,6 @@
             android:src="@drawable/edit"
             android:layout_height="32dp"/>
 
-
-
     </LinearLayout>
 
 </LinearLayout>

@@ -3,11 +3,9 @@
     <data>
         <variable
             name="viewmodel"
-            type="com.example.fanp.presentation.modbus.tcp.addserver.AddServeTcpViewModel" />
+            type="com.example.fanp.presentation.s7.manageplc.functionblock.addfunctionblock.AddFunctionBlockPlcViewModel" />
+
     </data>
-
-
-
     <LinearLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -17,7 +15,6 @@
         android:layoutDirection="rtl"
         android:layout_height="match_parent"
         android:background="?attr/main_back">
-
 
 
         <include layout="@layout/header"/>
@@ -45,18 +42,18 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.0"
-                        android:text="@string/slavename" />
+                        android:text="@string/functionblockname" />
 
                     <EditText
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.7"
                         android:gravity="center"
-                        android:hint="@string/devicename"
+                        android:hint="@string/functionblockname"
                         android:imeOptions="actionNext"
                         android:inputType="text"
                         android:maxLines="1"
-                        android:text="@={viewmodel.devicename}" />
+                        android:text="@={viewmodel.functionblockname}" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -68,18 +65,41 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.0"
-                        android:text="@string/ip" />
+                        android:text="@string/Functionblocknumber" />
 
                     <EditText
+                        android:id="@+id/tagid"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.7"
                         android:gravity="center"
-                        android:hint="@string/ip"
+                        android:hint="@string/Functionblocknumber"
                         android:imeOptions="actionNext"
                         android:inputType="text"
                         android:maxLines="1"
-                        android:text="@={viewmodel.ip}" />
+                        android:text="@={viewmodel.functionblocknumber}" />
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp">
+
+                    <com.example.fanp.utils.Shabnambold
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.0"
+                        android:text="@string/plc" />
+
+                    <Spinner
+                        android:id="@+id/spplc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_weight="0.7"
+                        android:onItemSelected="@{(parent,view,pos,id)->viewmodel.onSelectPlc(parent,view,pos,id)}"
+                        android:gravity="center" />
                 </LinearLayout>
 
 
@@ -105,43 +125,20 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.0"
-                        android:text="@string/slaveid" />
-
-                    <EditText
-                        android:id="@+id/edtid"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0.7"
-                        android:gravity="center"
-                        android:hint="@string/deviceid"
-                        android:imeOptions="actionNext"
-                        android:inputType="text"
-                        android:maxLines="1"
-                        android:text="@={viewmodel.deviceid}" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp">
-
-                    <com.example.fanp.utils.Shabnambold
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0.0"
-                        android:text="@string/port" />
+                        android:text="@string/description" />
 
                     <EditText
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.7"
                         android:gravity="center"
-                        android:hint="@string/port"
+                        android:hint="@string/description"
                         android:imeOptions="actionNext"
                         android:inputType="text"
                         android:maxLines="1"
-                        android:text="@={viewmodel.port}" />
+                        android:text="@={viewmodel.description}" />
                 </LinearLayout>
+
 
 
 
@@ -156,72 +153,13 @@
             android:id="@+id/lin_operation"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
             android:orientation="horizontal">
 
-
-            <RelativeLayout
-                android:visibility="visible"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_gravity="center_vertical"
-                android:layout_marginBottom="10dp"
-                android:layout_weight="0.5">
-
-                <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_marginStart="15dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginEnd="15dp"
-                    android:onClick="@{()->viewmodel.savedata()}"
-                    android:background="@drawable/transparent_yellow_border"
-                    android:textColor="@color/white" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:gravity="center|center_vertical"
-                    android:maxLines="1"
-                    android:text="@string/add"
-                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
-                    android:textColor="@color/white"
-                    android:textSize="16sp" />
-            </RelativeLayout>
-            <RelativeLayout
-                android:visibility="invisible"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_gravity="center_vertical"
-                android:layout_marginBottom="10dp"
-                android:layout_weight="0.5">
-
-                <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_marginStart="15dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginEnd="15dp"
-                    android:background="@drawable/transparent_yellow_border"
-                    android:textColor="@color/white" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:gravity="center|center_vertical"
-                    android:maxLines="1"
-                    android:text="@string/back"
-                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
-                    android:textColor="@color/white"
-                    android:textSize="16sp" />
-            </RelativeLayout>
-
-
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_gravity="center_vertical"
-                android:visibility="invisible"
+
                 android:layout_marginBottom="10dp"
                 android:layout_weight="0.5">
 
@@ -230,6 +168,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:layout_marginStart="15dp"
+                    android:onClick="@{()->viewmodel.savedata()}"
                     android:layout_marginTop="5dp"
                     android:layout_marginEnd="15dp"
                     android:background="@drawable/transparent_yellow_border"
@@ -241,7 +180,63 @@
                     android:layout_height="50dp"
                     android:gravity="center|center_vertical"
                     android:maxLines="1"
-                    android:text="@string/add"
+                    android:text="@string/save"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:visibility="invisible"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="0.5">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="15dp"
+                    android:background="@drawable/transparent_yellow_border"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="center|center_vertical"
+                    android:maxLines="1"
+                    android:text="@string/test"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:visibility="visible"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="0.5">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="15dp"
+                    android:onClick="@{()->viewmodel.addparameter()}"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="15dp"
+                    android:background="@drawable/transparent_yellow_border"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="center|center_vertical"
+                    android:maxLines="1"
+                    android:text="@string/addparameter"
                     android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
                     android:textColor="@color/white"
                     android:textSize="16sp" />
@@ -256,11 +251,11 @@
                 android:layout_weight="0.5">
 
                 <Button
+                    android:id="@+id/btnexit"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:layout_marginStart="15dp"
                     android:layout_marginTop="5dp"
-                    android:onClick="@{()->viewmodel.exit()}"
                     android:layout_marginEnd="15dp"
                     android:background="@drawable/transparent_yellow_border"
                     android:textColor="@color/white" />
@@ -270,7 +265,7 @@
                     android:layout_height="50dp"
                     android:gravity="center|center_vertical"
                     android:maxLines="1"
-                    android:text="@string/back"
+                    android:text="@string/cancel"
                     android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
                     android:textColor="@color/white"
                     android:textSize="16sp" />
@@ -278,17 +273,8 @@
 
 
 
-
-
-
-
-
         </LinearLayout>
 
 
     </LinearLayout>
-
-
-
-
 </layout>
