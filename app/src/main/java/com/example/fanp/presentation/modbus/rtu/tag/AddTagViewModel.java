@@ -97,7 +97,7 @@ public class AddTagViewModel extends ViewModel {
         try {
             for (int i = 0; i < data.size(); i++) {
                 JSONObject object1 = new JSONObject(data.get(i).getItemsData());
-                if (object1.getString("tagid").equals(tagid)) { //update
+                if (object1.getString("tagid").equals(tagid)) { // Update
                     data.get(i).setItemsData(object.toString());
                     db.update(data.get(i));
                     return;
@@ -116,5 +116,8 @@ public class AddTagViewModel extends ViewModel {
         main.finish();
     }
 
+    public void exit(){
+        main.finish();
+    }
 
 }

@@ -1,9 +1,11 @@
 package com.example.fanp.presentation.mqtt.clientmqtt.taglist;
 
+import android.app.Dialog;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -60,7 +62,7 @@ public class AdapterTagListMqttTags extends RecyclerView.Adapter<AdapterTagListM
         holder.remove.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                listener.delete(model);
+                delete_confirmation(model);
             }
         });
         holder.edit.setOnClickListener(new View.OnClickListener() {
@@ -71,7 +73,26 @@ public class AdapterTagListMqttTags extends RecyclerView.Adapter<AdapterTagListM
         });
 
     }
-
+    public void delete_confirmation(I4AllSetting item){
+        Dialog dialog = new Dialog(context);
+        dialog.setContentView(R.layout.delete_dialog);
+        Button btn_cancel = (Button) dialog.findViewById(R.id.btn_cancel);
+        Button bt_delete = (Button) dialog.findViewById(R.id.bt_delete);
+        bt_delete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                listener.delete(item);
+                dialog.dismiss();
+            }
+        });
+        btn_cancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dialog.dismiss();
+            }
+        });
+        dialog.show();
+    }
     @Override
     public int getItemCount() {
         return data.size();

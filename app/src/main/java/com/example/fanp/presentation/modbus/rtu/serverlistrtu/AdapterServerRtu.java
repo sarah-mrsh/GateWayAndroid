@@ -1,9 +1,11 @@
 package com.example.fanp.presentation.modbus.rtu.serverlistrtu;
 
+import android.app.Dialog;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -55,7 +57,7 @@ public class AdapterServerRtu extends RecyclerView.Adapter<AdapterServerRtu.View
             holder.imgdelete.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    listener.delete(main,position);
+                    delete_confirmation(main,position);
                 }
             });
             holder.imgedit.setOnClickListener(new View.OnClickListener() {
@@ -73,6 +75,27 @@ public class AdapterServerRtu extends RecyclerView.Adapter<AdapterServerRtu.View
         } catch (JSONException e) {
             e.printStackTrace();
         }
+    }
+
+    public void delete_confirmation(I4AllSetting item,int position){
+        Dialog dialog = new Dialog(ctx);
+        dialog.setContentView(R.layout.delete_dialog);
+        Button btn_cancel = (Button) dialog.findViewById(R.id.btn_cancel);
+        Button bt_delete = (Button) dialog.findViewById(R.id.bt_delete);
+        bt_delete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                listener.delete(item,position);
+                dialog.dismiss();
+            }
+        });
+        btn_cancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dialog.dismiss();
+            }
+        });
+        dialog.show();
     }
 
     @Override

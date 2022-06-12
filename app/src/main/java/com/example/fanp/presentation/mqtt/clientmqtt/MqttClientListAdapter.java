@@ -1,9 +1,11 @@
 package com.example.fanp.presentation.mqtt.clientmqtt;
 
+import android.app.Dialog;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -53,7 +55,7 @@ public class MqttClientListAdapter extends RecyclerView.Adapter<MqttClientListAd
             holder.imgdelete.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    listener.delete(main.get(position));
+                    delete_confirmation(main.get(position));
                 }
             });
             holder.imgedit.setOnClickListener(new View.OnClickListener() {
@@ -71,6 +73,27 @@ public class MqttClientListAdapter extends RecyclerView.Adapter<MqttClientListAd
         } catch (JSONException e) {
             e.printStackTrace();
         }
+    }
+
+    public void delete_confirmation(I4AllSetting item){
+        Dialog dialog = new Dialog(ctx);
+        dialog.setContentView(R.layout.delete_dialog);
+        Button btn_cancel = (Button) dialog.findViewById(R.id.btn_cancel);
+        Button bt_delete = (Button) dialog.findViewById(R.id.bt_delete);
+        bt_delete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                listener.delete(item);
+                dialog.dismiss();
+            }
+        });
+        btn_cancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dialog.dismiss();
+            }
+        });
+        dialog.show();
     }
 
     @Override

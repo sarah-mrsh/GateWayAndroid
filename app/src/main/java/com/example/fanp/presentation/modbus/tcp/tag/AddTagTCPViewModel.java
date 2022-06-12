@@ -116,5 +116,9 @@ public class AddTagTCPViewModel extends ViewModel {
         main.finish();
     }
 
+    public void exit(){
+        main.finish();
+    }
+
 
 }

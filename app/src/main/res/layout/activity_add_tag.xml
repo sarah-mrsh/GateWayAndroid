@@ -248,6 +248,7 @@
 
         <LinearLayout
             android:id="@+id/lin_operation"
+            android:layout_alignParentBottom="true"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
@@ -316,6 +317,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_gravity="center_vertical"
+                android:visibility="invisible"
                 android:layout_marginBottom="10dp"
                 android:layout_weight="0.5">
 
@@ -334,6 +336,35 @@
                     android:gravity="center|center_vertical"
                     android:maxLines="1"
                     android:text="@string/cancel"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="0.5">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="15dp"
+                    android:background="@drawable/transparent_yellow_border"
+                    android:onClick="@{()->viewmodel.exit()}"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="center|center_vertical"
+                    android:maxLines="1"
+                    android:text="@string/back"
                     android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
                     android:textColor="@color/white"
                     android:textSize="16sp" />
