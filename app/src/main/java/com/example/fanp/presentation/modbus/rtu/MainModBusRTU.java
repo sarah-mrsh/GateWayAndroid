@@ -33,25 +33,19 @@ public class MainModBusRTU extends DaggerAppCompatActivity {
     @Inject
     I4AllSettingDao db;
 
+    public boolean last_status=true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main_mod_bus_rtu);
         viewmodel = ViewModelProviders.of(this, providerFactory).get(MainModbudRtuViewModel.class);
         binding.setViewmodel(viewmodel);
         viewmodel.main=this;
 
-
-
-
-
         I4AllSetting data = db.getitembyId(512);
         if (data!=null){
-
-
+            enable_status(false);
             try {
                 JSONObject object  =new JSONObject(data.getItemsData());
                 if (object.has("devicename")){viewmodel.devicename = object.getString("devicename");}
@@ -64,9 +58,30 @@ public class MainModBusRTU extends DaggerAppCompatActivity {
             } catch (JSONException e) {
                 e.printStackTrace();
             }
-
         }
+    }
 
+    public void enable_status(boolean status){
+        last_status=status;
+        if (status){
+            binding.buttonProtocolCancelrequestText.setText(getResources().getString(R.string.save));
+            binding.edtdatabit.setEnabled(true);
+            binding.edtendbit.setEnabled(true);
+            binding.edtid.setEnabled(true);
+            binding.edtname.setEnabled(true);
+            binding.edtstartbit.setEnabled(true);
+            binding.spbouadrate.setEnabled(true);
+            binding.spparity.setEnabled(true);
+        }else{
+            binding.buttonProtocolCancelrequestText.setText(getResources().getString(R.string.edit));
+            binding.edtdatabit.setEnabled(false);
+            binding.edtendbit.setEnabled(false);
+            binding.edtid.setEnabled(false);
+            binding.edtname.setEnabled(false);
+            binding.edtstartbit.setEnabled(false);
+            binding.spbouadrate.setEnabled(false);
+            binding.spparity.setEnabled(false);
+        }
 
     }
 }

@@ -65,6 +65,10 @@ public class MainModbudRtuViewModel extends ViewModel {
 
 
     public void savedata() {
+        if (!main.last_status){
+            main.enable_status(true);
+            return;
+        }
         JSONObject object = new JSONObject();
         try {
             object.put("devicename", devicename);
@@ -90,6 +94,7 @@ public class MainModbudRtuViewModel extends ViewModel {
             data.setItemsData(object.toString());
             db.update(data);
         }
+        exit();
     }
 
     public void exit(){

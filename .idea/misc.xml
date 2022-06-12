@@ -21,8 +21,8 @@
         <entry key="app/src/main/res/layout/activity_data_block_plc.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_function_block_plc.xml" value="0.12" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/activity_main_mod_bus_rtu.xml" value="0.13020833333333334" />
-        <entry key="app/src/main/res/layout/activity_main_modbus_tcp.xml" value="0.2" />
+        <entry key="app/src/main/res/layout/activity_main_mod_bus_rtu.xml" value="0.14" />
+        <entry key="app/src/main/res/layout/activity_main_modbus_tcp.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_main_mqtt_client.xml" value="0.18" />
         <entry key="app/src/main/res/layout/activity_main_parameter.xml" value="0.14" />
         <entry key="app/src/main/res/layout/activity_main_s7.xml" value="0.22" />
@@ -35,6 +35,7 @@
         <entry key="app/src/main/res/layout/activity_tag_list_io.xml" value="0.6836628511966701" />
         <entry key="app/src/main/res/layout/activity_tag_list_mqtt_client.xml" value="0.67" />
         <entry key="app/src/main/res/layout/activity_taglist_memory.xml" value="0.18" />
+        <entry key="app/src/main/res/layout/fragment_convertprotocol.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_special_setting.xml" value="0.18" />
         <entry key="app/src/main/res/layout/header.xml" value="0.67" />
@@ -46,7 +47,8 @@
         <entry key="app/src/main/res/layout/row_functionblock_plc_list.xml" value="0.14" />
         <entry key="app/src/main/res/layout/row_mqtt_client.xml" value="0.615625" />
         <entry key="app/src/main/res/layout/row_parameter_functionblock_plc_list.xml" value="0.12" />
-        <entry key="app/src/main/res/layout/row_plc_list.xml" value="0.12" />
+        <entry key="app/src/main/res/layout/row_plc_list.xml" value="0.18" />
+        <entry key="app/src/main/res/layout/row_saved_network.xml" value="0.16" />
         <entry key="app/src/main/res/layout/row_ta_list.xml" value="0.19921875" />
         <entry key="app/src/main/res/layout/row_tag_memory_list.xml" value="0.14" />
         <entry key="app/src/main/res/layout/row_tag_mqtt.xml" value="0.75" />

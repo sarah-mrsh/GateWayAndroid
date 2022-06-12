@@ -13,6 +13,7 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:orientation="vertical"
         android:layout_width="match_parent"
+        android:layoutDirection="rtl"
         android:layout_height="match_parent"
         android:background="?attr/main_back"
         tools:context=".presentation.modbus.tcp.MainModbusTCP">
@@ -46,6 +47,7 @@
                         android:text="@string/devicename" />
 
                     <EditText
+                        android:id="@+id/edtname"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.7"
@@ -69,6 +71,7 @@
                         android:text="@string/Baudrate" />
 
                     <Spinner
+                        android:id="@+id/spbouadrate"
                         android:layout_width="wrap_content"
                         android:layout_height="50dp"
                         android:layout_weight="0.7"
@@ -91,6 +94,7 @@
                         android:text="@string/startbit" />
 
                     <EditText
+                        android:id="@+id/edtstartbit"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.7"
@@ -117,6 +121,7 @@
                         android:text="@string/databit" />
 
                     <EditText
+                        android:id="@+id/edtdatabit"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.7"
@@ -154,6 +159,7 @@
                         android:text="@string/deviceid" />
 
                     <EditText
+                        android:id="@+id/edtid"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.7"
@@ -179,6 +185,7 @@
                         android:text="@string/parity" />
 
                     <Spinner
+                        android:id="@+id/spparity"
                         android:layout_width="wrap_content"
                         android:layout_height="50dp"
                         android:layout_weight="0.7"
@@ -200,6 +207,7 @@
                         android:text="@string/endbit" />
 
                     <EditText
+                        android:id="@+id/edtendbit"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.7"

@@ -35,6 +35,8 @@ public class MainModbusTCP extends DaggerAppCompatActivity {
     GrpcModBus grpcModBus;
 
 
+    public boolean last_status=true;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,9 +45,9 @@ public class MainModbusTCP extends DaggerAppCompatActivity {
         binding.setViewmodel(viewmodel);
         viewmodel.main = this;
 
-
         I4AllSetting data = db.getitembyId(505);
         if (data != null) {
+            enable_items(false);
             try {
                 JSONObject object = new JSONObject(data.getItemsData());
                 if (object.has("devicename")) {
@@ -63,10 +65,25 @@ public class MainModbusTCP extends DaggerAppCompatActivity {
             } catch (JSONException e) {
                 e.printStackTrace();
             }
-
         }
 
-
         grpcModBus.update_data();
+    }
+
+    public void enable_items(boolean status){
+        last_status=status;
+        if (status){
+            binding.buttonProtocolCancelrequestText.setText(getResources().getString(R.string.save));
+            binding.edtid.setEnabled(true);
+            binding.edtip.setEnabled(true);
+            binding.edtname.setEnabled(true);
+            binding.edtport.setEnabled(true);
+        }else{
+            binding.buttonProtocolCancelrequestText.setText(getResources().getString(R.string.edit));
+            binding.edtid.setEnabled(false);
+            binding.edtip.setEnabled(false);
+            binding.edtname.setEnabled(false);
+            binding.edtport.setEnabled(false);
+        }
     }
 }
