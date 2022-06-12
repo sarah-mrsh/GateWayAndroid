@@ -234,19 +234,18 @@
                                 android:layout_weight="0.0"
                                 android:text="@string/host" />
 
-                            <EditText
+                            <com.example.fanp.utils.IpEdt
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="0.7"
                                 android:gravity="center"
                                 android:hint="@string/ip"
                                 android:text="@={viewmodel.ip}"
-
                                 android:imeOptions="actionNext"
                                 android:inputType="text"
                                 android:maxLines="1" />
 
-                            <EditText
+                            <com.example.fanp.utils.PortEdt
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="0.7"
@@ -254,7 +253,6 @@
                                 android:hint="@string/port"
                                 android:text="@={viewmodel.port}"
                                 android:imeOptions="actionNext"
-                                android:inputType="number"
                                 android:maxLines="1" />
                         </LinearLayout>
 

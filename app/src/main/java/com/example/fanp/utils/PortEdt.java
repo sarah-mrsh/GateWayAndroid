@@ -2,9 +2,9 @@ package com.example.fanp.utils;
 
 import android.content.Context;
 import android.text.Editable;
+import android.text.InputType;
 import android.text.TextWatcher;
 import android.util.AttributeSet;
-import android.widget.EditText;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -12,7 +12,7 @@ import androidx.annotation.Nullable;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class NameEdt extends androidx.appcompat.widget.AppCompatEditText {
+public class PortEdt extends androidx.appcompat.widget.AppCompatEditText {
 
     public boolean valid = false;
 
@@ -49,7 +49,7 @@ public class NameEdt extends androidx.appcompat.widget.AppCompatEditText {
         @Override
         public void afterTextChanged(Editable s) {
             String outputedText = s.toString();
-            if (outputedText.length() < 50 && outputedText.length() > 2) {
+            if (outputedText.length() <= 4 && outputedText.length() > 2) {
                 if (validate(outputedText))
                     valid = (true);
             } else {
@@ -58,33 +58,32 @@ public class NameEdt extends androidx.appcompat.widget.AppCompatEditText {
         }
     };
 
-    public NameEdt(@NonNull Context context) {
+    public PortEdt(@NonNull Context context) {
         super(context);
         addTextChangedListener(watcher);
+        setInputType(InputType.TYPE_CLASS_NUMBER);
+        setMaxEms(4);
     }
 
-    public NameEdt(@NonNull Context context, @Nullable AttributeSet attrs) {
+    public PortEdt(@NonNull Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
         addTextChangedListener(watcher);
+        setInputType(InputType.TYPE_CLASS_NUMBER);
+        setMaxEms(4);
 
     }
 
-    public NameEdt(@NonNull Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
+    public PortEdt(@NonNull Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         addTextChangedListener(watcher);
+        setInputType(InputType.TYPE_CLASS_NUMBER);
+        setMaxEms(4);
+
+
     }
 
     public boolean validate(final String hex) {
-
-        Pattern pattern = Pattern.compile(Name_PATTERN);
-        Matcher matcher = pattern.matcher(hex);
-        if (matcher.find()) {
-            return true;
-        } else {
-            return false;
-            // TODO handle condition when input doesn't have an email address
-        }
-
+        return true;
     }
 
 

@@ -2,6 +2,7 @@ package com.example.fanp.presentation.modbus.tcp;
 
 import android.content.Context;
 import android.content.Intent;
+import android.widget.Toast;
 
 import androidx.lifecycle.ViewModel;
 
@@ -32,7 +33,8 @@ public class MainModeBusTCPViewModel extends ViewModel {
     I4AllSettingDao db;
 
     @Inject
-    public MainModeBusTCPViewModel(){}
+    public MainModeBusTCPViewModel() {
+    }
 
 
     public void savedata() {
@@ -47,11 +49,11 @@ public class MainModeBusTCPViewModel extends ViewModel {
         }
 
         I4AllSetting data = db.getitembyId(505);
-        if (data==null){
+        if (data == null) {
             String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
-            data = new I4AllSetting(0,505,object.toString(),false,timeStamp);
+            data = new I4AllSetting(0, 505, object.toString(), false, timeStamp);
             db.insert(data);
-        }else{ // update data
+        } else { // update data
             String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
             data.setDateTime(timeStamp);
             data.setItemsData(object.toString());
@@ -65,7 +67,11 @@ public class MainModeBusTCPViewModel extends ViewModel {
     }
 
     public void serverlist() {
-        main.startActivity(new Intent(main, ServerList.class));
+        I4AllSetting data = db.getitembyId(505);
+        if (data == null) {
+            Toast.makeText(main, "Master Is Null", Toast.LENGTH_SHORT).show();
+        } else
+            main.startActivity(new Intent(main, ServerList.class));
     }
 
 

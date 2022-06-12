@@ -3,6 +3,7 @@ package com.example.fanp.presentation.modbus.rtu;
 import android.content.Intent;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Toast;
 
 import androidx.annotation.VisibleForTesting;
 import androidx.lifecycle.ViewModel;
@@ -96,6 +97,10 @@ main.finish();
     }
 
     public void serverlist(){
+        I4AllSetting data = db.getitembyId(512);
+        if (data==null){
+            Toast.makeText(main, "Master Is Null", Toast.LENGTH_SHORT).show();
+        }else
         main.startActivity(new Intent(main, ServerListRtu.class));
 
     }

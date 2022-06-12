@@ -41,20 +41,28 @@ public class MainModbusTCP extends DaggerAppCompatActivity {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main_modbus_tcp);
         viewmodel = ViewModelProviders.of(this, providerFactory).get(MainModeBusTCPViewModel.class);
         binding.setViewmodel(viewmodel);
-        viewmodel.main=this;
+        viewmodel.main = this;
 
 
         I4AllSetting data = db.getitembyId(505);
-        if (data!=null){
-        try {//TODO CHANGE FORMULAE
-            JSONObject object  =new JSONObject(data.getItemsData());
-            if (object.has("devicename")){viewmodel.devicename = object.getString("devicename");}
-            if (object.has("deviceid")){viewmodel.deviceid = object.getString("deviceid");}
-            if (object.has("ip")){viewmodel.ip = object.getString("ip");}
-            if (object.has("port")){viewmodel.port = object.getString("port");}
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
+        if (data != null) {
+            try {
+                JSONObject object = new JSONObject(data.getItemsData());
+                if (object.has("devicename")) {
+                    viewmodel.devicename = object.getString("devicename");
+                }
+                if (object.has("deviceid")) {
+                    viewmodel.deviceid = object.getString("deviceid");
+                }
+                if (object.has("ip")) {
+                    viewmodel.ip = object.getString("ip");
+                }
+                if (object.has("port")) {
+                    viewmodel.port = object.getString("port");
+                }
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
 
         }
 

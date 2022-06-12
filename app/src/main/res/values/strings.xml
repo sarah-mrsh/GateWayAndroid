@@ -134,7 +134,7 @@
     <string name="connected">Connected</string>
     <string name="devicename">Device Name</string>
     <string name="deviceid">Device ID</string>
-    <string name="serverlist">Server List</string>
+    <string name="serverlist">Slave List</string>
     <string name="modbustcp">ModbusTCP</string>
     <string name="Baudrate">Baud rate</string>
     <string name="parity">Parity</string>

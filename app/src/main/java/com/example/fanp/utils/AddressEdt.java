@@ -15,24 +15,7 @@ public class AddressEdt extends androidx.appcompat.widget.AppCompatEditText {
 
     public boolean valid = false;
 
-    private Pattern pattern;
-    private Matcher matcher;
 
-
-    private static final String Name_PATTERN = "^[_A-Za-z0-9-]";
-
-
-    @Override
-    public void setTag(Object tag) {
-        super.setTag(tag);
-
-    }
-
-    @Override
-    public Object getTag() {
-        return super.getTag();
-
-    }
 
     TextWatcher watcher = new TextWatcher() {
         @Override
@@ -48,7 +31,7 @@ public class AddressEdt extends androidx.appcompat.widget.AppCompatEditText {
         @Override
         public void afterTextChanged(Editable s) {
             String outputedText = s.toString();
-            if (outputedText.length() < 64 && outputedText.length() > 2) {
+            if (outputedText.length() < 256 && outputedText.length() > 2) {
                 if (validate(outputedText))
                     valid = (true);
             } else {
@@ -72,18 +55,20 @@ public class AddressEdt extends androidx.appcompat.widget.AppCompatEditText {
         super(context, attrs, defStyleAttr);
         addTextChangedListener(watcher);
 
+
     }
 
     public boolean validate(final String hex) {
 
-        Pattern pattern = Pattern.compile(Name_PATTERN);
-        Matcher matcher = pattern.matcher(hex);
-        if (matcher.find()) {
-            return true;
-        } else {
-            return false;
-            // TODO handle condition when input doesn't have an email address
-        }
+        return true;
+//        Pattern pattern = Pattern.compile(Name_PATTERN);
+//        Matcher matcher = pattern.matcher(hex);
+//        if (matcher.find()) {
+//            return true;
+//        } else {
+//            return false;
+//            // TODO handle condition when input doesn't have an email address
+//        }
 
     }
 
