@@ -47,7 +47,7 @@
                         android:layout_weight="0.0"
                         android:text="@string/slavename" />
 
-                    <EditText
+                    <com.example.fanp.utils.NameEdt
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.7"
@@ -70,7 +70,7 @@
                         android:layout_weight="0.0"
                         android:text="@string/ip" />
 
-                    <EditText
+                    <com.example.fanp.utils.IpEdt
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.7"
@@ -107,7 +107,7 @@
                         android:layout_weight="0.0"
                         android:text="@string/slaveid" />
 
-                    <EditText
+                    <com.example.fanp.utils.IdEdt
                         android:id="@+id/edtid"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -131,7 +131,7 @@
                         android:layout_weight="0.0"
                         android:text="@string/port" />
 
-                    <EditText
+                    <com.example.fanp.utils.PortEdt
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.7"

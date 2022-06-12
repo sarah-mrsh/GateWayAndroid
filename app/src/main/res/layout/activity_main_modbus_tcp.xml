@@ -73,7 +73,7 @@
                         android:layout_weight="0.0"
                         android:text="@string/ip" />
 
-                    <EditText
+                    <com.example.fanp.utils.IpEdt
                         android:id="@+id/edtip"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -114,7 +114,7 @@
                         android:layout_weight="0.0"
                         android:text="@string/deviceid" />
 
-                    <EditText
+                    <com.example.fanp.utils.IdEdt
                         android:id="@+id/edtid"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"

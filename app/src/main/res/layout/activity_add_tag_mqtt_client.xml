@@ -73,7 +73,7 @@
                     android:layout_weight="0.0"
                     android:text="@string/tagid" />
 
-                <EditText
+                <com.example.fanp.utils.IdEdt
                     android:id="@+id/edttagid"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

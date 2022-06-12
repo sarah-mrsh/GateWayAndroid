@@ -44,7 +44,7 @@
                         android:layout_weight="0.0"
                         android:text="@string/functionblockname" />
 
-                    <EditText
+                    <com.example.fanp.utils.NameEdt
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.7"

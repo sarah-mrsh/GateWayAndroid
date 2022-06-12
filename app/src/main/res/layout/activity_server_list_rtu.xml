@@ -97,7 +97,7 @@
                     android:layout_marginTop="5dp"
                     android:layout_marginEnd="15dp"
                     android:background="@drawable/transparent_yellow_border"
-                    android:onClick="@{()->viewmodel.savedata()}"
+                    android:onClick="@{()->viewmodel.addserver()}"
                     android:textColor="@color/white" />
 
                 <TextView
@@ -106,7 +106,7 @@
                     android:layout_height="50dp"
                     android:gravity="center|center_vertical"
                     android:maxLines="1"
-                    android:text="@string/save"
+                    android:text="@string/add"
                     android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
                     android:textColor="@color/white"
                     android:textSize="16sp" />
@@ -144,6 +144,7 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
+                android:visibility="invisible"
                 android:layout_gravity="center_vertical"
                 android:layout_marginBottom="10dp"
                 android:layout_weight="0.5">
@@ -155,7 +156,6 @@
                     android:layout_marginTop="5dp"
                     android:layout_marginEnd="15dp"
                     android:background="@drawable/transparent_yellow_border"
-                    android:onClick="@{()->viewmodel.exit()}"
                     android:textColor="@color/white" />
 
                 <TextView
@@ -184,7 +184,7 @@
                     android:layout_marginTop="5dp"
                     android:layout_marginEnd="15dp"
                     android:background="@drawable/transparent_yellow_border"
-                    android:onClick="@{()->viewmodel.serverlist()}"
+                    android:onClick="@{()->viewmodel.exit()}"
                     android:textColor="@color/white" />
 
                 <TextView
@@ -192,7 +192,7 @@
                     android:layout_height="50dp"
                     android:gravity="center|center_vertical"
                     android:maxLines="1"
-                    android:text="@string/serverlist"
+                    android:text="@string/back"
                     android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
                     android:textColor="@color/white"
                     android:textSize="16sp" />

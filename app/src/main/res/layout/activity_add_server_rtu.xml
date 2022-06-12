@@ -46,7 +46,7 @@
                         android:layout_weight="0.0"
                         android:text="@string/devicename" />
 
-                    <EditText
+                    <com.example.fanp.utils.NameEdt
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.7"
@@ -69,7 +69,7 @@
                         android:layout_weight="0.0"
                         android:text="@string/modbusaddress" />
 
-                    <EditText
+                    <com.example.fanp.utils.AddressEdt
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.7"
@@ -106,7 +106,7 @@
                         android:layout_weight="0.0"
                         android:text="@string/deviceid" />
 
-                    <EditText
+                    <com.example.fanp.utils.IdEdt
                         android:layout_width="wrap_content"
                         android:id="@+id/deviceid"
                         android:layout_height="wrap_content"
