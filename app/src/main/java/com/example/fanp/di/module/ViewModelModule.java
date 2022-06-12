@@ -41,6 +41,8 @@ import com.example.fanp.presentation.s7.tag.datablock.AddTagDataBlockViewModel;
 import com.example.fanp.presentation.s7.tag.datablock.TagListDataBlockViewModel;
 import com.example.fanp.presentation.s7.tag.io.AddTagIOViewmodel;
 import com.example.fanp.presentation.s7.tag.io.TagListIOViewModel;
+import com.example.fanp.presentation.s7.tag.memory.AddTagMemoryViewModel;
+import com.example.fanp.presentation.s7.tag.memory.TagListMemoryVIewModel;
 import com.example.fanp.presentation.serialactivity.SerialViewModel;
 import com.example.fanp.presentation.wifi.WifiViewModel;
 
@@ -275,5 +277,14 @@ public abstract class ViewModelModule {
     public abstract ViewModel bindsMainParameterViewModel(MainParameterViewModel viewModel);
 
 
+    @Binds
+    @IntoMap
+    @ViewModelKey(TagListMemoryVIewModel.class)
+    public abstract ViewModel bindsTagListMemoryVIewModel(TagListMemoryVIewModel viewModel);
+
+    @Binds
+    @IntoMap
+    @ViewModelKey(AddTagMemoryViewModel.class)
+    public abstract ViewModel bindsAddTagMemoryViewModel(AddTagMemoryViewModel viewModel);
 
 }

@@ -7,6 +7,7 @@ import androidx.lifecycle.ViewModel;
 import com.example.fanp.presentation.s7.tag.datablock.TagListDatablock;
 import com.example.fanp.presentation.s7.tag.io.AddTagIo;
 import com.example.fanp.presentation.s7.tag.io.TagListIo;
+import com.example.fanp.presentation.s7.tag.memory.TaglistMemory;
 
 import javax.inject.Inject;
 
@@ -28,6 +29,9 @@ public class MainTagViewModel extends ViewModel {
 
     public void tagio(){
         main.startActivity(new Intent(main, TagListIo.class));
+    }
+    public void memoryTag(){
+        main.startActivity(new Intent(main, TaglistMemory.class));
     }
 
 

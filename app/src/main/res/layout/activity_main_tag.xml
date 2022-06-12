@@ -60,6 +60,7 @@
             android:layout_marginTop="8dp"
             android:background="#52FFFFFF"
             android:gravity="center"
+            android:onClick="@{()->viewmodel.memoryTag()}"
             android:layout_marginStart="12dp"
             android:padding="6dp"
             android:text="@string/memorytagsetting" />

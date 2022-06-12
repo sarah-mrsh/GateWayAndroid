@@ -2,12 +2,15 @@ package com.example.fanp.presentation.mqtt.clientmqtt.addtag;
 
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.lifecycle.ViewModel;
 
 import com.example.fanp.domain.local.data.I4AllSettingDao;
 import com.example.fanp.domain.local.repository.I4AllSetting;
 import com.example.fanp.presentation.mqtt.clientmqtt.taglist.TagListMqttClient;
+import com.example.fanp.utils.NameEdt;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -40,7 +43,11 @@ public class AddTagMqttViewModel extends ViewModel {
 
     }
 
-    public void savedata() {
+    public void savedata(NameEdt item) {
+        if (!item.valid){
+            Toast.makeText(main, "validation failed", Toast.LENGTH_SHORT).show();
+            return;
+        }
         JSONObject object = new JSONObject();
         try {
             object.put("tagname", tagname);

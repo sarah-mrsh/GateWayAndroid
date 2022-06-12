@@ -20,7 +20,6 @@ import com.example.fanp.presentation.s7.manageplc.datablockplc.AdapterDataBlockP
 import com.example.fanp.presentation.s7.manageplc.datablockplc.DatablockplcViewModel;
 import com.example.fanp.presentation.s7.manageplc.datablockplc.ListDatablockplcImpl;
 import com.example.fanp.presentation.s7.manageplc.functionblock.addfunctionblock.AddFunctionBlockPlc;
-import com.example.fanp.presentation.s7.manageplc.functionblock.parameters.AdapterPrameterFunctionBloc;
 import com.example.fanp.presentation.s7.manageplc.functionblock.parameters.MainParameter;
 
 import java.util.List;
