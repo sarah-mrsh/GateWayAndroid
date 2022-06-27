@@ -9,9 +9,9 @@
     </string-array>
 
     <string-array name="qos">
-        <item>0 - Almost Once</item>
-        <item>1 - Almost Once</item>
-        <item>2 - Exactly Once</item>
+        <item>Almost Once</item>
+        <item>Atleast Once</item>
+        <item>Exactly Once</item>
         <item>ALL</item>
     </string-array>
 

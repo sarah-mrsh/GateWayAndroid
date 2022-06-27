@@ -67,24 +67,24 @@ message ModbusConfigResponse {
 
 message ModbusConfig {
     message ModbusDevice{
-        string clientName = 1;
-        string clientID = 2;
-        bool rtuOrTcp = 3;
+        bool rtuOrTcp = 1;
         message ModbusRTUSlaves {
-            BaudRate baudRate = 1;
-            Parity parity = 2;
-            int32 startBit = 3;
-            int32 stopBit = 4;
-            int32 dataBit = 5;
+            string clientName = 1;
+            string clientID = 2;
+            BaudRate baudRate = 3;
+            Parity parity = 4;
+            int32 startBit = 5;
+            int32 stopBit = 6;
+            int32 dataBit = 7;
         }
         message ModbusTCPSlaves{
-            string deviceId=1;
-            string deviceName=2;
+            string clientName=1;
+            string clientID=2;
             string IP = 3;
             int32 port = 4;
         }
-        ModbusRTUSlaves modbusRTUSlaves = 4;
-        ModbusTCPSlaves modbusTCPSlaves = 5;
+        ModbusRTUSlaves modbusRTUSlaves = 2;
+        ModbusTCPSlaves modbusTCPSlaves = 3;
         message ModbusTag{
             string tagName = 1;
             string tagId = 2;
@@ -95,7 +95,7 @@ message ModbusConfig {
             int32 startingAddress = 7;
             int32 numberOfRegisters = 8;
         }
-        repeated  ModbusTag modbusTag =6;
+        repeated  ModbusTag modbusTag =4;
     }
     repeated ModbusDevice modbusDevice =1;
 }

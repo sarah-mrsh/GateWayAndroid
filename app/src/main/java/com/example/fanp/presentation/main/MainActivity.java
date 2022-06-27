@@ -5,14 +5,17 @@ import androidx.lifecycle.ViewModelProviders;
 
 import android.content.Context;
 import android.content.res.Configuration;
+import android.content.res.Resources;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.widget.Toast;
 
 import com.example.fanp.Command;
 import com.example.fanp.CommandResponce;
 import com.example.fanp.CommandType;
+import com.example.fanp.MyContextWrapper;
 import com.example.fanp.R;
 import com.example.fanp.SystemCommandGrpc;
 import com.example.fanp.databinding.ActivityMainBinding;
@@ -65,15 +68,15 @@ public class MainActivity extends DaggerAppCompatActivity {
     @Inject
     WifiDao wifidb;
 
+
+    @Override
+    public Context getBaseContext() {
+      return MyContextWrapper.wrap(getApplicationContext(),"fa");
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Locale locale = new Locale("fa");
-        Locale.setDefault(locale);
-        Configuration config = getBaseContext().getResources().getConfiguration();
-        config.locale = locale;
-        getBaseContext().getResources().updateConfiguration(config,
-                getBaseContext().getResources().getDisplayMetrics());
 
 
         List<WifiSetting> list = wifidb.all();

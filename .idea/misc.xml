@@ -4,6 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="../../../../layout/custom_preview.xml" value="0.10182370820668693" />
+        <entry key="../../../../media/nouri/sdk/Android.SDK.Release.26.1.1.Linux/platforms/android-32/data/res/layout/simple_spinner_dropdown_item.xml" value="0.16" />
         <entry key="app/src/main/res/drawable/ic_reports.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_account.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_add_client.xml" value="0.2" />
@@ -15,7 +16,7 @@
         <entry key="app/src/main/res/layout/activity_add_server_rtu.xml" value="0.18" />
         <entry key="app/src/main/res/layout/activity_add_servertcp.xml" value="0.2" />
         <entry key="app/src/main/res/layout/activity_add_tag.xml" value="0.17" />
-        <entry key="app/src/main/res/layout/activity_add_tag_io.xml" value="0.16" />
+        <entry key="app/src/main/res/layout/activity_add_tag_io.xml" value="0.2" />
         <entry key="app/src/main/res/layout/activity_add_tag_memory.xml" value="0.18" />
         <entry key="app/src/main/res/layout/activity_add_tag_mqtt_client.xml" value="0.18" />
         <entry key="app/src/main/res/layout/activity_add_tag_tcp.xml" value="0.2" />
@@ -30,7 +31,7 @@
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_main_mod_bus_rtu.xml" value="0.14" />
         <entry key="app/src/main/res/layout/activity_main_modbus_tcp.xml" value="0.22" />
-        <entry key="app/src/main/res/layout/activity_main_mqtt_client.xml" value="0.18" />
+        <entry key="app/src/main/res/layout/activity_main_mqtt_client.xml" value="0.12" />
         <entry key="app/src/main/res/layout/activity_main_parameter.xml" value="0.14" />
         <entry key="app/src/main/res/layout/activity_main_s7.xml" value="0.22" />
         <entry key="app/src/main/res/layout/activity_main_tag.xml" value="0.16" />
@@ -51,8 +52,8 @@
         <entry key="app/src/main/res/layout/activity_taglist_memory.xml" value="0.18" />
         <entry key="app/src/main/res/layout/activity_taglist_tcp.xml" value="0.14" />
         <entry key="app/src/main/res/layout/dialogwifi_detaile.xml" value="0.23567708333333334" />
-        <entry key="app/src/main/res/layout/fragment_convertprotocol.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/fragment_financial.xml" value="0.23567708333333334" />
+        <entry key="app/src/main/res/layout/fragment_convertprotocol.xml" value="0.15" />
+        <entry key="app/src/main/res/layout/fragment_financial.xml" value="0.12" />
         <entry key="app/src/main/res/layout/fragment_general_setting.xml" value="0.23567708333333334" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.18" />
         <entry key="app/src/main/res/layout/fragment_special_setting.xml" value="0.18" />

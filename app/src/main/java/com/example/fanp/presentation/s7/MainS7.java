@@ -24,9 +24,13 @@ import java.util.List;
 import javax.inject.Inject;
 
 import dagger.android.support.DaggerAppCompatActivity;
+import io.grpc.ManagedChannel;
 
 public class MainS7 extends DaggerAppCompatActivity {
 
+
+    @Inject
+    ManagedChannel channel;
 
     @Inject
     ViewModelProviderFactory providerFactory;
@@ -52,6 +56,8 @@ public class MainS7 extends DaggerAppCompatActivity {
         binding.setViewmodel(viewmodel);
         viewmodel.main = this;
 
+
+        new S7Grpc(channel,db).update();
 
     }
 

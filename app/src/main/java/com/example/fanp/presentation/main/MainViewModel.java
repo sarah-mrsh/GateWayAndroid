@@ -118,7 +118,6 @@ public class MainViewModel extends ViewModel {
         resetcolor();
         main.binding.txtconvertprotocol.setTextColor(ctx.getResources().getColor(R.color.main_yellow));
         main.binding.imgconvert.setColorFilter(ctx.getResources().getColor(R.color.main_yellow));
-        convertProtocol.setdata();
         replace_frame(convertProtocol);
     }
 
