@@ -147,7 +147,7 @@
                     android:layout_height="50dp"
                     android:layout_weight="0.7"
                     android:onItemSelected="@{(parent,view,pos,id)->viewmodel.onSelectfunctioncode(parent,view,pos,id)}"
-                    android:entries="@array/Function"
+                    android:entries="@array/functioncode"
                     android:gravity="center"/>
             </LinearLayout>
 

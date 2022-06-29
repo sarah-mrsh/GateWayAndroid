@@ -137,7 +137,7 @@
                         android:layout_height="50dp"
                         android:layout_weight="0.7"
                         android:onItemSelected="@{(parent,view,pos,id)->viewmodel.onSelectType(parent,view,pos,id)}"
-                        android:entries="@array/DataTypeM"
+                        android:entries="@array/datattype"
                         android:gravity="center" />
                 </LinearLayout>
 
@@ -217,7 +217,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="50dp"
                         android:layout_weight="0.7"
-                        android:entries="@array/Function"
+                        android:entries="@array/functioncode"
                         android:onItemSelected="@{(parent,view,pos,id)->viewmodel.onSelectFunction(parent,view,pos,id)}"
                         android:gravity="center" />
                 </LinearLayout>

@@ -93,13 +93,7 @@ public class ConvertProtocol extends BasicFragment {
         });
         //Now specific components here (you can initialize Buttons etc)
 
-        view.findViewById(R.id.button_engineering_history).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                save();
-                new convertgrpc().execute();
-            }
-        });
+
 
 
         setdata();
@@ -300,35 +294,4 @@ public class ConvertProtocol extends BasicFragment {
             Log.e("APP", "onPostExecute");
         }
     }
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

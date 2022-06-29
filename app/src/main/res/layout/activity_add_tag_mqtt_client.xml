@@ -116,7 +116,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="50dp"
                     android:layout_weight="0.7"
-                    android:entries="@array/Type"
+                    android:entries="@array/tagtype"
                     android:onItemSelected="@{(parent,view,pos,id)->viewmodel.onSelectItempdatattype(parent,view,pos,id)}"
                     />
 

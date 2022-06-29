@@ -173,7 +173,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="50dp"
                         android:layout_weight="0.7"
-                        android:entries="@array/FunctionCode"
+                        android:entries="@array/functioncode"
                         android:onItemSelected="@{(parent,view,pos,id)->viewmodel.onSelectItemfunction(parent,view,pos,id)}"
                         />
 
@@ -196,7 +196,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="50dp"
                         android:layout_weight="0.7"
-                        android:entries="@array/DataType"
+                        android:entries="@array/datattype"
                         android:onItemSelected="@{(parent,view,pos,id)->viewmodel.onSelectItempdatattype(parent,view,pos,id)}"
                         />
 
