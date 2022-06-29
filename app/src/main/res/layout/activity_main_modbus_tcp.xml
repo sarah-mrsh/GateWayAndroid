@@ -27,6 +27,21 @@
 
         <LinearLayout
             android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="20dp">
+
+            <com.example.fanp.utils.Shabnambold
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.0"
+                android:text="@string/modbustcpconf"
+                android:textSize="20dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="350dp"
             android:orientation="horizontal">
 
@@ -49,7 +64,7 @@
                         android:layout_weight="0.0"
                         android:text="@string/devicename" />
 
-                    <EditText
+                    <com.example.fanp.utils.NameEdt
                         android:id="@+id/edtname"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -73,7 +88,7 @@
                         android:layout_weight="0.0"
                         android:text="@string/ip" />
 
-                    <EditText
+                    <com.example.fanp.utils.IpEdt
                         android:id="@+id/edtip"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -114,7 +129,7 @@
                         android:layout_weight="0.0"
                         android:text="@string/deviceid" />
 
-                    <EditText
+                    <com.example.fanp.utils.IdEdt
                         android:id="@+id/edtid"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -138,7 +153,7 @@
                         android:layout_weight="0.0"
                         android:text="@string/port" />
 
-                    <EditText
+                    <com.example.fanp.utils.PortEdt
                         android:id="@+id/edtport"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -183,7 +198,7 @@
                     android:onClick="@{()->viewmodel.savedata()}"
                     android:textColor="@color/white" />
 
-                <TextView
+                <com.example.fanp.utils.Shabnammid
                     android:id="@+id/button_protocol_cancelrequest_text"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
@@ -241,7 +256,7 @@
                     android:onClick="@{()->viewmodel.exit()}"
                     android:textColor="@color/white" />
 
-                <TextView
+                <com.example.fanp.utils.Shabnammid
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:gravity="center|center_vertical"
@@ -270,7 +285,7 @@
                     android:onClick="@{()->viewmodel.serverlist()}"
                     android:textColor="@color/white" />
 
-                <TextView
+                <com.example.fanp.utils.Shabnammid
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:gravity="center|center_vertical"

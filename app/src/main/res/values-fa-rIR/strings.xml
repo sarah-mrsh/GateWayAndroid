@@ -18,7 +18,6 @@
     <string name="edit">ویرایش</string>
     <string name="delete">حذف</string>
     <string name="add">افزودن</string>
-
     <string name="brokerName">نام بروکر</string>
     <string name="port">پورت</string>
     <string name="address">آدرس</string>
@@ -29,7 +28,6 @@
     <string name="tagmanagment">مدیریت تگ</string>
     <string name="clientname">نام کلاینت</string>
     <string name="clientid">شناسه کلاینت</string>
-
     <string name="host">هاست</string>
     <string name="keepAlive">Keep Alive</string>
     <string name="userName">نام کاربری</string>
@@ -62,7 +60,7 @@
     <string name="enterlansetting">لطفا در این صفحه تنظیمات درگاه LAN را ثبت نمایید.</string>
     <string name="protocolmanagement">مدیریت پروتکل</string>
     <string name="history">تاریخچه</string>
-    <string name="serialsetting">تنظیمات سریال</string>
+    <string name="serialsetting">تنظیمات درگاه سریال</string>
     <string name="specifystatusRS485port">لطفا وضعیت پورت RS485 را تعیین نمایید.</string>
     <string name="cancel">انصراف</string>
     <string name="next">بعدی</string>
@@ -76,9 +74,6 @@
     <string name="maxclient">ماکزیمم کلاینت</string>
     <string name="qos">QOS</string>
     <string name="retainmessage">زمان نگهداری پیام</string>
-
-
-
     <string name="cleansession">Clean Session</string>
     <string name="sendtimestamp">ارسال Time Stamp</string>
     <string name="willpayload">محتوی وصیت</string>
@@ -89,7 +84,7 @@
     <string name="compatiblemqttversition3">سازگار با mqtt 3.1.1</string>
     <string name="maintaine">حفظ وصیت</string>
     <string name="willcardsub">Willcard Sub</string>
-    <string name="sessiontime">SessionTime</string>
+    <string name="sessiontime">Session Time</string>
     <string name="tagmanagement">مدیریت تگ</string>
     <string name="tagname">نام تگ</string>
     <string name="access">دسترسی</string>
@@ -104,25 +99,24 @@
     <string name="Private">Private</string>
     <string name="confirm">تایید</string>
     <string name="mqtt">MQTT</string>
-
     <string name="mask">mask</string>
     <string name="wifi_setting_desc">تنظیمات وای فای</string>
     <string name="gateway">gateway</string>
     <string name="autoconnect">اتصال اتوماتیک</string>
     <string name="dhcp">DHCP</string>
     <string name="savednetwork">شبکه ذخیره شده</string>
-    <string name="refresh">بروز رسانی</string>
+    <string name="refresh">به روز رسانی</string>
     <string name="active">فعال کردن</string>
-    <string name="wifidesc">لطفا شبکه وای فای را انتخاب کنید</string>
+    <string name="wifidesc">لطفا شبکه وای فای را انتخاب کنید.</string>
     <string name="connected">Connected</string>
     <string name="devicename">نام دستگاه</string>
     <string name="deviceid">شناسه دستگاه</string>
-    <string name="serverlist">لیست slave</string>
+    <string name="serverlist">لیست Slave</string>
     <string name="modbustcp">ModbusTCP</string>
-    <string name="Baudrate">Baud rate</string>
+    <string name="Baudrate">Baud Rate</string>
     <string name="parity">بیت توازن</string>
     <string name="startbit">بیت شروع</string>
-    <string name="endbit">بیت پایان</string>
+    <string name="Stopbit">بیت پایان</string>
     <string name="databit">بیت داده</string>
     <string name="modbusaddress">آدرس مادباس</string>
     <string name="tagid">شناسه تگ</string>
@@ -135,7 +129,7 @@
     <string name="modbusrtu">ModBus RTU</string>
     <string name="manageplc">مدیریت PLC</string>
     <string name="plcsetting">تنظیمات PLC</string>
-    <string name="datablock">Data block</string>
+    <string name="datablock">Data Block</string>
     <string name="operationblock">Function Block</string>
     <string name="plcname">نام PLC</string>
     <string name="plcid">شناسه PLC</string>
@@ -153,7 +147,7 @@
     <string name="bitcount">شماره بیت </string>
     <string name="forget">فراموش کردن</string>
     <string name="blockdataid">شماره دیتا بلاک</string>
-    <string name="timeout">Timeout</string>
+    <string name="timeout">Time out</string>
     <string name="convertto">"تبدیل به "</string>
     <string name="s7setting">تنظیمات S7</string>
     <string name="plclist">PLC لیست</string>
@@ -162,13 +156,56 @@
     <string name="fbname">نام FB</string>
     <string name="fbnumber">شماره FB</string>
     <string name="parametername">نام پارامترها</string>
-    <string name="functionblocklist">لیست function block</string>
-    <string name="slavename">نام slave</string>
-    <string name="slaveid">شناسه slave</string>
-    <string name="functionblockname">نام functionblock</string>
-    <string name="Functionblocknumber">شماره functionblock</string>
+    <string name="functionblocklist">لیست Function Block</string>
+    <string name="slavename">نام Slave</string>
+    <string name="slaveid">شناسه Slave</string>
+    <string name="functionblockname">نام Function Block</string>
+    <string name="Functionblocknumber">شماره Function Block</string>
     <string name="addparameter">افزودن پارامتر</string>
     <string name="parametertype">نوع پارامتر</string>
+    <string name="Prove">بله</string>
+    <string name="Disprove">خیر</string>
+    <string name="Function">Function</string>
+    <string name="FunctionBlock">Function Block</string>
+    <string name="MQTTConf">تنظیمات MQTT کلاینت</string>
+    <string name="DataBlockconf">تنظیمات Data Block</string>
+    <string name="DBtagconf">تنظیمات تگ Data Block</string>
+    <string name="FBconf">تنظیمات Function Block</string>
+    <string name="PLCconf">تنظیمات PLC</string>
+    <string name="Parameterdef">تعریف پارامتر</string>
+    <string name="Slaveconfrtu">تنظیمات RTU Slave</string>
+    <string name="Slaveconftcp">تنظیمات TCP Slave</string>
+    <string name="rtutagconf">تنظیمات تگ RTU</string>
+    <string name="tagtcpconf">تنظیمات تگ TCP</string>
+    <string name="iotagconf">تنظیمات تگ I/O</string>
+    <string name="memotagconf">تنظیمات تگ حافظه</string>
+    <string name="mqtttagconf">تنظیمات تگ MQTT</string>
+    <string name="brokerconf">تنظیمات بروکر</string>
+    <string name="mqttclientlist">لیست  کلاینت MQTT</string>
+    <string name="memoaddress">آدرس حافظه</string>
+    <string name="datablocklist">لیست Data Block</string>
+    <string name="datablockid">شناسه Data Block</string>
+    <string name="datablockname">نام Data Block</string>
+    <string name="intervalbrokertaglist">لیست تگ های بروکر داخلی</string>
+    <string name="modbusrtuconf">تنظیمات Modbus-RTU</string>
+    <string name="modbustcpconf">تنظیمات Modbus-TCP</string>
+    <string name="parameterlist">لیست پارامترها</string>
+    <string name="datablocktagsetting">تنظیمات تگ Data Block</string>
+    <string name="mqttBrokersList">لیست بروکر های MQTT</string>
+    <string name="mqttbroker">بروکر MQTT</string>
+    <string name="mqttclient">کلاینت MQTT</string>
+    <string name="slavelist">لیست Slave</string>
+    <string name="taglist">لیست تگ</string>
+    <string name="datablocktaglist">لیست تگ Data Block</string>
+    <string name="iotaglist">لیست تگ I/O</string>
+    <string name="memotaglist">لیست تگ حافظه</string>
+    <string name="topiclist">لیست تاپیک</string>
+    <string name="enabledisable">فعال / غیر فعال</string>
+    <string name="serialportactivation">فعال / غیرفعال کردن درگاه سریال RS485 شماره 1</string>
+    <string name="serialportactivation1">فعال / غیرفعال کردن درگاه سریال RS485 شماره 2</string>
+    <string name="serialportactivation2">فعال / غیرفعال کردن درگاه سریال RS422</string>
+    <string name="protocolconversion">تبدیل پروتکل</string>
+    <string name="settings">تنظیمات</string>
 
 
 </resources>

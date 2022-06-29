@@ -20,6 +20,8 @@ public class HomeFragment extends BasicFragment {
     public View provideYourFragmentView(LayoutInflater inflater, ViewGroup parent, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_home,parent,false);
 
+
+
         //Now specific components here (you can initialize Buttons etc)
 
         return view;

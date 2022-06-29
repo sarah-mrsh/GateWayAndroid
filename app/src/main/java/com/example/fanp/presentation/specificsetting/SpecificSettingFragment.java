@@ -14,6 +14,7 @@ import com.example.fanp.presentation.modbus.tcp.MainModbusTCP;
 import com.example.fanp.presentation.mport.MportActivity;
 import com.example.fanp.presentation.mqtt.broker.brokersetting.BrokerSetting;
 import com.example.fanp.presentation.mqtt.clientmqtt.MainMqttClient;
+import com.example.fanp.presentation.protocolmanagment.MProtocolManagment;
 import com.example.fanp.presentation.s7.MainS7;
 import com.example.fanp.utils.BasicFragment;
 
@@ -48,39 +49,19 @@ public class SpecificSettingFragment extends BasicFragment {
                 getActivity().startActivity(new Intent(getActivity(), MportActivity.class));
             }
         });
+
+        ImageButton building_button_protocol_button = (ImageButton) view.findViewById(R.id.building_button_protocol_button);
+        building_button_protocol_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getActivity().startActivity(new Intent(getActivity(), MProtocolManagment.class));
+            }
+        });
         //Now specific components here (you can initialize Buttons etc)
 
-        view.findViewById(R.id.txtmqtt).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(getActivity(), BrokerSetting.class));
-            }
-        });
-        view.findViewById(R.id.txtmodbus).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(getActivity(), MainModbusTCP.class));
-            }
-        });
-        view.findViewById(R.id.txtmodbusrtu).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(getActivity(), MainModBusRTU.class));
-            }
-        });
-        view.findViewById(R.id.txts7).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(getActivity(), MainS7.class));
-            }
-        });
 
-        view.findViewById(R.id.txtmqttclient).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(getActivity(), MainMqttClient.class));
-            }
-        });
+////////////////////////////////sara
+
 
         return view;
     }

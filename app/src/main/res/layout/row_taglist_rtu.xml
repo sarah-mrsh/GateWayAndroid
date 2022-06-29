@@ -7,7 +7,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="50dp">
-        <com.example.fanp.utils.Shabnambold
+        <com.example.fanp.utils.Shabnamlight
             android:layout_width="wrap_content"
             android:text="@string/tagname"
             android:id="@+id/tagname"
@@ -15,7 +15,7 @@
             android:gravity="center"
             android:layout_height="match_parent"/>
 
-        <com.example.fanp.utils.Shabnambold
+        <com.example.fanp.utils.Shabnamlight
             android:layout_width="wrap_content"
             android:text="@string/modbusaddress"
             android:layout_weight="0.5"
@@ -23,7 +23,7 @@
             android:visibility="invisible"
             android:layout_height="match_parent"/>
 
-        <com.example.fanp.utils.Shabnambold
+        <com.example.fanp.utils.Shabnamlight
             android:layout_width="wrap_content"
             android:text="@string/tagid"
             android:id="@+id/tagid"
@@ -31,7 +31,7 @@
             android:gravity="center"
             android:layout_height="match_parent"/>
 
-        <com.example.fanp.utils.Shabnambold
+        <com.example.fanp.utils.Shabnamlight
             android:layout_width="wrap_content"
             android:layout_weight="0.5"
             android:gravity="center"

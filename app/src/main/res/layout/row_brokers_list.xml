@@ -13,20 +13,20 @@
         <com.example.fanp.utils.Shabnamlight
             android:id="@+id/btnTagManagement"
             android:layout_width="0dp"
-            android:layout_weight="1"
             android:layout_height="match_parent"
             android:layout_marginBottom="5dp"
-            android:gravity="center|center_vertical"
+            android:layout_weight="1"
             android:background="@drawable/transparent_yellow_border"
+            android:gravity="center|center_vertical"
             android:padding="12dp"
             android:text="مدیریت تک" />
 
         <com.example.fanp.utils.Shabnamlight
             android:id="@+id/txtBrokerPort"
             android:layout_width="0dp"
-            android:layout_weight="1"
             android:layout_height="match_parent"
             android:layout_marginBottom="5dp"
+            android:layout_weight="1"
             android:gravity="center|center_vertical"
             android:padding="12dp"
             android:text="پورت" />
@@ -34,9 +34,9 @@
         <com.example.fanp.utils.Shabnamlight
             android:id="@+id/txtBrokerAddress"
             android:layout_width="0dp"
-            android:layout_weight="1"
             android:layout_height="match_parent"
             android:layout_marginBottom="5dp"
+            android:layout_weight="1"
             android:gravity="center|center_vertical"
             android:padding="12dp"
             android:text="ادرس" />
@@ -44,9 +44,9 @@
         <com.example.fanp.utils.Shabnamlight
             android:id="@+id/txtBrokersName"
             android:layout_width="0dp"
-            android:layout_weight="1"
             android:layout_height="match_parent"
             android:layout_marginBottom="5dp"
+            android:layout_weight="1"
             android:gravity="center|center_vertical"
             android:padding="12dp"
             android:text="نام بروکر" />

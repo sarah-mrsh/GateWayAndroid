@@ -16,157 +16,236 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="?attr/main_back"
-        tools:context=".presentation.protocolmanagment.MProtocolManagment">
+        tools:context=".presentation.protocolmanagment.MProtocolManagment"
+        android:layoutDirection="rtl">
 
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="fill_parent"
+            android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <TextView
+            <com.example.fanp.utils.Shabnambold
                 android:id="@+id/title_protocol_fragmentm"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="70dp"
+                android:layout_marginTop="40dp"
                 android:gravity="center"
                 android:maxLines="1"
                 android:singleLine="true"
                 android:text="@string/manageprotocol"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
-                android:textColor="#ffd505"
-                android:textSize="30sp" />
+                android:textSize="23sp" />
+
+            <LinearLayout
+                android:layout_width="450dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="30dp"
+                android:layout_weight="1"
+                android:background="@drawable/yellowborder"
+                android:gravity="right"
+                android:orientation="vertical">
+
+                <!--                <TextView-->
+                <!--                    android:id="@+id/txtmqtt"-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:gravity="center"-->
+                <!--                    android:padding="6dp"-->
+                <!--                    android:text="@string/mqttbroker" />-->
 
 
-            <ImageView
-                android:id="@+id/image_view_emptym"
+                <TextView
+                    android:id="@+id/txtmqttclient"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="#52FFFFFF"
+                    android:gravity="center"
+                    android:onClick="@{()->viewmodel.start_MainMqttClient()}"
+                    android:padding="6dp"
+                    android:text="@string/mqttclient" />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="#52FFFFFF"
+                    android:gravity="center"
+                    android:onClick="@{()->viewmodel.start_MainModBus()}"
+                    android:padding="6dp"
+                    android:text="@string/modbustcp" />
+
+
+                <TextView
+                    android:id="@+id/txtmodbusrtu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="#52FFFFFF"
+                    android:gravity="center"
+                    android:onClick="@{()->viewmodel.start_MainModBusRTU()}"
+                    android:padding="6dp"
+                    android:text="@string/modbusrtu" />
+
+                <TextView
+                    android:id="@+id/txts7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="#52FFFFFF"
+                    android:gravity="center"
+                    android:onClick="@{()->viewmodel.start_MainS7()}"
+                    android:padding="6dp"
+                    android:text="@string/s7" />
+
+
+            </LinearLayout>  <!--                    android:background="#52FFFFFF"-->
+
+            <LinearLayout
+                android:id="@+id/lin_operation"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:visibility="gone"
-                app:srcCompat="@drawable/bg_empty" />
-
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recycle_view_protocol_fragmentm"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="0dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginStart="5dp"
-                android:layout_marginEnd="5dp"
-                android:scrollbars="vertical"
-                android:scrollingCache="true" />
+                android:orientation="horizontal"
+                android:layout_marginEnd="5dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_weight="0.5"
+                    android:visibility="visible">
+
+                    <Button
+                        android:id="@+id/button_port_history1"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="15dp"
+                        android:background="@drawable/transparent_yellow_border"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/white" />
+
+                    <com.example.fanp.utils.Shabnammid
+                        android:id="@+id/button_port_save_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:gravity="center|center_vertical"
+                        android:maxLines="1"
+                        android:text="@string/save"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_weight="0.5"
+                    android:visibility="visible">
+
+                    <Button
+                        android:id="@+id/btnadd"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="15dp"
+                        android:background="@drawable/transparent_yellow_border"
+                        android:onClick="@{()->viewmodel.add()}"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/white" />
+
+                    <com.example.fanp.utils.Shabnammid
+                        android:id="@+id/txtadd"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:gravity="center|center_vertical"
+                        android:maxLines="1"
+                        android:text="@string/add"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_weight="0.5"
+                    android:visibility="visible">
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:background="@drawable/transparent_yellow_border"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/white"
+                        android:visibility="invisible"
+                        tools:ignore="SpeakableTextPresentCheck" />
+
+                    <com.example.fanp.utils.Shabnammid
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:gravity="center|center_vertical"
+                        android:maxLines="1"
+                        android:onClick="@{()->viewmodel.cls_app()}"
+                        android:text="@string/back"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:visibility="invisible" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_weight="0.5"
+                    android:visibility="visible">
+
+                    <Button
+                        android:id="@+id/button_back"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="15dp"
+                        android:onClick="@{()->viewmodel.cls_app()}"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="15dp"
+                        android:background="@drawable/transparent_yellow_border"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/white"
+                        tools:ignore="SpeakableTextPresentCheck" />
+
+                    <com.example.fanp.utils.Shabnammid
+                        android:id="@+id/button_port_history_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:gravity="center|center_vertical"
+                        android:maxLines="1"
+                        android:text="@string/back"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+                </RelativeLayout>
+
+            </LinearLayout>
 
 
         </LinearLayout>
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="fill_parent"
-            android:layout_marginStart="10dp"
-            android:layout_marginBottom="30dp"
-            android:gravity="bottom"
-            android:orientation="horizontal">
-
-            <RelativeLayout
-                android:layout_width="220dp"
-                android:layout_height="70dp"
-                android:layout_gravity="center_horizontal|bottom"
-                android:layout_marginStart="0dp"
-                android:layout_marginEnd="0dp">
-
-                <Button
-                    android:id="@+id/button_port_history1"
-                    android:layout_width="match_parent"
-                    android:layout_height="70dp"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginEnd="5dp"
-                    android:background="@drawable/transparent_yellow_border"
-                    android:drawableEnd="@drawable/save"
-                    android:textAlignment="textEnd"
-                    android:textColor="@color/white" />
-
-                <TextView
-                    android:id="@+id/button_port_save_text"
-                    android:layout_width="match_parent"
-                    android:layout_height="70dp"
-                    android:gravity="center|center_vertical"
-                    android:maxLines="1"
-                    android:text="@string/save"
-                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
-                    android:textColor="@color/white"
-                    android:textSize="22sp" />
-            </RelativeLayout>
-
-
-            <RelativeLayout
-                android:layout_width="220dp"
-                android:layout_height="70dp"
-                android:layout_gravity="center_horizontal|bottom"
-                android:layout_marginStart="0dp"
-                android:layout_marginEnd="0dp">
-
-                <Button
-                    android:id="@+id/btnadd"
-                    android:layout_width="match_parent"
-                    android:layout_height="70dp"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginEnd="5dp"
-                    android:background="@drawable/transparent_yellow_border"
-                    android:drawableEnd="@drawable/save"
-                    android:onClick="@{()->viewmodel.add()}"
-                    android:textAlignment="textEnd"
-                    android:textColor="@color/white" />
-
-                <TextView
-                    android:id="@+id/txtadd"
-                    android:layout_width="match_parent"
-                    android:layout_height="70dp"
-                    android:gravity="center|center_vertical"
-                    android:maxLines="1"
-                    android:text="@string/add"
-                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
-                    android:textColor="@color/white"
-                    android:textSize="22sp" />
-            </RelativeLayout>
-
-
-            <RelativeLayout
-                android:layout_width="220dp"
-                android:layout_height="70dp"
-                android:layout_gravity="center_horizontal|bottom"
-                android:layout_marginStart="10dp"
-                android:layout_marginEnd="10dp">
-
-                <Button
-                    android:id="@+id/button_back"
-                    android:layout_width="match_parent"
-                    android:layout_height="70dp"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginEnd="5dp"
-                    android:background="@drawable/transparent_yellow_border"
-                    android:drawableEnd="@drawable/cancel"
-                    android:textAlignment="textEnd"
-                    android:textColor="@color/white"
-                    tools:ignore="SpeakableTextPresentCheck" />
-
-                <TextView
-                    android:id="@+id/button_port_history_text"
-                    android:layout_width="match_parent"
-                    android:layout_height="80dp"
-                    android:gravity="center|center_vertical"
-                    android:maxLines="1"
-                    android:onClick="@{()->viewmodel.cls_app()}"
-                    android:text="@string/back"
-                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
-                    android:textColor="@color/white"
-                    android:textSize="22sp" />
-            </RelativeLayout>
-        </LinearLayout>
-
 
     </RelativeLayout>
 

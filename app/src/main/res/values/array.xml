@@ -2,6 +2,7 @@
 <resources>
 
     <string-array name="brokerprotocols">
+        <item>Choose</item>
         <item>WS</item>
         <item>WSS</item>
         <item>MQTT/TCP</item>
@@ -9,6 +10,7 @@
     </string-array>
 
     <string-array name="qos">
+        <item>Choose</item>
         <item>0 - Almost Once</item>
         <item>1 - Almost Once</item>
         <item>2 - Exactly Once</item>
@@ -17,12 +19,14 @@
 
 
     <string-array name="clientpubsub">
+        <item>Choose</item>
         <item>All</item>
         <item>Sub</item>
         <item>Pub</item>
     </string-array>
 
     <string-array name="numberto2">
+        <item>Choose</item>
         <item>0</item>
         <item>1</item>
         <item>2</item>
@@ -30,6 +34,7 @@
 
 
     <string-array name="tagtype">
+        <item>Choose</item>
         <item>Plain Text</item>
         <item>Json</item>
         <item>CSV</item>
@@ -37,12 +42,14 @@
 
 
     <string-array name="parity">
+        <item>Choose</item>
         <item>Odd</item>
         <item>Even</item>
         <item>None</item>
     </string-array>
 
     <string-array name="functioncode">
+        <item>Choose</item>
        <item> RRAD_COIL  </item>
        <item> READ_DISCRETE_INPUTS  </item>
        <item> READ_MULTIPLE_HOLDING_REGISTERS  </item>
@@ -54,6 +61,7 @@
     </string-array>
 
     <string-array name="datattype">
+        <item>Choose</item>
        <item>  MBOOLEAN   </item>
        <item>  MINT8  </item>
        <item>  MUINT8  </item>
@@ -71,6 +79,7 @@
 
 
     <string-array name="baudrate">
+        <item>Choose</item>
         <item>110 b/s</item>
         <item>300 b/s</item>
         <item>600 b/s</item>
@@ -89,14 +98,73 @@
     </string-array>
 
     <string-array name="ioinputtype">
+        <item>Choose</item>
         <item>Digital</item>
         <item>Analogue</item>
     </string-array>
 
 
     <string-array name="tagtypeio">
+        <item>Choose</item>
         <item>Input</item>
         <item>Output</item>
+    </string-array>
+
+
+    <string-array name="Function">
+        <item>Choose</item>
+        <item>Write</item>
+        <item>Read</item>
+    </string-array>
+
+    <string-array name="FunctionCode">
+        <item>Choose</item>
+        <item>(1) Read Coil</item>
+        <item>(2) Read Discrete Inputs</item>
+        <item>(3) Read Multiple Holding Registers</item>
+        <item>(4) Read Input Registers</item>
+        <item>(5) Write Single Coil</item>
+        <item>(6) Write Single Holding Register</item>
+        <item>(15) Write Multiple Coils</item>
+        <item>(16) Write Multiple Holding Registers</item>
+        <item>(23) Read and Write Multiple Registers</item>
+    </string-array>
+
+    <string-array name="DataType">
+        <item>Choose</item>
+        <item>1 bit , Boolean</item>
+        <item>8 bits, Unsigned Integer</item>
+        <item>8 bits, Signed Integer</item>
+        <item>8 bits, Unsigned Float</item>
+        <item>8 bits, Signed Float</item>
+        <item>16 bits, Unsigned Integer</item>
+        <item>16 bits, Signed Integer</item>
+        <item>16 bits, Unsigned Float</item>
+        <item>16 bits, Signed Float</item>
+        <item>32 bits, Unsigned Integer</item>
+        <item>32 bits, Signed Integer</item>
+        <item>32 bits, Unsigned Float</item>
+        <item>32 bits, Signed Float</item>
+        <item>64 bits, Unsigned Integer</item>
+        <item>64 bits, Signed Integer</item>
+        <item>64 bits, Unsigned Float</item>
+        <item>64 bits, Signed Float</item>
+        <item>String</item>
+    </string-array>
+
+    <string-array name="DataTypeM">
+        <item>Choose</item>
+        <item>Bool</item>
+        <item>Integer</item>
+        <item>Float</item>
+        <item>String</item>
+    </string-array>
+
+    <string-array name="Type">
+        <item>Choose</item>
+        <item>Plain Text</item>
+        <item>JSON</item>
+        <item>CSV</item>
     </string-array>
 
 </resources>

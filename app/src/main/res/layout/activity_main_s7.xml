@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 
-<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
 
@@ -11,7 +12,7 @@
     </data>
 
 
-    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="?attr/main_back"
@@ -23,13 +24,27 @@
             layout="@layout/header"
             app:title="@{@string/s7setting}"/>
 
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.0"
+                android:text="@string/s7setting"
+                android:textSize="23dp" />
+        </LinearLayout>
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="horizontal">
 
-            <TextView
+            <com.example.fanp.utils.Shabnammid
                 android:id="@+id/tagmanagment"
                 android:layout_width="170dp"
                 android:layout_height="55dp"
@@ -38,19 +53,19 @@
                 android:layout_gravity="center"
                 android:layout_marginStart="30dp"
                 android:layout_marginTop="8dp"
-                android:layout_marginEnd="30dp"
+                android:layout_marginEnd="237dp"
                 android:background="#52FFFFFF"
                 android:gravity="center"
                 android:onClick="@{()->viewmodel.tagmanage()}"
                 android:padding="6dp"
-                android:text="@string/tagmanagement" />
+                android:text="@string/tagManagment" />
 
-            <TextView
+            <com.example.fanp.utils.Shabnammid
                 android:layout_width="170dp"
                 android:layout_height="55dp"
                 android:layout_centerVertical="true"
                 android:layout_gravity="center"
-                android:layout_marginStart="30dp"
+                android:layout_marginStart="230dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="30dp"
                 android:background="#52FFFFFF"
@@ -62,7 +77,6 @@
 
         </RelativeLayout>
 
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -73,7 +87,7 @@
                 android:layout_height="50dp"
                 android:layout_gravity="center_vertical"
                 android:layout_marginBottom="10dp"
-                android:layout_weight="0.7"
+                android:layout_weight="0.75"
                 android:visibility="invisible">
 
                 <Button
@@ -102,7 +116,7 @@
                 android:layout_height="50dp"
                 android:layout_gravity="center_vertical"
                 android:layout_marginBottom="10dp"
-                android:layout_weight="0.3">
+                android:layout_weight="0.25">
 
                 <Button
                     android:layout_width="match_parent"
@@ -114,7 +128,7 @@
                     android:onClick="@{()->viewmodel.finish()}"
                     android:textColor="@color/white" />
 
-                <TextView
+                <com.example.fanp.utils.Shabnammid
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:gravity="center|center_vertical"
