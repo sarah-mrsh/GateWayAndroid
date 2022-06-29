@@ -107,7 +107,7 @@
         <entry key="app/src/main/res/layout/activity_main_modbus_tcp.xml" value="0.2" />
         <entry key="app/src/main/res/layout/activity_main_mqtt_client.xml" value="0.18" />
         <entry key="app/src/main/res/layout/activity_main_parameter.xml" value="0.14" />
-        <entry key="app/src/main/res/layout/activity_main_s7.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/activity_main_s7.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_main_tag.xml" value="0.16" />
         <entry key="app/src/main/res/layout/activity_manage_plc.xml" value="0.6315378610460578" />
         <entry key="app/src/main/res/layout/activity_mqtt_brokers_list.xml" value="0.33" />
