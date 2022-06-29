@@ -37,8 +37,16 @@ message ConfigSnapSeven{
             string functionCode=3;
             int32 count=4;
         }
+        message MemoryTag{
+            string tagName=1;
+            string tagId=2;
+            string functionCode=3;
+            string startAddress=4;
+            string varSize=5;
+        }
         repeated  IoTag iotag =6;
         repeated  DataBlockTag datablocktag =7;
+        repeated  DataBlockTag memoryTag =8;
     }
     repeated  PLCConfig pLCConfig =1;
 }

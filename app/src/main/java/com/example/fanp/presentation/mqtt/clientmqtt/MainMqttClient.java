@@ -40,6 +40,7 @@ public class MainMqttClient extends DaggerAppCompatActivity implements mqttClien
     protected void onResume() {
         super.onResume();
         refresh();
+        viewmodel.updatedata();
     }
 
     @Override
@@ -48,7 +49,8 @@ public class MainMqttClient extends DaggerAppCompatActivity implements mqttClien
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main_mqtt_client);
         viewmodel = ViewModelProviders.of(this, providerFactory).get(MainMqttViewModel.class);
         binding.setViewmodel(viewmodel);
-        viewmodel.main=this;
+        viewmodel.main = this;
+
     }
 
 
@@ -56,7 +58,7 @@ public class MainMqttClient extends DaggerAppCompatActivity implements mqttClien
         List<I4AllSetting> list = db.getmqttclient();
 
         LinearLayoutManager manager = new LinearLayoutManager(this);
-        adapter = new MqttClientListAdapter(this, list,this);
+        adapter = new MqttClientListAdapter(this, list, this);
         binding.recserverlist.setLayoutManager(manager);
         binding.recserverlist.setAdapter(adapter);
 
@@ -66,9 +68,9 @@ public class MainMqttClient extends DaggerAppCompatActivity implements mqttClien
 
     @Override
     public void update(I4AllSetting item) {
-        AddClient.update=true;
-        AddClient.ddbdata=item;
-        startActivity(new Intent(this,AddClient.class));
+        AddClient.update = true;
+        AddClient.ddbdata = item;
+        startActivity(new Intent(this, AddClient.class));
     }
 
     @Override

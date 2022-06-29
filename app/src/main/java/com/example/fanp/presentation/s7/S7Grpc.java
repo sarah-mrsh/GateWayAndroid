@@ -46,8 +46,7 @@ public class S7Grpc {
 
         String target;
 
-        private s7update() {
-        }
+        private s7update() {}
 
         @Override
         protected SnapSevenConfigResponse doInBackground(wifi... net) {
@@ -72,11 +71,11 @@ public class S7Grpc {
                                 ConfigSnapSeven.PLCConfig.IoTag.Builder iotag = ConfigSnapSeven.PLCConfig.IoTag.newBuilder();
                                 iotag.setTagName(tag.getString("tagname"));
                                 iotag.setTagId(tag.getString("tagid"));
-                                iotag.setWordCount(tag.getInt("wordcount"));
                                 iotag.setBitCount(tag.getInt("bitcount"));
                                 iotag.setByteCount(tag.getInt("bytecount"));
                                 iotag.setIoType(tag.getString("iotype"));
                                 iotag.setTagType(tag.getString("tagtype"));
+//                                iotag.setWordCount(tag.getInt("wordcount"));
                                 plc.addIotag(iotag);
                             } else {
                                 ConfigSnapSeven.PLCConfig.DataBlockTag.Builder iotag = ConfigSnapSeven.PLCConfig.DataBlockTag.newBuilder();

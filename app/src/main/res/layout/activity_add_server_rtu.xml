@@ -82,7 +82,7 @@
                         android:layout_weight="0.0"
                         android:text="@string/modbusaddress" />
 
-                    <EditText
+                    <com.example.fanp.utils.AddressEdt
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.7"
