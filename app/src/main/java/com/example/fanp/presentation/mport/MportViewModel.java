@@ -19,7 +19,9 @@ public class MportViewModel extends ViewModel {
     public MportViewModel(){}
 
 //09125935746
-
+    public void finish() {
+    main.finish();
+}
     public void lan(int i){
      main.startActivity(new Intent(main, LanActivity.class));
     }

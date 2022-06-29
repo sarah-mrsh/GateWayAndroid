@@ -81,50 +81,51 @@ public class MainViewModel extends ViewModel {
         main.binding.imgconvert.setColorFilter(ctx.getResources().getColor(R.color.black));
         main.binding.imgreport.setColorFilter(ctx.getResources().getColor(R.color.black));
         main.binding.imgspecificsetting.setColorFilter(ctx.getResources().getColor(R.color.black));
-        main.binding.imgglobalsetting.setColorFilter(ctx.getResources().getColor(R.color.black));
+//        main.binding.imgglobalsetting.setColorFilter(ctx.getResources().getColor(R.color.black));
 
         main.binding.txthome.setTextColor(ctx.getResources().getColor(R.color.black));
         main.binding.txtconvertprotocol.setTextColor(ctx.getResources().getColor(R.color.black));
         main.binding.txtreport.setTextColor(ctx.getResources().getColor(R.color.black));
         main.binding.txtsecificsetting.setTextColor(ctx.getResources().getColor(R.color.black));
-        main.binding.txtglobalseting.setTextColor(ctx.getResources().getColor(R.color.black));
+//        main.binding.txtglobalseting.setTextColor(ctx.getResources().getColor(R.color.black));
     }
 
     public void home_frame() {
         resetcolor();
-        main.binding.imghome.setColorFilter(ctx.getResources().getColor(R.color.main_yellow));
-        main.binding.txthome.setTextColor(ctx.getResources().getColor(R.color.main_yellow));
+        main.binding.imghome.setColorFilter(ctx.getResources().getColor(R.color.purple_700));
+        main.binding.txthome.setTextColor(ctx.getResources().getColor(R.color.purple_700));
         replace_frame(home);
     }
 
-    public void general_setting_frame() {
-        resetcolor();
-        main.binding.txtglobalseting.setTextColor(ctx.getResources().getColor(R.color.main_yellow));
-        main.binding.imgglobalsetting.setColorFilter(ctx.getResources().getColor(R.color.main_yellow));
-        replace_frame(generalSettingFragment);
-    }
+//    public void general_setting_frame() {
+//        resetcolor();
+//        main.binding.txtglobalseting.setTextColor(ctx.getResources().getColor(R.color.purple_700));
+//        main.binding.imgglobalsetting.setColorFilter(ctx.getResources().getColor(R.color.purple_700));
+//        replace_frame(generalSettingFragment);
+//    }
 
     public void specific_setting_frame() {
         System.runFinalization();
         Runtime.getRuntime().gc();
         System.gc();
         resetcolor();
-        main.binding.txtsecificsetting.setTextColor(ctx.getResources().getColor(R.color.main_yellow));
-        main.binding.imgspecificsetting.setColorFilter(ctx.getResources().getColor(R.color.main_yellow));
+        main.binding.txtsecificsetting.setTextColor(ctx.getResources().getColor(R.color.purple_700));
+        main.binding.imgspecificsetting.setColorFilter(ctx.getResources().getColor(R.color.purple_700));
         replace_frame(specificSettingFragment);
     }
 
     public void convert_protocol_frame() {
         resetcolor();
-        main.binding.txtconvertprotocol.setTextColor(ctx.getResources().getColor(R.color.main_yellow));
-        main.binding.imgconvert.setColorFilter(ctx.getResources().getColor(R.color.main_yellow));
+        main.binding.txtconvertprotocol.setTextColor(ctx.getResources().getColor(R.color.purple_700));
+        main.binding.imgconvert.setColorFilter(ctx.getResources().getColor(R.color.purple_700));
+        convertProtocol.setdata();
         replace_frame(convertProtocol);
     }
 
     public void financial_frame() {
         resetcolor();
-        main.binding.imgreport.setColorFilter(ctx.getResources().getColor(R.color.main_yellow));
-        main.binding.txtreport.setTextColor(ctx.getResources().getColor(R.color.main_yellow));
+        main.binding.imgreport.setColorFilter(ctx.getResources().getColor(R.color.purple_700));
+        main.binding.txtreport.setTextColor(ctx.getResources().getColor(R.color.purple_700));
 
         replace_frame(financialFragment);
     }

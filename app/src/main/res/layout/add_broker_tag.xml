@@ -24,7 +24,7 @@
                 android:layout_weight="0.0"
                 android:text="@string/tagname" />
 
-            <EditText
+            <com.example.fanp.utils.NameEdt
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.7"
@@ -45,7 +45,7 @@
                 android:layout_weight="0.0"
                 android:text="@string/topicname" />
 
-            <EditText
+            <com.example.fanp.utils.NameEdt
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.7"
@@ -148,14 +148,14 @@
                     android:layout_marginStart="15dp"
                     android:layout_marginTop="5dp"
                     android:layout_marginEnd="15dp"
-                    android:text="@string/add"
                     android:background="@drawable/transparent_yellow_border"
                     android:textColor="@color/white" />
 
-                <TextView
+                <com.example.fanp.utils.Shabnammid
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:gravity="center|center_vertical"
+                    android:text="@string/add"
                     android:maxLines="1"
                     android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
                     android:textColor="@color/white"
@@ -180,7 +180,7 @@
                     android:background="@drawable/transparent_yellow_border"
                     android:textColor="@color/white" />
 
-                <TextView
+                <com.example.fanp.utils.Shabnammid
                     android:id="@+id/btn_back"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"

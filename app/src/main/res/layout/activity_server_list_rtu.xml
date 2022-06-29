@@ -1,6 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-
 <layout>
 
     <data>
@@ -63,15 +61,15 @@
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recrtu"
-            android:background="@drawable/yellowborder"
-            android:layout_marginRight="12dp"
-            android:layout_marginLeft="12dp"
-            android:layout_marginTop="4dp"
-            android:layout_marginBottom="4dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_above="@+id/lin_operation"
-            android:layout_below="@+id/mainheader" />
+            android:layout_below="@+id/mainheader"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/yellowborder" />
 
 
         <LinearLayout
@@ -100,7 +98,7 @@
                     android:onClick="@{()->viewmodel.addserver()}"
                     android:textColor="@color/white" />
 
-                <TextView
+                <com.example.fanp.utils.Shabnammid
                     android:id="@+id/button_protocol_cancelrequest_text"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
@@ -144,7 +142,6 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:visibility="invisible"
                 android:layout_gravity="center_vertical"
                 android:layout_marginBottom="10dp"
                 android:layout_weight="0.5">
@@ -156,9 +153,10 @@
                     android:layout_marginTop="5dp"
                     android:layout_marginEnd="15dp"
                     android:background="@drawable/transparent_yellow_border"
+                    android:onClick="@{()->viewmodel.exit()}"
                     android:textColor="@color/white" />
 
-                <TextView
+                <com.example.fanp.utils.Shabnammid
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:gravity="center|center_vertical"
@@ -184,15 +182,14 @@
                     android:layout_marginTop="5dp"
                     android:layout_marginEnd="15dp"
                     android:background="@drawable/transparent_yellow_border"
-                    android:onClick="@{()->viewmodel.exit()}"
                     android:textColor="@color/white" />
 
-                <TextView
+                <com.example.fanp.utils.Shabnammid
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:gravity="center|center_vertical"
                     android:maxLines="1"
-                    android:text="@string/back"
+                    android:text="@string/serverlist"
                     android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
                     android:textColor="@color/white"
                     android:textSize="16sp" />

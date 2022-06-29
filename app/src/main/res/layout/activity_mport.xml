@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<layout>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
     <data>
 
@@ -10,8 +11,7 @@
     </data>
 
 
-    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layoutDirection="rtl"
@@ -26,17 +26,32 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="90dp"
+                android:gravity="center">
+
+                <com.example.fanp.utils.Shabnambold
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.0"
+                    android:text="@string/managmentport"
+                    android:textSize="20sp" />
+            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
                 android:gravity="center_horizontal"
                 android:orientation="horizontal">
 
                 <RelativeLayout
                     android:layout_width="250dp"
                     android:layout_height="80dp"
-                    android:layout_marginTop="120dp">
+                    android:layout_marginTop="20dp">
 
                     <ImageView
                         android:layout_width="250dp"
@@ -49,7 +64,7 @@
                         android:scaleType="centerInside"
                         android:src="@drawable/ble" />
 
-                    <TextView
+                    <com.example.fanp.utils.Shabnammid
                         android:layout_width="200dp"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="25dp"
@@ -60,14 +75,14 @@
                         android:textAlignment="center"
                         android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
                         android:textColor="@android:color/white"
-                        android:textSize="24sp" />
+                        android:textSize="16sp" />
                 </RelativeLayout>
 
                 <RelativeLayout
                     android:layout_width="250dp"
                     android:layout_height="80dp"
-                    android:onClick="@{()->viewmodel.serial()}"
-                    android:layout_marginTop="120dp">
+                    android:layout_marginTop="20dp"
+                    android:onClick="@{()->viewmodel.serial()}">
 
                     <ImageView
                         android:layout_width="250dp"
@@ -80,7 +95,7 @@
                         android:scaleType="centerInside"
                         android:src="@drawable/serial" />
 
-                    <TextView
+                    <com.example.fanp.utils.Shabnammid
                         android:layout_width="200dp"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="25dp"
@@ -91,14 +106,14 @@
                         android:textAlignment="center"
                         android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
                         android:textColor="@android:color/white"
-                        android:textSize="24sp" />
+                        android:textSize="16sp" />
                 </RelativeLayout>
 
 
                 <RelativeLayout
                     android:layout_width="250dp"
                     android:layout_height="80dp"
-                    android:layout_marginTop="120dp">
+                    android:layout_marginTop="20dp">
 
                     <ImageView
                         android:id="@+id/image"
@@ -107,13 +122,13 @@
                         android:layout_marginStart="10dp"
                         android:layout_marginTop="5dp"
                         android:layout_marginEnd="10dp"
-                        android:onClick="@{()->viewmodel.wifi()}"
                         android:layout_marginBottom="5dp"
                         android:foreground="@color/transparent"
+                        android:onClick="@{()->viewmodel.wifi()}"
                         android:scaleType="centerInside"
                         android:src="@drawable/wifi" />
 
-                    <TextView
+                    <com.example.fanp.utils.Shabnammid
                         android:layout_width="200dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="25dp"
@@ -125,7 +140,7 @@
                         android:textAlignment="center"
                         android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
                         android:textColor="@android:color/white"
-                        android:textSize="24sp" />
+                        android:textSize="16sp" />
                 </RelativeLayout>
 
 
@@ -153,7 +168,7 @@
                         android:scaleType="centerInside"
                         android:src="@drawable/gps" />
 
-                    <TextView
+                    <com.example.fanp.utils.Shabnammid
                         android:layout_width="200dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="25dp"
@@ -165,13 +180,13 @@
                         android:textAlignment="center"
                         android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
                         android:textColor="@android:color/white"
-                        android:textSize="24sp" />
+                        android:textSize="16sp" />
                 </RelativeLayout>
 
                 <RelativeLayout
                     android:layout_width="250dp"
-                    android:onClick="@{()->viewmodel.lan(1)}"
-                    android:layout_height="80dp">
+                    android:layout_height="80dp"
+                    android:onClick="@{()->viewmodel.lan(1)}">
 
                     <ImageView
                         android:layout_width="250dp"
@@ -184,7 +199,7 @@
                         android:scaleType="centerInside"
                         android:src="@drawable/lanit" />
 
-                    <TextView
+                    <com.example.fanp.utils.Shabnammid
                         android:layout_width="200dp"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="25dp"
@@ -194,14 +209,14 @@
                         android:textAlignment="center"
                         android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
                         android:textColor="@android:color/white"
-                        android:textSize="24sp" />
+                        android:textSize="16sp" />
                 </RelativeLayout>
 
 
                 <RelativeLayout
                     android:layout_width="250dp"
-                    android:onClick="@{()->viewmodel.lan(2)}"
-                    android:layout_height="80dp">
+                    android:layout_height="80dp"
+                    android:onClick="@{()->viewmodel.lan(2)}">
 
                     <ImageView
                         android:layout_width="250dp"
@@ -214,7 +229,7 @@
                         android:scaleType="centerInside"
                         android:src="@drawable/lanit" />
 
-                    <TextView
+                    <com.example.fanp.utils.Shabnammid
                         android:layout_width="200dp"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="25dp"
@@ -224,7 +239,7 @@
                         android:textAlignment="center"
                         android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
                         android:textColor="@android:color/white"
-                        android:textSize="24sp" />
+                        android:textSize="16sp" />
                 </RelativeLayout>
 
 
@@ -238,8 +253,8 @@
 
                 <RelativeLayout
                     android:layout_width="250dp"
-                    android:onClick="@{()->viewmodel.lan(3)}"
-                    android:layout_height="80dp">
+                    android:layout_height="80dp"
+                    android:onClick="@{()->viewmodel.lan(3)}">
 
                     <ImageView
                         android:layout_width="250dp"
@@ -252,7 +267,7 @@
                         android:scaleType="centerInside"
                         android:src="@drawable/lanit" />
 
-                    <TextView
+                    <com.example.fanp.utils.Shabnammid
                         android:layout_width="200dp"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="25dp"
@@ -262,13 +277,13 @@
                         android:textAlignment="center"
                         android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
                         android:textColor="@android:color/white"
-                        android:textSize="24sp" />
+                        android:textSize="16sp" />
                 </RelativeLayout>
 
                 <RelativeLayout
                     android:layout_width="250dp"
-                    android:onClick="@{()->viewmodel.lan(4)}"
-                    android:layout_height="80dp">
+                    android:layout_height="80dp"
+                    android:onClick="@{()->viewmodel.lan(4)}">
 
                     <ImageView
                         android:layout_width="250dp"
@@ -281,7 +296,7 @@
                         android:scaleType="centerInside"
                         android:src="@drawable/lanot" />
 
-                    <TextView
+                    <com.example.fanp.utils.Shabnammid
                         android:layout_width="200dp"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="25dp"
@@ -291,14 +306,14 @@
                         android:textAlignment="center"
                         android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
                         android:textColor="@android:color/white"
-                        android:textSize="24sp" />
+                        android:textSize="16sp" />
                 </RelativeLayout>
 
 
                 <RelativeLayout
                     android:layout_width="250dp"
-                    android:onClick="@{()->viewmodel.lan(5)}"
-                    android:layout_height="80dp">
+                    android:layout_height="80dp"
+                    android:onClick="@{()->viewmodel.lan(5)}">
 
                     <ImageView
                         android:layout_width="250dp"
@@ -311,7 +326,7 @@
                         android:scaleType="centerInside"
                         android:src="@drawable/lanot" />
 
-                    <TextView
+                    <com.example.fanp.utils.Shabnammid
                         android:layout_width="200dp"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="25dp"
@@ -321,46 +336,169 @@
                         android:textAlignment="center"
                         android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
                         android:textColor="@android:color/white"
-                        android:textSize="24sp" />
+                        android:textSize="16sp" />
                 </RelativeLayout>
 
 
             </LinearLayout>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:orientation="horizontal">
 
-
-            <RelativeLayout
-                android:layout_width="250dp"
-                android:gravity="center_horizontal"
-                android:onClick="@{()->viewmodel.lan(6)}"
-                android:layout_gravity="center_horizontal"
-                android:layout_height="80dp">
-
-                <ImageView
+                <RelativeLayout
                     android:layout_width="250dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginBottom="5dp"
-                    android:foreground="@color/transparent"
-                    android:scaleType="centerInside"
-                    android:src="@drawable/lanot" />
+                    android:layout_height="80dp"
+                    android:layout_marginRight="105dp"
+                    android:onClick="@{()->viewmodel.lan(6)}">
 
-                <TextView
-                    android:layout_width="200dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="25dp"
-                    android:maxLines="1"
-                    android:singleLine="true"
-                    android:text="@string/lanport6"
-                    android:textAlignment="center"
-                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
-                    android:textColor="@android:color/white"
-                    android:textSize="24sp" />
-            </RelativeLayout>
+                    <ImageView
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:foreground="@color/transparent"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/lanot" />
+
+                    <com.example.fanp.utils.Shabnammid
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="25dp"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:text="@string/lanport6"
+                        android:textAlignment="center"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="bottom"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginBottom="10dp"
+                    android:layout_weight="0.5"
+                    android:visibility="invisible">
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="15dp"
+                        android:background="@drawable/transparent_yellow_border"
+                        android:textColor="@color/white" />
+
+                    <com.example.fanp.utils.Shabnammid
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:gravity="center|center_vertical"
+                        android:maxLines="1"
+                        android:text="@string/back"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginBottom="10dp"
+                    android:layout_weight="0.5"
+                    android:visibility="invisible">
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="15dp"
+                        android:background="@drawable/transparent_yellow_border"
+                        android:textColor="@color/white" />
+
+                    <com.example.fanp.utils.Shabnammid
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:gravity="center|center_vertical"
+                        android:maxLines="1"
+                        android:text="@string/back"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginBottom="10dp"
+                    android:layout_weight="0.5"
+                    android:visibility="invisible">
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="15dp"
+                        android:background="@drawable/transparent_yellow_border"
+                        android:textColor="@color/white" />
+
+                    <com.example.fanp.utils.Shabnammid
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:gravity="center|center_vertical"
+                        android:maxLines="1"
+                        android:text="@string/back"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginBottom="0dp"
+                    android:layout_weight="0.5">
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="15dp"
+                        android:onClick="@{()->viewmodel.finish()}"
+                        android:background="@drawable/transparent_yellow_border"
+                        android:textColor="@color/white" />
+
+                    <com.example.fanp.utils.Shabnammid
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:gravity="center|center_vertical"
+                        android:maxLines="1"
+                        android:text="@string/back"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+                </RelativeLayout>
 
 
+            </LinearLayout>
 
 
         </LinearLayout>

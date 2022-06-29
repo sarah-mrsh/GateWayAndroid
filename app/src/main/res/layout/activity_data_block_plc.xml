@@ -20,12 +20,14 @@
 
 
         <include
-            app:title="@{@string/datablock}"
             android:id="@+id/include"
             layout="@layout/header"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:title="@{@string/datablock}" />
+
 
         <LinearLayout
             android:id="@+id/linearLayout"
@@ -33,29 +35,44 @@
             android:layout_height="wrap_content"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/include">
+            app:layout_constraintTop_toBottomOf="@+id/include"
+            android:layout_marginTop="60dp">
 
             <com.example.fanp.utils.Shabnambold
                 android:layout_width="wrap_content"
                 android:layout_height="55dp"
                 android:layout_weight="0.5"
                 android:gravity="center"
-                android:text="@string/plcname" />
+                android:text="@string/datablockname"/>
 
             <com.example.fanp.utils.Shabnambold
                 android:layout_width="wrap_content"
                 android:layout_height="55dp"
                 android:layout_weight="0.5"
                 android:gravity="center"
-                android:text="@string/plcid" />
+                android:text="@string/datablockid" />
 
             <com.example.fanp.utils.Shabnambold
                 android:layout_width="wrap_content"
                 android:layout_height="55dp"
                 android:layout_weight="0.5"
                 android:gravity="center"
-                android:text="@string/plcid"
-                android:visibility="invisible" />
+                android:text="@string/plcname"/>
+
+            <com.example.fanp.utils.Shabnambold
+                android:layout_width="wrap_content"
+                android:layout_height="55dp"
+                android:layout_weight="0.5"
+                android:gravity="center"
+                android:text="@string/FunctionBlock"/>
+
+            <com.example.fanp.utils.Shabnambold
+                android:layout_width="wrap_content"
+                android:layout_height="55dp"
+                android:layout_weight="0.5"
+                android:gravity="center"
+                android:text="@string/parametername"
+                android:visibility="invisible"/>
 
         </LinearLayout>
 
@@ -64,15 +81,17 @@
             android:id="@+id/recyclerView"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:background="@drawable/yellowborder"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginEnd="12dp"
-            android:layout_marginBottom="4dp"
             android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/yellowborder"
             app:layout_constraintBottom_toTopOf="@+id/lin_operation"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
-
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+            app:layout_constraintVertical_bias="1.0"
+            />
 
         <LinearLayout
             app:layout_constraintBottom_toBottomOf="parent"
@@ -98,7 +117,7 @@
                     android:background="@drawable/transparent_yellow_border"
                     android:textColor="@color/white" />
 
-                <TextView
+                <com.example.fanp.utils.Shabnammid
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:gravity="center|center_vertical"
@@ -180,7 +199,7 @@
                     android:background="@drawable/transparent_yellow_border"
                     android:textColor="@color/white" />
 
-                <TextView
+                <com.example.fanp.utils.Shabnammid
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:gravity="center|center_vertical"
@@ -191,6 +210,25 @@
                     android:textSize="16sp" />
             </RelativeLayout>
 
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:layout_editor_absoluteY="100dp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="100dp">
+
+            <com.example.fanp.utils.Shabnambold
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.0"
+                android:text="@string/datablocklist"
+                android:textSize="20dp" />
 
         </LinearLayout>
 

@@ -2,6 +2,8 @@ package com.example.fanp.presentation.protocolmanagment;
 
 import android.annotation.SuppressLint;
 import android.app.Dialog;
+import android.content.Context;
+import android.content.Intent;
 import android.graphics.Typeface;
 import android.view.View;
 import android.view.Window;
@@ -15,6 +17,10 @@ import androidx.lifecycle.ViewModel;
 
 import com.example.fanp.R;
 import com.example.fanp.domain.entity.ProtocolTypeEntity;
+import com.example.fanp.presentation.modbus.rtu.MainModBusRTU;
+import com.example.fanp.presentation.modbus.tcp.MainModbusTCP;
+import com.example.fanp.presentation.mqtt.clientmqtt.MainMqttClient;
+import com.example.fanp.presentation.s7.MainS7;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,7 +34,6 @@ public class MprotocolManagmentViewModel extends ViewModel {
     private ProtocolAdapter protocolAdapter;
 //    ProtocolsType protocolsType;
 
-
     @SuppressLint("StaticFieldLeak")
     MProtocolManagment main;
 
@@ -36,12 +41,30 @@ public class MprotocolManagmentViewModel extends ViewModel {
     public MprotocolManagmentViewModel(){}
 
 
+    public void start_MainModBus(){
+        main.startActivity(new Intent(main, MainModbusTCP.class));
+    }
 
 
+    public void start_MainModBusRTU(){
+        main.startActivity(new Intent(main, MainModBusRTU.class));
+    }
+
+
+    public void start_MainS7(){
+        main.startActivity(new Intent(main, MainS7.class));
+    }
+
+    public void start_MainMqttClient(){
+        main.startActivity(new Intent(main, MainMqttClient.class));
+    }
     public void cls_app(){
         main.onBackPressed();
     }
 
+    public void finish() {
+        main.finish();
+    }
 
     public void add(){
         showPortRequestDialog();
@@ -53,17 +76,8 @@ public class MprotocolManagmentViewModel extends ViewModel {
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE); // before
         dialog.setContentView(R.layout.dialog_port_request);
         dialog.setCancelable(true);
-
-//        Typeface face = Typeface.createFromAsset(main.getAssets(), "Sha.ttf");
-//        ((TextView) dialog.findViewById(R.id.title_terms_and_conditions)).setTypeface(face);
-//        ((TextView) dialog.findViewById(R.id.text_view_activity_time_header)).setTypeface(face);
-//        ((TextView) dialog.findViewById(R.id.button_port_request_text)).setTypeface(face);
-//        ((TextView) dialog.findViewById(R.id.button_protocol_cancelrequest_text)).setTypeface(face);
-//        addProtocolButtons(dialog);
-
-
-//        ((Button) dialog.findViewById(R.id.bt_cancel)).setTypeface(face);
         ((Button) dialog.findViewById(R.id.bt_cancel)).setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("NotifyDataSetChanged")
             @Override
             public void onClick(View v) {
                 Toast.makeText(main, "انصراف", Toast.LENGTH_SHORT).show();
@@ -74,6 +88,7 @@ public class MprotocolManagmentViewModel extends ViewModel {
         });
 
         ((Button) dialog.findViewById(R.id.button_port_request)).setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("NotifyDataSetChanged")
             @Override
             public void onClick(View v) {
                 dialog.dismiss();

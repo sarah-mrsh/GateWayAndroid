@@ -62,29 +62,29 @@
                         android:text="@string/home" />
                 </LinearLayout>
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="6dp"
-                    android:layout_marginRight="6dp"
-                    android:onClick="@{()->viewmodel.general_setting_frame()}"
-                    android:orientation="vertical">
+<!--                <LinearLayout-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:layout_marginLeft="6dp"-->
+<!--                    android:layout_marginRight="6dp"-->
+<!--                    android:onClick="@{()->viewmodel.general_setting_frame()}"-->
+<!--                    android:orientation="vertical">-->
 
-                    <ImageView
-                        android:layout_width="@dimen/image_bottom_navigation"
-                        android:layout_height="@dimen/image_bottom_navigation"
-                        android:id="@+id/imgglobalsetting"
-                        android:layout_gravity="center_horizontal"
-                        android:src="@drawable/ic_globalsetting" />
+<!--                    <ImageView-->
+<!--                        android:layout_width="@dimen/image_bottom_navigation"-->
+<!--                        android:layout_height="@dimen/image_bottom_navigation"-->
+<!--                        android:id="@+id/imgglobalsetting"-->
+<!--                        android:layout_gravity="center_horizontal"-->
+<!--                        android:src="@drawable/ic_globalsetting" />-->
 
-                    <com.example.fanp.utils.Shabnamlight
-                        android:layout_width="wrap_content"
-                        android:layout_height="0dp"
-                        android:layout_weight="0.3"
-                        android:gravity="center"
-                        android:id="@+id/txtglobalseting"
-                        android:text="@string/globalsetting" />
-                </LinearLayout>
+<!--                    <com.example.fanp.utils.Shabnamlight-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="0dp"-->
+<!--                        android:layout_weight="0.3"-->
+<!--                        android:gravity="center"-->
+<!--                        android:id="@+id/txtglobalseting"-->
+<!--                        android:text="@string/globalsetting" />-->
+<!--                </LinearLayout>-->
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -107,7 +107,7 @@
                         android:layout_height="0dp"
                         android:layout_weight="0.3"
                         android:gravity="center"
-                        android:text="@string/specificsetting" />
+                        android:text="@string/settings" />
                 </LinearLayout>
 
                 <LinearLayout

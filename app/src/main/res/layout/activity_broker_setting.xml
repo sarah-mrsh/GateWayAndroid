@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<layout xmlns:tools="http://schemas.android.com/tools">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
 
@@ -9,8 +11,7 @@
             type="com.example.fanp.presentation.mqtt.broker.brokersetting.BrokerSettingViewmodel" />
     </data>
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="?attr/main_back"
@@ -23,6 +24,20 @@
             android:id="@+id/header"
             layout="@layout/header" />
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="20dp">
+
+            <com.example.fanp.utils.Shabnambold
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.0"
+                android:text="@string/brokerconf"
+                android:textSize="20dp" />
+        </LinearLayout>
 
         <ScrollView
             android:layout_width="match_parent"
@@ -104,11 +119,12 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="0.0"
-                                android:text="@string/userName" />
+                                android:text="@string/userName"
+                                android:layout_marginBottom="20dp"/>
 
-                            <EditText
+                            <com.example.fanp.utils.NameEdt
                                 android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
+                                android:layout_height="match_parent"
                                 android:layout_weight="0.7"
                                 android:gravity="center"
                                 android:hint="@string/userName"
@@ -335,7 +351,7 @@
                         android:layout_height="match_parent"
                         android:layout_marginLeft="12dp"
                         android:layout_marginRight="12dp"
-                        android:layout_weight="0.5"
+                        android:layout_weight="1.5"
                         android:orientation="vertical">
 
                         <LinearLayout
@@ -346,7 +362,8 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:checked="@={viewmodel.sendtimestamp}"
-                                android:text="@string/sendtimestamp" />
+                                android:text="@string/sendtimestamp"
+                                android:textDirection="rtl"/>
                         </LinearLayout>
 
                         <LinearLayout
@@ -359,15 +376,17 @@
                                 android:layout_height="wrap_content"
                                 android:checked="@={viewmodel.keepalive}"
 
-                                android:text="@string/keepAlive" />
+                                android:text="@string/keepAlive"
+                                android:textDirection="rtl"/>
                         </LinearLayout>
 
                         <LinearLayout
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
+                            android:layout_height="wrap_content"
+                            android:textDirection="rtl">
 
                             <CheckBox
-                                android:layout_width="match_parent"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:checked="@={viewmodel.compatibleversion}"
                                 android:text="@string/compatiblemqttversition3" />
@@ -382,7 +401,8 @@
                                 android:layout_width="match_parent"
                                 android:checked="@={viewmodel.maintainewill}"
                                 android:layout_height="wrap_content"
-                                android:text="@string/maintaine" />
+                                android:text="@string/maintaine"
+                                android:textDirection="rtl"/>
                         </LinearLayout>
 
 
@@ -396,7 +416,8 @@
                                 android:layout_width="match_parent"
                                 android:checked="@={viewmodel.willcardsub}"
                                 android:layout_height="wrap_content"
-                                android:text="@string/willcardsub" />
+                                android:text="@string/willcardsub"
+                                android:textDirection="rtl"/>
                         </LinearLayout>
 
 
@@ -460,7 +481,7 @@
                             android:background="@drawable/transparent_yellow_border"
                             android:textColor="@color/white" />
 
-                        <TextView
+                        <com.example.fanp.utils.Shabnammid
                             android:id="@+id/button_protocol_cancelrequest_text"
                             android:layout_width="match_parent"
                             android:layout_height="50dp"
@@ -489,12 +510,12 @@
                             android:background="@drawable/transparent_yellow_border"
                             android:textColor="@color/white" />
 
-                        <TextView
+                        <com.example.fanp.utils.Shabnammid
                             android:layout_width="match_parent"
                             android:layout_height="50dp"
                             android:gravity="center|center_vertical"
                             android:maxLines="1"
-                            android:text="@string/tagmanagement"
+                            android:text="@string/tagManagment"
                             android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
                             android:textColor="@color/white"
                             android:textSize="16sp" />
@@ -518,7 +539,7 @@
                             android:background="@drawable/transparent_yellow_border"
                             android:textColor="@color/white" />
 
-                        <TextView
+                        <com.example.fanp.utils.Shabnammid
                             android:layout_width="match_parent"
                             android:layout_height="50dp"
                             android:gravity="center|center_vertical"
@@ -547,7 +568,7 @@
                             android:onClick="@{()->viewmodel.finish()}"
                             android:textColor="@color/white" />
 
-                        <TextView
+                        <com.example.fanp.utils.Shabnammid
                             android:layout_width="match_parent"
                             android:layout_height="50dp"
                             android:gravity="center|center_vertical"

@@ -55,15 +55,15 @@
 
         <ImageView
             android:id="@+id/imgdelete"
-            android:layout_width="35dp"
-            android:layout_height="wrap_content"
+            android:layout_width="131dp"
+            android:layout_height="32dp"
             android:layout_weight="0.5"
             android:src="@drawable/delete" />
 
         <ImageView
             android:id="@+id/imgedit"
-            android:layout_width="35dp"
-            android:layout_height="wrap_content"
+            android:layout_width="123dp"
+            android:layout_height="32dp"
             android:layout_weight="0.5"
             android:src="@drawable/edit" />
 

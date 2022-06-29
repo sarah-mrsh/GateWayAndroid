@@ -19,8 +19,7 @@
             android:gravity="center"
             android:id="@+id/clientname"
             android:padding="12dp"
-            android:hint="@string/clientName"
-            android:textSize="21sp" />
+            android:hint="@string/clientName" />
 
         <EditText
             android:layout_width="match_parent"
@@ -29,8 +28,7 @@
             android:gravity="center"
             android:id="@+id/name"
             android:padding="12dp"
-            android:hint="@string/name"
-            android:textSize="21sp" />
+            android:hint="@string/name" />
 
         <Spinner
             android:layout_width="match_parent"
@@ -40,7 +38,7 @@
             android:gravity="center"
             android:entries="@array/numberto2"
             android:padding="12dp"
-            android:textSize="21sp" />
+            android:textDirection="rtl"/>
 
         <CheckBox
             android:layout_width="match_parent"
@@ -49,8 +47,7 @@
             android:layout_weight="0.5"
             android:gravity="center"
             android:padding="12dp"
-            android:text="@string/retain"
-            android:textSize="21sp" />
+            android:text="@string/retain" />
 
 
         <CheckBox
@@ -60,8 +57,7 @@
             android:gravity="center"
             android:id="@+id/chbprivaite"
             android:padding="12dp"
-            android:text="@string/Private"
-            android:textSize="21sp" />
+            android:text="@string/Private" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -72,12 +68,12 @@
             android:textSize="21sp" >
 
             <ImageView
-                android:layout_width="35dp"
-                android:src="@drawable/ic_add"
                 android:id="@+id/imgadd"
-                android:padding="2dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:background="#FFEB3B"
-                android:layout_height="35dp"/>
+                android:padding="2dp"
+                android:src="@drawable/ic_add" />
         </LinearLayout>
 
     </LinearLayout>

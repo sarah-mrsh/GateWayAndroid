@@ -6,7 +6,7 @@
     android:layout_height="150dp">
 
 
-    <TextView
+    <com.example.fanp.utils.Shabnammid
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="12dp"
@@ -38,13 +38,13 @@
                 android:background="@drawable/transparent_yellow_border"
                 android:textColor="@color/white" />
 
-            <TextView
+            <com.example.fanp.utils.Shabnammid
                 android:id="@+id/button_protocol_cancelrequest_text"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:gravity="center|center_vertical"
                 android:maxLines="1"
-                android:text="@string/delete"
+                android:text="@string/Prove"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
                 android:textColor="@color/white"
                 android:textSize="16sp" />
@@ -68,12 +68,12 @@
                 android:background="@drawable/transparent_yellow_border"
                 android:textColor="@color/white" />
 
-            <TextView
+            <com.example.fanp.utils.Shabnammid
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:gravity="center|center_vertical"
                 android:maxLines="1"
-                android:text="@string/back"
+                android:text="@string/Disprove"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
                 android:textColor="@color/white"
                 android:textSize="16sp" />
