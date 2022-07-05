@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.example.fanp.utils.Shabnambold
+            android:layout_width="wrap_content"
+            android:layout_height="55dp"
+            android:layout_weight="0.5"
+            android:id="@+id/name"
+            android:gravity="center"
+            android:text="@string/name" />
+
+        <com.example.fanp.utils.Shabnambold
+            android:layout_width="wrap_content"
+            android:layout_height="55dp"
+            android:layout_weight="0.5"
+            android:id="@+id/tagid"
+            android:gravity="center"
+            android:text="@string/tagid" />
+
+        <com.example.fanp.utils.Shabnambold
+            android:layout_width="wrap_content"
+            android:layout_height="55dp"
+            android:id="@+id/plcid"
+            android:layout_weight="0.5"
+            android:gravity="center"
+            android:text="@string/plcid" />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_weight="0.5"
+        android:gravity="center"
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/imgdelete"
+            android:layout_width="35dp"
+            android:layout_weight="0.5"
+            android:src="@drawable/delete"
+            android:layout_height="32dp"/>
+        <ImageView
+            android:id="@+id/imgedit"
+            android:layout_width="35dp"
+            android:layout_weight="0.5"
+            android:src="@drawable/edit"
+            android:layout_height="32dp"/>
+
+    </LinearLayout>
+
+    </LinearLayout>

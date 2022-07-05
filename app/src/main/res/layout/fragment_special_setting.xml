@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layoutDirection="rtl"
+    android:background="?attr/main_back"
+    android:layout_height="match_parent">
+
+
+    <include layout="@layout/header" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/bottom_navigation_height"
+        android:paddingTop="100dp"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/building_button_port"
+                    android:layout_width="250dp"
+                    android:layout_height="80dp"
+                    android:gravity="center_horizontal">
+
+                    <ImageButton
+                        android:id="@+id/building_button_port_button"
+                        android:layout_width="250dp"
+                        android:layout_height="80dp"
+                        android:layout_gravity="center"
+                        android:adjustViewBounds="true"
+                        android:background="@color/transparent"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/portsetting" />
+
+                    <com.example.fanp.utils.Shabnammid
+                        android:id="@+id/setting_button_port_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="40dp"
+                        android:layout_marginTop="25dp"
+                        android:text="@string/managmentport"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/building_button_mainreserve"
+                    android:layout_width="250dp"
+                    android:layout_height="80dp"
+                    android:gravity="center_horizontal">
+
+                    <ImageButton
+                        android:id="@+id/setting_button_user_button"
+                        android:layout_width="250dp"
+                        android:layout_height="80dp"
+                        android:layout_gravity="center"
+                        android:adjustViewBounds="true"
+                        android:background="@color/transparent"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/memorymanagment"
+                        android:text="پست جدید" />
+
+                    <com.example.fanp.utils.Shabnammid
+                        android:id="@+id/setting_button_user_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="40dp"
+                        android:layout_marginTop="25dp"
+                        android:text="@string/memorymanagment"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/building_button_enterance"
+                    android:layout_width="250dp"
+                    android:layout_height="80dp"
+                    android:layout_below="@id/building_button_mainreserve"
+                    android:gravity="center_horizontal">
+
+                    <ImageButton
+                        android:id="@+id/building_button_enterance_button"
+                        android:layout_width="250dp"
+                        android:layout_height="80dp"
+                        android:layout_gravity="center"
+                        android:adjustViewBounds="true"
+                        android:background="@color/transparent"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/shell"
+                        android:text="پست جدید" />
+
+                    <com.example.fanp.utils.Shabnammid
+                        android:id="@+id/building_button_enterance_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="40dp"
+                        android:layout_marginTop="25dp"
+                        android:text="@string/craeateshell"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/building_button_mainhelp"
+                    android:layout_width="250dp"
+                    android:layout_height="80dp"
+                    android:gravity="center_horizontal">
+
+                    <ImageButton
+                        android:id="@+id/building_button_mainhelp_button"
+                        android:layout_width="250dp"
+                        android:layout_height="80dp"
+                        android:background="@color/transparent"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/node"
+                        android:text="پست جدید" />
+
+                    <com.example.fanp.utils.Shabnammid
+                        android:id="@+id/building_button_mainhelp_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="40dp"
+                        android:layout_marginTop="25dp"
+                        android:text="@string/craeatenode"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="0.3"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/building_button_port1"
+                    android:layout_width="250dp"
+                    android:layout_height="80dp"
+                    android:gravity="center_horizontal">
+
+                    <ImageButton
+                        android:id="@+id/setting_button_edgeprocess_button"
+                        android:layout_width="250dp"
+                        android:layout_height="80dp"
+                        android:layout_gravity="center"
+                        android:adjustViewBounds="true"
+                        android:background="@color/transparent"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/edgeprocess" />
+
+                    <com.example.fanp.utils.Shabnammid
+                        android:id="@+id/setting_button_edgeprocess_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="40dp"
+                        android:layout_marginTop="25dp"
+                        android:text="@string/edgeprocess"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/building_button_mainreserve1"
+                    android:layout_width="250dp"
+                    android:layout_height="80dp"
+                    android:layout_below="@id/setting_button_monitoring_text"
+                    android:gravity="center_horizontal">
+
+                    <ImageButton
+                        android:id="@+id/setting_button_monitoring_button"
+                        android:layout_width="250dp"
+                        android:layout_height="80dp"
+                        android:layout_gravity="center"
+                        android:adjustViewBounds="true"
+                        android:background="@color/transparent"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/monitoring" />
+
+                    <com.example.fanp.utils.Shabnammid
+                        android:id="@+id/setting_button_monitoring_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="40dp"
+                        android:layout_marginTop="25dp"
+                        android:text="@string/monitoring"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/setting_button_protocol_layout"
+                    android:layout_width="250dp"
+                    android:layout_height="80dp">
+
+                    <ImageView
+                        android:id="@+id/setting_button_protocol"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:background="@color/transparent"
+                        android:src="@drawable/protocolmanage" />
+
+                    <ImageButton
+                        android:id="@+id/building_button_protocol_button"
+                        android:layout_width="250dp"
+                        android:layout_height="80dp"
+                        android:layout_gravity="center"
+                        android:adjustViewBounds="true"
+                        android:background="@color/transparent"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/protocolmanage" />
+
+                    <com.example.fanp.utils.Shabnammid
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="40dp"
+                        android:layout_marginTop="25dp"
+                        android:text="@string/manageprotocol"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/setting_button_protocol_layout2"
+                    android:layout_width="250dp"
+                    android:layout_height="80dp">
+
+                    <ImageView
+                        android:id="@+id/setting_button_protocol2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:background="@color/transparent"
+                        android:src="@drawable/usermanage" />
+
+                    <com.example.fanp.utils.Shabnamlight
+                        android:id="@+id/setting_button_port_text2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="40dp"
+                        android:layout_marginTop="25dp"
+                        android:text="@string/usermanagement"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="0.3"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="250dp"
+                    android:layout_height="80dp"
+                    android:gravity="center_horizontal">
+
+                    <ImageButton
+                        android:layout_width="250dp"
+                        android:layout_height="80dp"
+                        android:layout_gravity="center"
+                        android:adjustViewBounds="true"
+                        android:background="@color/transparent"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/settings" />
+
+                    <com.example.fanp.utils.Shabnammid
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="40dp"
+                        android:layout_marginTop="25dp"
+                        android:text="@string/globalsetting"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

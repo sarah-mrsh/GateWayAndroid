@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="com.example.fanp.presentation.account.AccountUserViewmodel" />
+
+    </data>
+
+
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/main_back"
+>
+
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+
+
+                    <ImageView
+                        android:id="@+id/image_view_profile_img"
+                        android:layout_width="130dp"
+                        android:layout_height="130dp"
+                        app:srcCompat="@drawable/profile" />
+
+
+
+                    <ImageButton
+                        android:id="@+id/Image_button_profile_pic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="85dp"
+                        android:layout_marginTop="85dp"
+                        android:padding="10dp"
+                        app:srcCompat="@drawable/ic_menu_camera" />
+
+
+                <TextView
+                    android:id="@+id/header_text_view_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:paddingTop="10dp"
+                    android:text="@string/add"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+
+        <LinearLayout
+            android:paddingLeft="5dp"
+            android:paddingTop="5dp"
+            android:paddingRight="5dp"
+            android:paddingBottom="0dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:layout_marginTop="10dp"
+                android:id="@+id/relativeLayout_profile"
+                android:background="@drawable/border_bottom"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="45dp">
+                <ImageView
+                    android:padding="5dp"
+                    android:layout_margin="7dp"
+                    app:srcCompat="@drawable/ic_person"
+                    android:layout_width="30dp"
+                    android:layout_height="45dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="45dp"
+                    android:gravity="center|left"
+                    android:text="@string/my_profile"
+                    android:textSize="16sp"
+                    tools:ignore="RtlHardcoded" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/relativeLayout_photo"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/border_bottom"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="45dp">
+                <ImageView
+                    android:padding="1dp"
+                    android:layout_margin="7dp"
+                    app:srcCompat="@drawable/ic_menu_camera"
+                    android:layout_width="30dp"
+                    android:layout_height="45dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="45dp"
+                    android:gravity="center|left"
+                    android:text="@string/change_photo"
+                    android:textSize="16sp"
+                    tools:ignore="RtlHardcoded" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout_password"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/border_bottom"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="45dp">
+                <ImageView
+                    android:padding="1dp"
+                    android:layout_margin="7dp"
+                    app:srcCompat="@drawable/ic_lock_black"
+                    android:layout_width="30dp"
+                    android:layout_height="45dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="45dp"
+                    android:gravity="center|left"
+                    android:text="@string/change_password"
+                    android:textSize="16sp"
+                    tools:ignore="RtlHardcoded" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_marginTop="10dp"
+                android:id="@+id/relativeLayout_edit"
+                android:background="@drawable/border_bottom"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="45dp">
+                <ImageView
+                    android:padding="5dp"
+                    android:layout_margin="7dp"
+                    app:srcCompat="@drawable/ic_border_color"
+                    android:layout_width="30dp"
+                    android:layout_height="45dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="45dp"
+                    android:gravity="center|left"
+                    android:text="@string/edit_my_profile"
+                    android:textSize="16sp"
+                    tools:ignore="RtlHardcoded" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/relativeLayout_logout"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="45dp">
+                <ImageView
+                    android:padding="5dp"
+                    android:layout_margin="7dp"
+                    app:srcCompat="@drawable/ic_exit_to_app"
+                    android:layout_width="30dp"
+                    android:layout_height="45dp" />
+                <TextView
+                    android:layout_marginStart="45dp"
+                    android:textSize="16sp"
+                    android:text="@string/logout"
+                    android:gravity="center|start"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp" />
+            </RelativeLayout>
+        </LinearLayout>
+
+
+
+
+</RelativeLayout>
+
+</layout>

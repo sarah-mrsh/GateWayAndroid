@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.fanp">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+        android:name=".MainApplicationFannap"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:largeHeap="true"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Fanp"
+        tools:targetApi="31">
+        <activity
+            android:name=".presentation.s7.manageplc.functionblock.parameters.addparameter.AddParameterFunctionBlock"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.s7.manageplc.functionblock.parameters.MainParameter"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.mqtt.clientmqtt.addtag.AddTagMqttClient"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.mqtt.clientmqtt.taglist.TagListMqttClient"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.mqtt.clientmqtt.addclient.AddClient"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.mqtt.clientmqtt.MainMqttClient"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.s7.manageplc.adddatablockplc.AddDataBlockPlc"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.s7.manageplc.datablockplc.DataBlockPlc"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.wifi.savednetworks.SavedNetworks"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.s7.tag.memory.AddTagMemory"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.s7.tag.memory.TaglistMemory"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.s7.tag.io.AddTagIo"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.s7.tag.io.TagListIo"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.s7.tag.datablock.AddDatatBlockTag"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.s7.tag.datablock.TagListDatablock"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.s7.tag.MainTag"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.s7.addplc.AddPlc"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.s7.plclist.PLCList"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.s7.manageplc.ManagePLC"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.s7.MainS7"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.modbus.tcp.taglisttcp.TaglistTcp"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.modbus.rtu.tag.AddTag"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.modbus.tcp.tag.AddTagTCP"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.modbus.rtu.taglist.TagListRtu"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.modbus.rtu.addserver.AddServerRtu"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.modbus.tcp.addserver.AddServertcp"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.modbus.rtu.serverlistrtu.ServerListRtu"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.modbus.rtu.MainModBusRTU"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.modbus.tcp.serverlist.ServerList"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.modbus.tcp.MainModbusTCP"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.mqtt.broker.clientlist.ClientList"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.mqtt.broker.taglist.Localbrokertaglist"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.mqtt.broker.brokersetting.BrokerSetting"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.serialactivity.SerialActivity"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.s7.manageplc.functionblock.addfunctionblock.AddFunctionBlockPlc"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.wifi.WifiActivity"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.protocolmanagment.MProtocolManagment"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.mport.MportActivity"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.lan.LanActivity"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.s7.manageplc.functionblock.FunctionBlockMainPlc"
+            android:exported="false" />
+        <!--
+             TODO: Before you run your application, you need a Google Maps API key.
+
+             To get one, follow the directions here:
+
+                https://developers.google.com/maps/documentation/android-sdk/get-api-key
+
+             Once you have your API key (it starts with "AIza"), define a new property in your
+             project's local.properties file (e.g. MAPS_API_KEY=Aiza...), and replace the
+             "YOUR_API_KEY" string in this file with "${MAPS_API_KEY}".
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="YOUR_API_KEY" />
+
+        <activity
+            android:name=".presentation.ble.BleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.account.AccountUser"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.mqtt.broker.topic.Addtopic"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.main.MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

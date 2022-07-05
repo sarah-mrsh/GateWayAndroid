@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent">
+
+    <com.example.fanp.utils.Shabnambold
+        android:id="@+id/txtfbname"
+        android:layout_width="wrap_content"
+        android:layout_height="55dp"
+        android:layout_weight="0.5"
+        android:gravity="center"
+        android:text="@string/fbname" />
+
+    <com.example.fanp.utils.Shabnambold
+        android:id="@+id/txtfbnumber"
+        android:layout_width="wrap_content"
+        android:layout_height="55dp"
+        android:layout_weight="0.5"
+        android:gravity="center"
+        android:text="@string/fbnumber" />
+
+    <com.example.fanp.utils.Shabnambold
+        android:id="@+id/txtplcname"
+        android:layout_width="wrap_content"
+        android:layout_height="55dp"
+        android:layout_weight="0.5"
+        android:gravity="center"
+        android:text="@string/plcname"
+        android:visibility="visible" />
+
+    <com.example.fanp.utils.Shabnambold
+        android:id="@+id/txtparametername"
+        android:layout_width="wrap_content"
+        android:layout_height="55dp"
+        android:layout_weight="0.5"
+        android:gravity="center"
+        android:text="@string/parametername"
+        android:visibility="visible" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_weight="0.5"
+        android:gravity="center"
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/imgdelete"
+            android:layout_width="35dp"
+            android:layout_weight="0.5"
+            android:src="@drawable/delete"
+            android:layout_height="32dp"/>
+        <ImageView
+            android:id="@+id/imgedit"
+            android:layout_width="35dp"
+            android:layout_weight="0.5"
+            android:src="@drawable/edit"
+            android:layout_height="32dp"/>
+
+
+        <ImageView
+            android:id="@+id/imgparameter"
+            android:layout_width="35dp"
+            android:layout_weight="0.5"
+            android:src="@drawable/topic"
+            android:layout_height="32dp"/>
+    </LinearLayout>
+
+
+</LinearLayout>

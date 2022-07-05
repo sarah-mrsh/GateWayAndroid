@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <com.example.fanp.utils.Shabnambold
+            android:layout_width="wrap_content"
+            android:text="@string/devicename"
+            android:id="@+id/name"
+            android:layout_weight="0.5"
+            android:gravity="center"
+            android:layout_height="match_parent"/>
+        <com.example.fanp.utils.Shabnambold
+            android:layout_width="wrap_content"
+            android:text="@string/deviceid"
+            android:layout_weight="0.5"
+            android:id="@+id/deviceid"
+            android:gravity="center"
+            android:layout_height="match_parent"/>
+        <com.example.fanp.utils.Shabnambold
+            android:layout_width="wrap_content"
+            android:text="@string/modbusaddress"
+            android:id="@+id/modbusadress"
+            android:layout_weight="0.5"
+            android:gravity="center"
+            android:layout_height="match_parent"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_weight="0.5"
+            android:gravity="center"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imgdelete"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:layout_weight="0.5"
+                android:src="@drawable/delete" />
+
+            <ImageView
+                android:id="@+id/imgedit"
+                android:layout_width="79dp"
+                android:layout_height="32dp"
+                android:layout_weight="0.5"
+                android:src="@drawable/edit" />
+
+            <ImageView
+                android:id="@+id/imgtopic"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:layout_weight="0.5"
+                android:src="@drawable/topic" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="?attr/main_back"
+    android:paddingBottom="24dp"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/linop"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_vertical">
+
+        <com.example.fanp.utils.NameEdt
+            android:id="@+id/edtname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="24dp"
+            android:layout_weight="0.5"
+            android:gravity="center"
+            android:hint="@string/clientName" />
+
+        <com.example.fanp.utils.IdEdt
+            android:id="@+id/edtclientid"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginLeft="24dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:gravity="center"
+            android:hint="@string/clientID" />
+
+        <Spinner
+            android:id="@+id/spnumber"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginLeft="24dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:entries="@array/numberto2"
+            android:padding="12dp"
+            android:textDirection="rtl"/>
+
+        <Spinner
+            android:id="@+id/sppubsub"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layoutDirection="rtl"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="24dp"
+            android:layout_weight="0.5"
+            android:entries="@array/clientpubsub"
+            android:padding="12dp"
+            android:textDirection="rtl" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginLeft="24dp"
+            android:layout_weight="0.5">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/btnadd"
+                android:layout_marginStart="350dp"
+                android:layout_marginEnd="350dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/transparent_yellow_border"
+                android:textColor="@color/white" />
+
+            <com.example.fanp.utils.Shabnammid
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="350dp"
+                android:layout_marginEnd="350dp"
+                android:gravity="center|center_vertical"
+                android:maxLines="1"
+                android:text="@string/add"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

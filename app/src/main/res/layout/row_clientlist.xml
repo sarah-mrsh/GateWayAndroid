@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentTop="true"
+    android:orientation="horizontal">
+
+    <com.example.fanp.utils.Shabnambold
+        android:layout_width="match_parent"
+        android:id="@+id/txtname"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.5"
+        android:gravity="center"
+        android:padding="12dp"
+        android:text="@string/clientName"
+        android:textSize="21sp" />
+
+    <com.example.fanp.utils.Shabnambold
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.5"
+        android:id="@+id/txtid"
+        android:gravity="center"
+        android:padding="12dp"
+        android:text="@string/clientID"
+        android:textSize="21sp" />
+
+    <com.example.fanp.utils.Shabnambold
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.5"
+        android:gravity="center"
+        android:padding="12dp"
+        android:id="@+id/txtqos"
+        android:text="@string/qos"
+        android:textSize="21sp" />
+
+    <LinearLayout
+        android:layout_width="1083dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.5"
+        android:gravity="center"
+        android:padding="12dp"
+        android:textSize="21sp">
+
+        <ImageView
+            android:id="@+id/topic"
+            android:layout_width="37dp"
+            android:layout_height="37dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="0dp"
+            android:background="@drawable/topic"
+            android:gravity="center"
+            android:padding="12dp"
+            android:textSize="21sp" />
+
+        <com.example.fanp.utils.Shabnambold
+            android:id="@+id/remove"
+            android:layout_width="41dp"
+            android:layout_height="36dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:background="@drawable/delete"
+            android:gravity="center"
+            android:padding="12dp"
+            android:textSize="21sp" />
+
+        <ImageView
+            android:id="@+id/edit"
+            android:layout_width="38dp"
+            android:layout_height="36dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/edit"
+            android:gravity="center"
+            android:padding="12dp"
+            android:textSize="21sp" />
+    </LinearLayout>
+
+</LinearLayout>
+

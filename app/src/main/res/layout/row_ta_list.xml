@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/header_main"
+    android:layout_width="match_parent"
+    android:gravity="center_vertical"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <com.example.fanp.utils.Shabnambold
+        android:id="@+id/tagname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.5"
+        android:gravity="center"
+        android:padding="12dp"
+        android:text="@string/tagname" />
+
+    <com.example.fanp.utils.Shabnambold
+        android:id="@+id/topicname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.5"
+        android:gravity="center"
+        android:padding="12dp"
+        android:text="@string/topic" />
+
+    <com.example.fanp.utils.Shabnambold
+        android:layout_width="match_parent"
+        android:id="@+id/type"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.5"
+        android:gravity="center"
+        android:padding="12dp"
+        android:text="@string/type" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.5"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="12dp">
+
+        <ImageView
+            android:id="@+id/remove"
+            android:layout_width="42dp"
+            android:layout_height="36dp"
+            android:background="@drawable/delete"
+            android:gravity="center"
+            android:padding="12dp"
+            android:textColor="#fff"
+            android:layout_marginLeft="60dp"/>
+
+        <ImageView
+            android:id="@+id/edit"
+            android:layout_width="36dp"
+            android:layout_height="35dp"
+            android:background="@drawable/edit"
+            android:gravity="center"
+            android:padding="12dp" />
+
+    </LinearLayout>
+
+</LinearLayout>

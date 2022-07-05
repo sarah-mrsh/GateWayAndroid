@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="com.example.fanp.presentation.wifi.WifiViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?attr/main_back"
+        android:layoutDirection="ltr"
+        tools:context=".presentation.wifi.WifiActivity">
+
+        <include
+            android:id="@+id/header"
+            layout="@layout/header" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="90dp">
+
+            <com.example.fanp.utils.Shabnambold
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.0"
+                android:text="@string/wifi"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <Switch
+            android:id="@+id/ckON_Off"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/header"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="50dp"
+            android:checked="@{viewmodel.active}"
+            android:onCheckedChanged="@{(button, on)-> viewmodel.setwifionoff(on)}"
+            android:text="@string/active" />
+
+        <com.example.fanp.utils.Shabnambold
+            android:id="@+id/meuDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ckON_Off"
+            android:padding="15dp"
+            android:text="@string/wifidesc"
+            android:textSize="16sp" />
+
+
+        <RelativeLayout
+            android:id="@+id/relative_layout_port_activity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="60dp"
+            android:layout_below="@id/meuDesc">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/yellowborder"
+                    android:orientation="vertical">
+
+                    <ProgressBar
+                        android:id="@+id/progress"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:indeterminate="true" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recycle_mqtt_brokers"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:scrollbars="vertical"
+                        android:scrollingCache="true" />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="bottom"
+            android:orientation="horizontal"
+            android:weightSum="4">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal|bottom"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1">
+
+                <Button
+                    android:id="@+id/btnBack"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/transparent_yellow_border"
+                    android:onClick="@{()->viewmodel.back()}"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/white"
+                    tools:ignore="SpeakableTextPresentCheck" />
+
+                <com.example.fanp.utils.Shabnammid
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:gravity="center|center_vertical"
+                    android:text="@string/back"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal|bottom"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1">
+
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal|bottom"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1">
+
+                <Button
+                    android:id="@+id/btnEdit"
+                    android:onClick="@{()->viewmodel.refresh()}"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/transparent_yellow_border"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/white"
+                    tools:ignore="SpeakableTextPresentCheck" />
+
+                <com.example.fanp.utils.Shabnammid
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:gravity="center|center_vertical"
+                    android:maxLines="1"
+                    android:text="@string/refresh"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal|bottom"
+                android:layout_marginStart="0dp"
+                android:layout_marginEnd="0dp"
+                android:layout_weight="1"
+                android:visibility="visible">
+
+                <Button
+                    android:id="@+id/btnAdd"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_marginStart="5dp"
+                    android:onClick="@{()->viewmodel.saved_network()}"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/transparent_yellow_border"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/white" />
+
+                <com.example.fanp.utils.Shabnammid
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:gravity="center|center_vertical"
+                    android:maxLines="1"
+                    android:text="@string/savednetwork"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</layout>

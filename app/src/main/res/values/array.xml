@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="brokerprotocols">
+        <item>WS</item>
+        <item>WSS</item>
+        <item>MQTT/TCP</item>
+        <item>MQTT/TLS</item>
+    </string-array>
+
+    <string-array name="qos">
+        <item>Almost Once</item>
+        <item>Atleast Once</item>
+        <item>Exactly Once</item>
+        <item>ALL</item>
+    </string-array>
+
+
+    <string-array name="clientpubsub">
+        <item>All</item>
+        <item>Sub</item>
+        <item>Pub</item>
+    </string-array>
+
+    <string-array name="numberto2">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
+
+    <string-array name="tagtype">
+        <item>Plain Text</item>
+        <item>Json</item>
+        <item>CSV</item>
+    </string-array>
+
+
+    <string-array name="parity">
+        <item>Odd</item>
+        <item>Even</item>
+        <item>None</item>
+    </string-array>
+
+    <string-array name="functioncode">
+       <item> RRAD_COIL  </item>
+       <item> READ_DISCRETE_INPUTS  </item>
+       <item> READ_MULTIPLE_HOLDING_REGISTERS  </item>
+       <item> READ_INPUT_REGISTERS  </item>
+       <item> WRITE_SINGLE_COIL  </item>
+       <item> WRITE_SINGLE_HOLDING_REGISTER  </item>
+       <item> WRITE_MULTIPLE_COILS  </item>
+       <item> WRITE_MULTIPLE_HLDING_REGISTERS  </item>
+    </string-array>
+
+    <string-array name="datattype">
+       <item>  MBOOLEAN   </item>
+       <item>  MINT8  </item>
+       <item>  MUINT8  </item>
+       <item>  MINT16  </item>
+       <item>  MUINT16  </item>
+       <item>  MINT32  </item>
+       <item>  MUINT32  </item>
+       <item>  MINT64  </item>
+       <item>  MUINT64  </item>
+       <item>  MFLOAT32  </item>
+       <item>  MFLOAT64  </item>
+       <item>  MSTRING  </item>
+    </string-array>
+
+
+
+    <string-array name="baudrate">
+        <item>110 b/s</item>
+        <item>300 b/s</item>
+        <item>600 b/s</item>
+        <item>1200 b/s</item>
+        <item>2400 b/s</item>
+        <item>4800 b/s</item>
+        <item>9600 b/s</item>
+        <item>14400 b/s</item>
+        <item>19200 b/s</item>
+        <item>38400 b/s</item>
+        <item>56000 b/s</item>
+        <item>57600 b/s</item>
+        <item>115200 b/s</item>
+        <item>128000 b/s</item>
+        <item>256000 b/s</item>
+    </string-array>
+
+    <string-array name="ioinputtype">
+        <item>Digital</item>
+        <item>Analogue</item>
+    </string-array>
+
+
+    <string-array name="tagtypeio">
+        <item>Input</item>
+        <item>Output</item>
+    </string-array>
+
+    <string-array name="IntvlUnit">
+        <item>choose</item>
+        <item>ms</item>
+        <item>s</item>
+        <item>min</item>
+    </string-array>
+
+</resources>
