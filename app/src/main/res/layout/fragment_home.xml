@@ -1,12 +1,157 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:background="?attr/main_back"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="?attr/main_back">
 
-<include layout="@layout/header"/>
+    <include
+        android:id="@+id/header"
+        layout="@layout/header" />
 
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/header">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:id="@+id/linsection1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp">
+
+                <RelativeLayout
+                    android:id="@+id/linwatch"
+                    android:layout_width="200dp"
+                    android:layout_height="240dp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/yellowborder_sharp"
+                    android:orientation="vertical">
+
+                    <com.example.fanp.utils.Shabnambold
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/timedate" />
+
+                    <com.example.fanp.utils.Shabnambold
+                        android:layoutDirection="ltr"
+                        android:textDirection="ltr"
+                        android:id="@+id/txtdatetime"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:text="" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/linlocation"
+                    android:layout_width="200dp"
+                    android:layout_height="240dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/yellowborder_sharp"
+                    android:orientation="vertical">
+
+                    <com.example.fanp.utils.Shabnambold
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/location" />
+
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:src="@drawable/map"
+                        android:layout_centerInParent="true"
+                        android:layout_marginTop="35dp"
+                        android:layout_height="70dp"/>
+
+                    <com.example.fanp.utils.Shabnambold
+                        android:layout_width="match_parent"
+                        android:layout_alignParentBottom="true"
+                        android:layout_height="wrap_content"
+                        android:text="Iran / Tehran" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="240dp"
+                    android:layout_marginStart="5dp"
+                    android:background="@drawable/yellowborder_sharp"
+                    android:orientation="vertical">
+
+                    <com.example.fanp.utils.Shabnambold
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/systeminformation" />
+
+                    <ImageView
+                        android:src="@drawable/chart1"
+                        android:layout_width="match_parent"
+                        android:scaleType="fitXY"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+
+
+
+                    </ImageView>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linsection1"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="12dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="240dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/yellowborder_sharp"
+                    android:orientation="vertical" >
+                    <ImageView
+                        android:id="@+id/chart_availability"
+                        android:layout_width="match_parent"
+                        android:src="@drawable/chart2"
+                        android:layout_height="match_parent" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="240dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/yellowborder_sharp"
+                    android:orientation="vertical" >
+                    <ImageView
+                        android:src="@drawable/chart3"
+                        android:id="@+id/chart_error"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
 
 </RelativeLayout>

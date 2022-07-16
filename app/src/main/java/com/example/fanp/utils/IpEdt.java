@@ -31,7 +31,6 @@ public class IpEdt extends androidx.appcompat.widget.AppCompatEditText {
     @Override
     public void setTag(Object tag) {
         super.setTag(tag);
-
     }
 
     @Override

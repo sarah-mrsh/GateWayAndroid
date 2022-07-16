@@ -206,6 +206,9 @@
     <string name="serialportactivation2">فعال / غیرفعال کردن درگاه سریال RS422</string>
     <string name="protocolconversion">تبدیل پروتکل</string>
     <string name="settings">تنظیمات</string>
+    <string name="timedate">تاریخ و زمان</string>
+    <string name="location">موقعیت</string>
+    <string name="systeminformation">اطلاعات سیستم</string>
 
 
 </resources>

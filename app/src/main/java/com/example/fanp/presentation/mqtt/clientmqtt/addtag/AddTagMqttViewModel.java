@@ -36,6 +36,7 @@ public class AddTagMqttViewModel extends ViewModel {
     public String tagid;
     public String type;
     public String topicname;
+    public String subpub;
 
 
     @Inject
@@ -54,6 +55,7 @@ public class AddTagMqttViewModel extends ViewModel {
             object.put("tagid", tagid);
             object.put("type", type);
             object.put("topicname", topicname);
+            object.put("subpub", subpub);
 
 
             JSONObject tmp = new JSONObject(TagListMqttClient.item.getItemsData());
@@ -99,6 +101,17 @@ public class AddTagMqttViewModel extends ViewModel {
         //parent.getSelectedItem()            get selected item
 
         type = parent.getAdapter().getItem(pos).toString();
+    }
+
+    public void onSelectSubOrPub(AdapterView<?> parent, View view, int pos, long id) {
+        //pos                                 get selected item position
+        //view.getText()                      get label of selected item
+        //parent.getAdapter().getItem(pos)    get item by pos
+        //parent.getAdapter().getCount()      get item count
+        //parent.getCount()                   get item count
+        //parent.getSelectedItem()            get selected item
+
+        subpub = parent.getAdapter().getItem(pos).toString();
     }
 
 

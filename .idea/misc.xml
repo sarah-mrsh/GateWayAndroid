@@ -86,53 +86,33 @@
         <entry key="..\:/Users/pc/AndroidStudioProjects/GateWayAndroid/app/src/main/res/layout/row_taglist_rtu.xml" value="0.2191780821917808" />
         <entry key="..\:/Users/pc/AndroidStudioProjects/GateWayAndroid/app/src/main/res/layout/row_topic.xml" value="0.2191780821917808" />
         <entry key="..\:/Users/pc/AndroidStudioProjects/GateWayAndroid/app/src/main/res/layout/row_wifi_list.xml" value="0.2191780821917808" />
-        <entry key="..\:/Users/pc/Documents/android/GateWayAndroid/app/src/main/res/layout/activity_add_client.xml" value="0.64" />
-        <entry key="..\:/Users/pc/Documents/android/GateWayAndroid/app/src/main/res/layout/activity_add_data_block_plc.xml" value="0.38533333333333336" />
-        <entry key="..\:/Users/pc/Documents/android/GateWayAndroid/app/src/main/res/layout/activity_add_datat_block_tag.xml" value="0.49866666666666665" />
-        <entry key="..\:/Users/pc/Documents/android/GateWayAndroid/app/src/main/res/layout/activity_add_function_block_plc.xml" value="0.38533333333333336" />
-        <entry key="..\:/Users/pc/Documents/android/GateWayAndroid/app/src/main/res/layout/activity_add_parameter_function_block.xml" value="0.38533333333333336" />
-        <entry key="..\:/Users/pc/Documents/android/GateWayAndroid/app/src/main/res/layout/activity_add_plc.xml" value="0.2813333333333333" />
-        <entry key="..\:/Users/pc/Documents/android/GateWayAndroid/app/src/main/res/layout/activity_add_server_rtu.xml" value="0.38533333333333336" />
-        <entry key="..\:/Users/pc/Documents/android/GateWayAndroid/app/src/main/res/layout/activity_add_servertcp.xml" value="0.38533333333333336" />
-        <entry key="..\:/Users/pc/Documents/android/GateWayAndroid/app/src/main/res/layout/activity_add_tag.xml" value="0.38533333333333336" />
-        <entry key="..\:/Users/pc/Documents/android/GateWayAndroid/app/src/main/res/layout/activity_add_tag_io.xml" value="0.38533333333333336" />
-        <entry key="..\:/Users/pc/Documents/android/GateWayAndroid/app/src/main/res/layout/activity_add_tag_memory.xml" value="0.38533333333333336" />
-        <entry key="..\:/Users/pc/Documents/android/GateWayAndroid/app/src/main/res/layout/activity_add_tag_mqtt_client.xml" value="0.38533333333333336" />
-        <entry key="..\:/Users/pc/Documents/android/GateWayAndroid/app/src/main/res/layout/activity_add_tag_tcp.xml" value="0.38533333333333336" />
-        <entry key="..\:/Users/pc/Documents/android/GateWayAndroid/app/src/main/res/layout/activity_ble.xml" value="0.38533333333333336" />
-        <entry key="..\:/Users/pc/Documents/android/GateWayAndroid/app/src/main/res/layout/activity_broker_setting.xml" value="0.38533333333333336" />
-        <entry key="..\:/Users/pc/Documents/android/GateWayAndroid/app/src/main/res/layout/activity_client_list.xml" value="0.38533333333333336" />
-        <entry key="..\:/Users/pc/Documents/android/GateWayAndroid/app/src/main/res/layout/activity_data_block_plc.xml" value="0.38533333333333336" />
-        <entry key="..\:/Users/pc/Documents/android/GateWayAndroid/app/src/main/res/layout/activity_edit_broker.xml" value="0.38533333333333336" />
-        <entry key="..\:/Users/pc/Documents/android/GateWayAndroid/app/src/main/res/layout/activity_main.xml" value="0.38533333333333336" />
-        <entry key="..\:/Users/pc/Documents/android/GateWayAndroid/app/src/main/res/layout/activity_main_mod_bus_rtu.xml" value="0.38533333333333336" />
-        <entry key="..\:/Users/pc/Documents/android/GateWayAndroid/app/src/main/res/layout/fragment_convertprotocol.xml" value="0.38533333333333336" />
-        <entry key="..\:/Users/pc/Documents/android/GateWayAndroid/app/src/main/res/layout/fragment_financial.xml" value="0.38533333333333336" />
-        <entry key="..\:/Users/pc/Documents/android/GateWayAndroid/app/src/main/res/layout/fragment_general_setting.xml" value="0.38533333333333336" />
-        <entry key="..\:/Users/pc/Documents/android/GateWayAndroid/app/src/main/res/layout/row_functionblock_plc_list.xml" value="0.38533333333333336" />
-        <entry key="..\:/Users/pc/Documents/android/GateWayAndroid/app/src/main/res/layout/row_ta_list.xml" value="0.38533333333333336" />
         <entry key="app/src/main/res/drawable/ic_reports.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/listpanel.xml" value="0.3575" />
+        <entry key="app/src/main/res/drawable/transparent_yellow_border.xml" value="0.3575" />
+        <entry key="app/src/main/res/drawable/yellowborder.xml" value="0.3575" />
+        <entry key="app/src/main/res/drawable/yellowborder_sharp.xml" value="0.3575" />
         <entry key="app/src/main/res/layout/activity_account.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_add_client.xml" value="0.2" />
-        <entry key="app/src/main/res/layout/activity_add_data_block_plc.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/activity_add_datat_block_tag.xml" value="0.5" />
+        <entry key="app/src/main/res/layout/activity_add_data_block_plc.xml" value="0.2" />
+        <entry key="app/src/main/res/layout/activity_add_datat_block_tag.xml" value="0.16" />
         <entry key="app/src/main/res/layout/activity_add_function_block_plc.xml" value="0.18" />
-        <entry key="app/src/main/res/layout/activity_add_parameter_function_block.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_add_parameter_function_block.xml" value="0.22" />
         <entry key="app/src/main/res/layout/activity_add_plc.xml" value="0.35625" />
         <entry key="app/src/main/res/layout/activity_add_server_rtu.xml" value="0.18177083333333333" />
         <entry key="app/src/main/res/layout/activity_add_servertcp.xml" value="0.5" />
         <entry key="app/src/main/res/layout/activity_add_tag_io.xml" value="1.0" />
         <entry key="app/src/main/res/layout/activity_add_tag_memory.xml" value="0.22" />
-        <entry key="app/src/main/res/layout/activity_add_tag_mqtt_client.xml" value="0.18" />
+        <entry key="app/src/main/res/layout/activity_add_tag_mqtt_client.xml" value="0.159375" />
         <entry key="app/src/main/res/layout/activity_add_tag_tcp.xml" value="0.2" />
+        <entry key="app/src/main/res/layout/activity_client_list.xml" value="0.20598958333333334" />
         <entry key="app/src/main/res/layout/activity_data_block_plc.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_function_block_plc.xml" value="0.12" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.3229692965410027" />
         <entry key="app/src/main/res/layout/activity_main_mod_bus_rtu.xml" value="0.13020833333333334" />
         <entry key="app/src/main/res/layout/activity_main_modbus_tcp.xml" value="0.2" />
         <entry key="app/src/main/res/layout/activity_main_mqtt_client.xml" value="0.18" />
         <entry key="app/src/main/res/layout/activity_main_parameter.xml" value="0.14" />
-        <entry key="app/src/main/res/layout/activity_main_s7.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/activity_main_s7.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_main_tag.xml" value="0.16" />
         <entry key="app/src/main/res/layout/activity_manage_plc.xml" value="0.6315378610460578" />
         <entry key="app/src/main/res/layout/activity_mqtt_brokers_list.xml" value="0.33" />
@@ -142,7 +122,8 @@
         <entry key="app/src/main/res/layout/activity_tag_list_io.xml" value="0.6836628511966701" />
         <entry key="app/src/main/res/layout/activity_tag_list_mqtt_client.xml" value="0.67" />
         <entry key="app/src/main/res/layout/activity_taglist_memory.xml" value="0.18" />
-        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/fragment_convertprotocol.xml" value="0.35" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.16" />
         <entry key="app/src/main/res/layout/fragment_special_setting.xml" value="0.18" />
         <entry key="app/src/main/res/layout/header.xml" value="0.67" />
         <entry key="app/src/main/res/layout/row_brokers_list.xml" value="0.71171875" />
@@ -156,7 +137,7 @@
         <entry key="app/src/main/res/layout/row_plc_list.xml" value="0.12" />
         <entry key="app/src/main/res/layout/row_ta_list.xml" value="0.19921875" />
         <entry key="app/src/main/res/layout/row_tag_memory_list.xml" value="0.14" />
-        <entry key="app/src/main/res/layout/row_tag_mqtt.xml" value="0.75" />
+        <entry key="app/src/main/res/layout/row_tag_mqtt.xml" value="0.25" />
       </map>
     </option>
   </component>

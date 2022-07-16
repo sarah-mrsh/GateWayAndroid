@@ -10,6 +10,7 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.util.Log;
+import android.view.View;
 import android.widget.Toast;
 
 import com.example.fanp.Command;
@@ -75,6 +76,8 @@ public class MainActivity extends DaggerAppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+
         super.onCreate(savedInstanceState);
 
 
@@ -100,6 +103,12 @@ public class MainActivity extends DaggerAppCompatActivity {
         binding.setViewmodel(viewModel);
         setContentView(binding.getRoot());
 
+        binding.txtlang.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+//                attachBaseContext(getBaseContext(),"fa");
+            }
+        });
 
     }
 

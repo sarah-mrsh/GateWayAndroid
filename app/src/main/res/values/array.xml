@@ -17,7 +17,7 @@
 
 
     <string-array name="clientpubsub">
-        <item>All</item>
+        <item>PUB_SUB</item>
         <item>Sub</item>
         <item>Pub</item>
     </string-array>

@@ -1,7 +1,4 @@
 buildscript {
-    repositories {
-        google()
-    }
     dependencies {
         classpath "com.google.protobuf:protobuf-gradle-plugin:0.8.14"
     }
@@ -13,6 +10,7 @@ plugins {
     id 'com.google.android.libraries.mapsplatform.secrets-gradle-plugin' version '2.0.0' apply false
 
 }
+
 
 task clean(type: Delete) {
     delete rootProject.buildDir

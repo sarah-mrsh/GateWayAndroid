@@ -3,11 +3,13 @@ package com.example.fanp.presentation.mqtt.clientmqtt.addclient;
 import android.content.Context;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Toast;
 
 import androidx.lifecycle.ViewModel;
 
 import com.example.fanp.domain.local.data.I4AllSettingDao;
 import com.example.fanp.domain.local.repository.I4AllSetting;
+import com.example.fanp.utils.IpEdt;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -80,7 +82,21 @@ public class AddClientViewModel extends ViewModel {
         qos = parent.getAdapter().getItem(pos).toString();
     }
 
-    public void savedata() {
+    public void savedata(IpEdt ip) {
+
+        if (!ip.valid){
+            Toast.makeText(ctx, "Ip Is Not Valid", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+
+
+
+
+
+
+
+
         JSONObject object = new JSONObject();
         try {
             object.put("clientname", clientname);
