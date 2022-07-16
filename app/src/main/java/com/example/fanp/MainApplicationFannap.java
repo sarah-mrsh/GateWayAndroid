@@ -34,9 +34,6 @@ public class MainApplicationFannap extends DaggerApplication {
 
 
 
-
-
-
         return DaggerAppComponent.builder().application(this).build();
     }
 }

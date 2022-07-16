@@ -68,11 +68,10 @@ public class MainActivity extends DaggerAppCompatActivity {
     @Inject
     WifiDao wifidb;
 
-
-    @Override
-    public Context getBaseContext() {
-      return MyContextWrapper.wrap(getApplicationContext(),"fa");
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(MyContextWrapper.wrap(newBase,"fa"));
     }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -94,8 +94,6 @@ public class ConvertProtocol extends BasicFragment {
         //Now specific components here (you can initialize Buttons etc)
 
 
-
-
         setdata();
         return view;
     }
@@ -166,29 +164,33 @@ public class ConvertProtocol extends BasicFragment {
         list.add(new TagModelSP("Choise", "Choise", "Choise"));
         try {
             // MODBUS TCP
-            I4AllSetting modbus_tcp = db.gettcpmodbus();
-            JSONArray tcparray = new JSONArray(modbus_tcp.getItemsData());
-            for (int i = 0; i < tcparray.length(); i++) {
-                int deviceid = tcparray.getJSONObject(i).getInt("deviceid");
-                List<I4AllSetting> data = db.getitembyitesref(deviceid);
-                for (I4AllSetting item : data) {
-                    JSONObject temp = new JSONObject(item.getItemsData());
-                    list.add(new TagModelSP(temp.getString("tagname"), temp.getString("tagid"), "MODBUSTCP"));
+            if (db.gettcpmodbus() != null) {
+                I4AllSetting modbus_tcp = db.gettcpmodbus();
+                JSONArray tcparray = new JSONArray(modbus_tcp.getItemsData());
+                for (int i = 0; i < tcparray.length(); i++) {
+                    int deviceid = tcparray.getJSONObject(i).getInt("deviceid");
+                    List<I4AllSetting> data = db.getitembyitesref(deviceid);
+                    for (I4AllSetting item : data) {
+                        JSONObject temp = new JSONObject(item.getItemsData());
+                        list.add(new TagModelSP(temp.getString("tagname"), temp.getString("tagid"), "MODBUSTCP"));
+                    }
                 }
             }
 
 // MODBUS RTU
-            I4AllSetting modbus_rtu = db.getrtumodbusserverlist();
-            JSONArray rtuarray = new JSONArray(modbus_rtu.getItemsData());
-            for (int i = 0; i < rtuarray.length(); i++) {
-                int deviceid = rtuarray.getJSONObject(i).getInt("deviceid");
-                List<I4AllSetting> data = db.getitembyitesref(deviceid);
-                for (I4AllSetting item : data) {
-                    JSONObject temp = new JSONObject(item.getItemsData());
-                    list.add(new TagModelSP(temp.getString("tagname"), temp.getString("tagid"), "MODBUSTCP"));
+            if (db.getrtumodbusserverlist() != null) {
+
+                I4AllSetting modbus_rtu = db.getrtumodbusserverlist();
+                JSONArray rtuarray = new JSONArray(modbus_rtu.getItemsData());
+                for (int i = 0; i < rtuarray.length(); i++) {
+                    int deviceid = rtuarray.getJSONObject(i).getInt("deviceid");
+                    List<I4AllSetting> data = db.getitembyitesref(deviceid);
+                    for (I4AllSetting item : data) {
+                        JSONObject temp = new JSONObject(item.getItemsData());
+                        list.add(new TagModelSP(temp.getString("tagname"), temp.getString("tagid"), "MODBUSTCP"));
+                    }
                 }
             }
-
 
             // MODBUS RTU
 //            List<I4AllSetting> modbus_rtu = db.getitembyitesref(513);
@@ -202,30 +204,33 @@ public class ConvertProtocol extends BasicFragment {
 //            }
 
             // MQTT CLIENT
-            List<I4AllSetting> mqtt_client = db.getitembyitesref(517);
-            for (int i = 0; i < mqtt_client.size(); i++) {
-                int deviceid = new JSONObject(mqtt_client.get(i).getItemsData()).getInt("clientid");
-                List<I4AllSetting> data = db.getitembyitesref(deviceid);
-                for (I4AllSetting item : data) {
-                    JSONObject temp = new JSONObject(item.getItemsData());
-                    list.add(new TagModelSP(temp.getString("tagname"), temp.getString("tagid"), "MQTT CLIENT"));
+            if (db.getitembyitesref(517) != null) {
+                List<I4AllSetting> mqtt_client = db.getitembyitesref(517);
+                for (int i = 0; i < mqtt_client.size(); i++) {
+                    int deviceid = new JSONObject(mqtt_client.get(i).getItemsData()).getInt("clientid");
+                    List<I4AllSetting> data = db.getitembyitesref(deviceid);
+                    for (I4AllSetting item : data) {
+                        JSONObject temp = new JSONObject(item.getItemsData());
+                        list.add(new TagModelSP(temp.getString("tagname"), temp.getString("tagid"), "MQTT CLIENT"));
+                    }
                 }
             }
 
             // S7
-            List<I4AllSetting> s7 = db.getplc();
-            for (I4AllSetting item : s7) {
-                JSONObject temp = new JSONObject(item.getItemsData());
-                List<I4AllSetting> tags = db.getitembyitesref(Integer.parseInt(temp.getString("deviceid")));
-                for (I4AllSetting data : tags) {
-                    JSONObject object = new JSONObject(data.getItemsData());
-                    if (!object.has("iotype")) {
-                        list.add(new TagModelSP(temp.getString("devicename"), temp.getString("deviceid"), "S7 DATABLOCK CLIENT"));
-                    } else {
-                        list.add(new TagModelSP(temp.getString("devicename"), temp.getString("deviceid"), "S7 IO CLIENT"));
+            if (db.getplc() != null) {
+                List<I4AllSetting> s7 = db.getplc();
+                for (I4AllSetting item : s7) {
+                    JSONObject temp = new JSONObject(item.getItemsData());
+                    List<I4AllSetting> tags = db.getitembyitesref(Integer.parseInt(temp.getString("deviceid")));
+                    for (I4AllSetting data : tags) {
+                        JSONObject object = new JSONObject(data.getItemsData());
+                        if (!object.has("iotype")) {
+                            list.add(new TagModelSP(temp.getString("devicename"), temp.getString("deviceid"), "S7 DATABLOCK CLIENT"));
+                        } else {
+                            list.add(new TagModelSP(temp.getString("devicename"), temp.getString("deviceid"), "S7 IO CLIENT"));
+                        }
                     }
                 }
-
             }
 
 
@@ -255,9 +260,9 @@ public class ConvertProtocol extends BasicFragment {
     }
 
 
-
     private class convertgrpc extends AsyncTask<Void, Void, ModbusConfigResponse> {
         List<I4AllSetting> alldata = new ArrayList<>();
+
         private convertgrpc() {
         }
 
@@ -268,7 +273,7 @@ public class ConvertProtocol extends BasicFragment {
 
                 ConfigConvertProtocol.Builder config = ConfigConvertProtocol.newBuilder();
                 alldata = db.getconvertprotocols();
-                for (int i = 0; alldata.size() > i ; i++){
+                for (int i = 0; alldata.size() > i; i++) {
                     JSONObject object = new JSONObject(alldata.get(i).getItemsData());
                     ConfigConvertProtocol.ConvertProtocol.Builder convert = ConfigConvertProtocol.ConvertProtocol.newBuilder();
                     convert.setTagNameSource(object.getString("from"));
