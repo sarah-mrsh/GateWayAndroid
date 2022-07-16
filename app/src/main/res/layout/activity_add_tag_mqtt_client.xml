@@ -169,6 +169,29 @@
                     android:text="@={viewmodel.topicname}" />
             </LinearLayout>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp">
+
+                <com.example.fanp.utils.Shabnambold
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.0"
+                    android:text="@string/startbit" />
+
+                <Spinner
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_weight="0.7"
+                    android:entries="@array/clientpubsub"
+                    android:onItemSelected="@{(parent,view,pos,id)->viewmodel.onSelectSubOrPub(parent,view,pos,id)}"
+                    />
+
+
+            </LinearLayout>
+
+
         </LinearLayout>
 
     </LinearLayout>

@@ -1,6 +1,10 @@
 package com.example.fanp.utils;
 
+import android.content.Context;
+import android.content.res.Configuration;
+import android.content.res.Resources;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,12 +12,11 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
+import java.util.Locale;
+
 public abstract class BasicFragment extends Fragment {
 
-    public void onCreate(Bundle savedInstanceState)
-    {
-        super.onCreate(savedInstanceState);
-    }
+
 
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup parent, Bundle savedInstanseState)
     {
@@ -23,7 +26,5 @@ public abstract class BasicFragment extends Fragment {
     }
 
     public abstract View provideYourFragmentView(LayoutInflater inflater,ViewGroup parent, Bundle savedInstanceState);
-
-
 
 }

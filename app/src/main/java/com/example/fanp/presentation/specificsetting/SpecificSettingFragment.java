@@ -1,12 +1,17 @@
 package com.example.fanp.presentation.specificsetting;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.res.Configuration;
+import android.content.res.Resources;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
+
+import androidx.annotation.NonNull;
 
 import com.example.fanp.R;
 import com.example.fanp.presentation.modbus.rtu.MainModBusRTU;
@@ -34,12 +39,6 @@ public class SpecificSettingFragment extends BasicFragment {
         View view = inflater.inflate(R.layout.fragment_special_setting, parent, false);
 
 
-        Locale locale = new Locale("fa");
-        Locale.setDefault(locale);
-        Configuration config = getActivity().getBaseContext().getResources().getConfiguration();
-        config.locale = locale;
-        getActivity().getBaseContext().getResources().updateConfiguration(config,
-                getActivity().getBaseContext().getResources().getDisplayMetrics());
 
 
         ImageButton building_button_port_button = (ImageButton) view.findViewById(R.id.building_button_port_button);
@@ -60,11 +59,9 @@ public class SpecificSettingFragment extends BasicFragment {
         //Now specific components here (you can initialize Buttons etc)
 
 
-////////////////////////////////sara
 
 
         return view;
     }
-
 
 }

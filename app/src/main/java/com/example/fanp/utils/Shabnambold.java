@@ -32,8 +32,6 @@ public class Shabnambold extends TextView {
 
     protected void onDraw (Canvas canvas) {
         super.onDraw(canvas);
-
-
     }
 
 }

@@ -73,6 +73,7 @@ message MqttClients {
     Qos qos = 20;
     int32 publishInterval = 21;
     bool retain = 22;
+
   }
 
 

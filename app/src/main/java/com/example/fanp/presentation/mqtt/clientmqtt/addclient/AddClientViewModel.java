@@ -9,10 +9,6 @@ import androidx.lifecycle.ViewModel;
 
 import com.example.fanp.domain.local.data.I4AllSettingDao;
 import com.example.fanp.domain.local.repository.I4AllSetting;
-import com.example.fanp.utils.IdEdt;
-import com.example.fanp.utils.IpEdt;
-import com.example.fanp.utils.NameEdt;
-import com.example.fanp.utils.PortEdt;
 
 import org.json.JSONException;
 import org.json.JSONObject;

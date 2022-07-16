@@ -228,6 +228,8 @@
     <string name="serialportactivation2">Active / Inactive Serial Port RS422</string>
     <string name="protocolconversion">Protocol Conversion</string>
     <string name="settings">Settings</string>
-    <string name="IntervalTimeHint" translatable="false">100ms-60min</string>
+    <string name="timedate">Time and Date</string>
+    <string name="location">Location</string>
+    <string name="systeminformation">System Information</string>
 
 </resources>

@@ -179,9 +179,15 @@ public class MainMqttViewModel extends ViewModel {
                                 tag.setMqttVarType(MqttVarType.CSV);
                                 break;
                         }
-                        tag.setClientActions(ClientActions.PUB);
+                        switch (object1.getString("subpub")) {
+                            case "PUB_SUB": tag.setClientActions(ClientActions.PUB_SUB);break;
+                            case "Sub": tag.setClientActions(ClientActions.SUB);break;
+                            case "Pub": tag.setClientActions(ClientActions.PUB);break;
+                        }
+
                         tag.setOnOff(false);
                         tag.setSystemName("Mohammad");
+
                         client.addClientTag(tag);
                     }
                     config.addMqttClient(client);

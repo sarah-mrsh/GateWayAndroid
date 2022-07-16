@@ -129,11 +129,11 @@
                         android:text="@string/FunctionBlock" />
 
                     <Spinner
+                        android:id="@+id/spfunctionblock"
                         android:layout_width="wrap_content"
                         android:layout_height="50dp"
                         android:layout_weight="0.7"
                         android:onItemSelected="@{(parent,view,pos,id)->viewmodel.onSelectfunctioncode(parent,view,pos,id)}"
-                        android:entries="@array/baudrate"
                         android:gravity="center" />
                 </LinearLayout>
 

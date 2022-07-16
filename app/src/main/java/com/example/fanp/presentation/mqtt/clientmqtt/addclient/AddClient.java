@@ -5,8 +5,7 @@ import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.ViewModelProviders;
 
 import android.os.Bundle;
-import android.util.Log;
-import android.widget.Toast;
+import android.widget.EditText;
 
 import com.example.fanp.R;
 import com.example.fanp.databinding.ActivityAddClientBinding;
@@ -14,10 +13,13 @@ import com.example.fanp.di.injector.ViewModelProviderFactory;
 import com.example.fanp.domain.local.data.I4AllSettingDao;
 import com.example.fanp.domain.local.repository.I4AllSetting;
 import com.example.fanp.presentation.modbus.tcp.MainModeBusTCPViewModel;
-import com.example.fanp.utils.autoIdEdt;
+import com.example.fanp.utils.Toaster;
 
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.inject.Inject;
 
@@ -49,12 +51,11 @@ public class AddClient extends DaggerAppCompatActivity {
         binding.setViewmodel(viewmodel);
         viewmodel.main=this;
 
-//      String id = new autoIdEdt().gen();
-//        Log.e("SARAHHHHHHHHH",id);
+        List<EditText> list = new ArrayList<>();
+        list.add(binding.edtip);
+        list.add(binding.edtclientid);
 
-
-
-
+        Toaster<?> tt = new Toaster<>(list);
 
 
         if (update) {

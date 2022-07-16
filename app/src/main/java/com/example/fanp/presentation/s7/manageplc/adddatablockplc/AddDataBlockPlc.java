@@ -79,7 +79,37 @@ public class AddDataBlockPlc extends DaggerAppCompatActivity {
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(
                 this, android.R.layout.simple_spinner_item, plcs);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+
+        List<String> functions = new ArrayList<>();
+        List<I4AllSetting> functionsblock = db.getitembyitesref(601);
+        for (I4AllSetting item : functionsblock) {
+            try {
+                JSONObject object = new JSONObject(item.getItemsData());
+                functions.add(object.getString("functionblockname"));
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        }
+        if (functions.size() == 0) {
+            Toast.makeText(xcs, "Function IS NULL", Toast.LENGTH_SHORT).show();
+            finish();
+        }
+        ArrayAdapter<String> adapterfunction = new ArrayAdapter<String>(
+                this, android.R.layout.simple_spinner_item, functions);
+        adapterfunction.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+
+
+
+
+
+
+
+        binding.spfunctionblock.setAdapter(adapterfunction);
         binding.spplc.setAdapter(adapter);
+
+
         viewmodel.main=this;
 
 

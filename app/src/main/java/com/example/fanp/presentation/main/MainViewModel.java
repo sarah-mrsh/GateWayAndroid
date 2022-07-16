@@ -6,6 +6,7 @@ import android.content.Context;
 import android.os.AsyncTask;
 import android.text.TextUtils;
 import android.util.Log;
+import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
@@ -31,6 +32,7 @@ import java.lang.ref.WeakReference;
 import java.util.concurrent.TimeUnit;
 
 import javax.inject.Inject;
+import javax.inject.Singleton;
 
 import io.grpc.Channel;
 import io.grpc.ManagedChannel;
@@ -49,17 +51,20 @@ public class MainViewModel extends ViewModel {
     HomeFragment home;
 
     @Inject
+    @Singleton
     SpecificSettingFragment specificSettingFragment;
 
     @Inject
+    @Singleton
     GeneralSettingFragment generalSettingFragment;
 
     @Inject
+    @Singleton
     ConvertProtocol convertProtocol;
 
     @Inject
+    @Singleton
     FinancialFragment financialFragment;
-
 
 
     public MainActivity main; // TODO REMOVE VIEW FROM VIEWMODEL
@@ -69,9 +74,22 @@ public class MainViewModel extends ViewModel {
         Log.e(TAG, "AuthViewModel: viewmodel is working...");
     }
 
+
+    public void refresh() {
+        Fragment frag = null;
+        final FragmentTransaction transaction = main.getSupportFragmentManager().beginTransaction();
+        frag = main.getSupportFragmentManager().findFragmentByTag("Your_Fragment_TAG");
+        transaction.detach(frag);
+        transaction.attach(frag);
+        transaction.commit();
+    }
+
     public void replace_frame(Fragment fr) {
         final FragmentTransaction transaction = main.getSupportFragmentManager().beginTransaction();
-        transaction.replace(R.id.contentContainer, fr);
+        if (fr == specificSettingFragment)
+            transaction.replace(R.id.contentContainer, fr, "MYFR");
+        else
+            transaction.replace(R.id.contentContainer, fr);
         transaction.addToBackStack(null);
         transaction.commit();
     }
@@ -105,9 +123,6 @@ public class MainViewModel extends ViewModel {
 //    }
 
     public void specific_setting_frame() {
-        System.runFinalization();
-        Runtime.getRuntime().gc();
-        System.gc();
         resetcolor();
         main.binding.txtsecificsetting.setTextColor(ctx.getResources().getColor(R.color.purple_700));
         main.binding.imgspecificsetting.setColorFilter(ctx.getResources().getColor(R.color.purple_700));
@@ -128,8 +143,6 @@ public class MainViewModel extends ViewModel {
 
         replace_frame(financialFragment);
     }
-
-
 
 
 }
