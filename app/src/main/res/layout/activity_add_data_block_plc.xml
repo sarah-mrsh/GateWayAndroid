@@ -17,7 +17,25 @@
         android:background="?attr/main_back">
 
 
-        <include layout="@layout/header"/>
+        <include
+            android:id="@+id/header"
+            layout="@layout/header"
+            app:title="@{@string/DataBlockconf}"/>
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.0"
+                android:text="@string/DataBlockconf"
+                android:textSize="23dp" />
+        </LinearLayout>
 
 
         <LinearLayout
@@ -45,6 +63,7 @@
                         android:text="@string/name" />
 
                     <com.example.fanp.utils.NameEdt
+                        android:id="@+id/editName"
                         android:layout_width="409dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.7"
@@ -67,7 +86,7 @@
                         android:layout_weight="0.0"
                         android:text="@string/blockdataid" />
 
-                    <EditText
+                    <com.example.fanp.utils.IdEdt
                         android:id="@+id/tagid"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -184,7 +203,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:layout_marginStart="15dp"
-                    android:onClick="@{()->viewmodel.savedata()}"
+                    android:onClick="@{()->viewmodel.validation(tagid, editName)}"
                     android:layout_marginTop="5dp"
                     android:layout_marginEnd="15dp"
                     android:background="@drawable/transparent_yellow_border"

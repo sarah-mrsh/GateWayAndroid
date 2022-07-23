@@ -9,7 +9,10 @@ import androidx.lifecycle.ViewModel;
 
 import com.example.fanp.domain.local.data.I4AllSettingDao;
 import com.example.fanp.domain.local.repository.I4AllSetting;
+import com.example.fanp.utils.IdEdt;
 import com.example.fanp.utils.IpEdt;
+import com.example.fanp.utils.NameEdt;
+import com.example.fanp.utils.PortEdt;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -82,21 +85,35 @@ public class AddClientViewModel extends ViewModel {
         qos = parent.getAdapter().getItem(pos).toString();
     }
 
-    public void savedata(IpEdt ip) {
 
-        if (!ip.valid){
-            Toast.makeText(ctx, "Ip Is Not Valid", Toast.LENGTH_SHORT).show();
+
+
+    public void validation(IpEdt ip, IdEdt id, PortEdt port, NameEdt name){
+        if (!ip.valid) {
+            Toast.makeText(ctx, "IP is not valid.", Toast.LENGTH_SHORT).show();
             return;
         }
 
+        if (!name.valid){
+            Toast.makeText(ctx, "Name is not valid.", Toast.LENGTH_SHORT).show();
+            return ;
+
+        }
+        if (!port.valid){
+            Toast.makeText(ctx, "Port is not valid.", Toast.LENGTH_SHORT).show();
+            return;
+
+        }
+        if (!id.valid){
+            Toast.makeText(ctx, "ID is not valid.", Toast.LENGTH_SHORT).show();
+            return ;
+        }
+
+       savedata();
+    }
 
 
-
-
-
-
-
-
+    public void savedata() {
         JSONObject object = new JSONObject();
         try {
             object.put("clientname", clientname);

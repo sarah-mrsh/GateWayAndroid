@@ -1,6 +1,5 @@
 package com.example.fanp.presentation.specificsetting;
 
-import android.content.Context;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.content.res.Resources;
@@ -59,9 +58,11 @@ public class SpecificSettingFragment extends BasicFragment {
         //Now specific components here (you can initialize Buttons etc)
 
 
+////////////////////////////////sara
 
 
         return view;
     }
+
 
 }

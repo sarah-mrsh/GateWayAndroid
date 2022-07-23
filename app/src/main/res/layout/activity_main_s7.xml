@@ -44,36 +44,71 @@
             android:layout_height="match_parent"
             android:orientation="horizontal">
 
-            <com.example.fanp.utils.Shabnammid
-                android:id="@+id/tagmanagment"
-                android:layout_width="170dp"
-                android:layout_height="55dp"
-                android:layout_alignParentEnd="true"
-                android:layout_centerVertical="true"
-                android:layout_gravity="center"
-                android:layout_marginStart="30dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="237dp"
-                android:background="#52FFFFFF"
-                android:gravity="center"
-                android:onClick="@{()->viewmodel.tagmanage()}"
-                android:padding="6dp"
-                android:text="@string/tagManagment" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="150dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
 
-            <com.example.fanp.utils.Shabnammid
-                android:layout_width="170dp"
-                android:layout_height="55dp"
-                android:layout_centerVertical="true"
-                android:layout_gravity="center"
-                android:layout_marginStart="230dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="30dp"
-                android:background="#52FFFFFF"
-                android:gravity="center"
-                android:onClick="@{()->viewmodel.manageplc()}"
-                android:padding="6dp"
-                android:text="@string/manageplc" />
+                <RelativeLayout
+                    android:id="@+id/building_button_port"
+                    android:layout_width="250dp"
+                    android:layout_height="80dp"
+                    android:gravity="center_horizontal">
 
+                    <ImageButton
+                        android:layout_width="250dp"
+                        android:layout_height="80dp"
+                        android:layout_gravity="center"
+                        android:adjustViewBounds="true"
+                        android:background="@color/transparent"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/plcmgmt" />
+
+                    <com.example.fanp.utils.Shabnammid
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="0dp"
+                        android:gravity="center"
+                        android:onClick="@{()->viewmodel.manageplc()}"
+                        android:text="@string/manageplc"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/building_button_mainreserve"
+                    android:layout_width="250dp"
+                    android:layout_height="80dp"
+                    android:gravity="center_horizontal">
+
+                    <ImageButton
+                        android:id="@+id/building_button_port_button"
+                        android:layout_width="250dp"
+                        android:layout_height="80dp"
+                        android:layout_gravity="center"
+                        android:adjustViewBounds="true"
+                        android:background="@color/transparent"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/tagmgmt" />
+
+                    <com.example.fanp.utils.Shabnammid
+                        android:id="@+id/tagmanagment"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:onClick="@{()->viewmodel.tagmanage()}"
+                        android:text="@string/tagManagment"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+
+
+                </RelativeLayout>
+            </LinearLayout>
 
         </RelativeLayout>
 

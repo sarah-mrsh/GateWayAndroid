@@ -64,6 +64,7 @@
                         android:text="@string/tagname" />
 
                     <com.example.fanp.utils.NameEdt
+                        android:id="@+id/editName"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.7"
@@ -87,6 +88,7 @@
                         android:text="@string/tagid" />
 
                     <com.example.fanp.utils.IdEdt
+                        android:id="@+id/editid"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.7"
@@ -111,6 +113,7 @@
                         android:text="@string/serverid" />
 
                     <com.example.fanp.utils.IdEdt
+                        android:id="@+id/editsrvid"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.7"
@@ -228,6 +231,20 @@
                         android:inputType="number"
                         android:maxLines="1"
                         android:text="@={viewmodel.interval}" />
+
+                    <Spinner
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_weight="0.7"
+                        android:entries="@array/IntvlUnit">
+                    </Spinner>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.0"
+                        android:text="@string/IntervalTimeHint" />
+
                 </LinearLayout>
 
 
@@ -283,7 +300,7 @@
                     android:layout_marginTop="5dp"
                     android:layout_marginEnd="15dp"
                     android:background="@drawable/transparent_yellow_border"
-                    android:onClick="@{()->viewmodel.savedata()}"
+                    android:onClick="@{()->viewmodel.validation(editid, editsrvid, editName)}"
                     android:textColor="@color/white" />
 
                 <com.example.fanp.utils.Shabnammid

@@ -1,9 +1,16 @@
 package com.example.fanp.presentation.s7.addplc;
 
+import android.content.Context;
+import android.widget.Toast;
+
 import androidx.lifecycle.ViewModel;
 
 import com.example.fanp.domain.local.data.I4AllSettingDao;
 import com.example.fanp.domain.local.repository.I4AllSetting;
+import com.example.fanp.utils.IdEdt;
+import com.example.fanp.utils.IpEdt;
+import com.example.fanp.utils.NameEdt;
+import com.example.fanp.utils.PortEdt;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -15,6 +22,9 @@ import java.util.List;
 import javax.inject.Inject;
 
 public class AddPlcViewModel extends ViewModel {
+
+    @Inject
+    Context ctx;
 
     @Inject
     public AddPlcViewModel(){}
@@ -36,6 +46,30 @@ public class AddPlcViewModel extends ViewModel {
         main.finish();
     }
 
+
+    public void validation(IpEdt ip, IdEdt id, PortEdt port, NameEdt name){
+        if (!ip.valid) {
+            Toast.makeText(ctx, "IP is not valid.", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        if (!name.valid){
+            Toast.makeText(ctx, "Name is not valid.", Toast.LENGTH_SHORT).show();
+            return ;
+
+        }
+        if (!port.valid){
+            Toast.makeText(ctx, "Port is not valid.", Toast.LENGTH_SHORT).show();
+            return;
+
+        }
+        if (!id.valid){
+            Toast.makeText(ctx, "ID is not valid.", Toast.LENGTH_SHORT).show();
+            return ;
+        }
+
+        savedata();
+    }
 
     public void savedata() {
         JSONObject object = new JSONObject();

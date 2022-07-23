@@ -1,5 +1,6 @@
 package com.example.fanp.presentation.modbus.rtu;
 
+import android.content.Context;
 import android.content.Intent;
 import android.view.View;
 import android.widget.AdapterView;
@@ -11,6 +12,8 @@ import androidx.lifecycle.ViewModel;
 import com.example.fanp.domain.local.data.I4AllSettingDao;
 import com.example.fanp.domain.local.repository.I4AllSetting;
 import com.example.fanp.presentation.modbus.rtu.serverlistrtu.ServerListRtu;
+import com.example.fanp.utils.IdEdt;
+import com.example.fanp.utils.NameEdt;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -34,6 +37,9 @@ public class MainModbudRtuViewModel extends ViewModel {
     public String databit;
     public String parity;
     public String endbit;
+
+    @Inject
+    Context ctx;
 
     @Inject
     I4AllSettingDao db;
@@ -63,7 +69,17 @@ public class MainModbudRtuViewModel extends ViewModel {
         parity = parent.getAdapter().getItem(pos).toString();
     }
 
-
+    public void validation(IdEdt id, NameEdt name){
+        if (!id.valid){
+            Toast.makeText(ctx, "ID is not valid.", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        if (!name.valid){
+            Toast.makeText(ctx, "Name is not valid.", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        savedata();
+    }
     public void savedata() {
         if (!main.last_status){
             main.enable_status(true);

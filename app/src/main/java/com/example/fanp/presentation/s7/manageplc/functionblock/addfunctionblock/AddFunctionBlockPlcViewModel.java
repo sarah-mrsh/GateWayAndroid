@@ -12,6 +12,7 @@ import com.example.fanp.domain.local.data.I4AllSettingDao;
 import com.example.fanp.domain.local.repository.I4AllSetting;
 import com.example.fanp.presentation.s7.manageplc.adddatablockplc.AddDataBlockPlc;
 import com.example.fanp.presentation.s7.manageplc.functionblock.parameters.addparameter.AddParameterFunctionBlock;
+import com.example.fanp.utils.NameEdt;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -64,6 +65,14 @@ public class AddFunctionBlockPlcViewModel extends ViewModel {
 //    public String id;
 //    public String functionblock;
 //    public String description;
+
+    public void validation (NameEdt name){
+        if(!name.valid){
+            Toast.makeText(ctx, "Name is not valid.", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        savedata();
+    }
 
     public void savedata() {
         JSONObject object = new JSONObject();

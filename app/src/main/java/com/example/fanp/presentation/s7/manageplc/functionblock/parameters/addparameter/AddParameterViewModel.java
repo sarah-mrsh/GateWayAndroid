@@ -10,6 +10,7 @@ import androidx.lifecycle.ViewModel;
 import com.example.fanp.domain.local.data.I4AllSettingDao;
 import com.example.fanp.domain.local.repository.I4AllSetting;
 import com.example.fanp.presentation.s7.manageplc.functionblock.parameters.AdapterPrameterFunctionBloc;
+import com.example.fanp.utils.NameEdt;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -59,6 +60,14 @@ public class AddParameterViewModel extends ViewModel {
     }
 
 
+    public void validation (NameEdt name){
+        if(!name.valid){
+            Toast.makeText(xcs, "Name is not valid.", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        savedata();
+    }
+
     public void savedata() {
 
 
@@ -78,12 +87,12 @@ public class AddParameterViewModel extends ViewModel {
             I4AllSetting data = null;
             int plcid = 0;
             for (I4AllSetting item : spdata) {
-                    JSONObject temp = new JSONObject(item.getItemsData());
-                    if (temp.getString("parameterid").equals(parameterid)) {
-                        plcid = temp.getInt("parameterid");
-                        data = item;
-                        break;
-                    }
+                JSONObject temp = new JSONObject(item.getItemsData());
+                if (temp.getString("parameterid").equals(parameterid)) {
+                    plcid = temp.getInt("parameterid");
+                    data = item;
+                    break;
+                }
             }
 
             String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());

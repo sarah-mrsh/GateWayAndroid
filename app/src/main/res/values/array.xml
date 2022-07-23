@@ -99,4 +99,11 @@
         <item>Output</item>
     </string-array>
 
+    <string-array name="IntvlUnit">
+        <item>choose</item>
+        <item>ms</item>
+        <item>s</item>
+        <item>min</item>
+    </string-array>
+
 </resources>

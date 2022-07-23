@@ -1,12 +1,16 @@
 package com.example.fanp.presentation.modbus.tcp.tag;
 
+import android.content.Context;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Toast;
 
 import androidx.lifecycle.ViewModel;
 
 import com.example.fanp.domain.local.data.I4AllSettingDao;
 import com.example.fanp.domain.local.repository.I4AllSetting;
+import com.example.fanp.utils.IdEdt;
+import com.example.fanp.utils.NameEdt;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -34,6 +38,8 @@ public class AddTagTCPViewModel extends ViewModel {
 
     AddTagTCP main;
 
+    @Inject
+    Context ctx;
 
     @Inject
     public AddTagTCPViewModel() {
@@ -75,6 +81,22 @@ public class AddTagTCPViewModel extends ViewModel {
 //    public int interval;
 //    public String description;
 
+
+    public void validation(IdEdt id, IdEdt idserver, NameEdt name){
+        if(!name.valid){
+            Toast.makeText(ctx, "Name is not valid.", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        if (!id.valid){
+            Toast.makeText(ctx, "ID is not valid.", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        if (!idserver.valid){
+            Toast.makeText(ctx, "Server ID is not valid.", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        savedata();
+    }
 
     public void savedata() {
         JSONObject object = new JSONObject();

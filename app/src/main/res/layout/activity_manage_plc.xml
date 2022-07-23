@@ -36,63 +36,98 @@
                 android:textSize="20dp" />
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="150dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
 
-            <com.example.fanp.utils.Shabnammid
-                android:layout_width="170dp"
-                android:layout_height="55dp"
-                android:layout_gravity="center"
-                android:layout_marginStart="12dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="12dp"
-                android:background="#52FFFFFF"
-                android:gravity="center"
-                android:onClick="@{()->viewmodel.plclist()}"
-                android:padding="6dp"
-                android:text="@string/plcsetting" />
+                <RelativeLayout
+                    android:id="@+id/building_button_port"
+                    android:layout_width="250dp"
+                    android:layout_height="80dp"
+                    android:gravity="center_horizontal">
 
+                    <ImageButton
+                        android:layout_width="250dp"
+                        android:layout_height="80dp"
+                        android:layout_gravity="center"
+                        android:adjustViewBounds="true"
+                        android:background="@color/transparent"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/plc" />
 
-            <com.example.fanp.utils.Shabnammid
-                android:id="@+id/txtdatablock"
-                android:layout_width="170dp"
-                android:layout_height="55dp"
-                android:layout_gravity="center"
-                android:layout_marginStart="12dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="12dp"
-                android:background="#52FFFFFF"
-                android:gravity="center"
-                android:onClick="@{()->viewmodel.datablockplc()}"
-                android:padding="6dp"
-                android:text="@string/datablock" />
+                    <com.example.fanp.utils.Shabnammid
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_marginEnd="40dp"
+                        android:onClick="@{()->viewmodel.plclist()}"
+                        android:text="@string/plc"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
 
+                </RelativeLayout>
 
-            <com.example.fanp.utils.Shabnammid
-                android:id="@+id/txtfunctionclock"
-                android:layout_width="170dp"
-                android:layout_height="55dp"
-                android:layout_gravity="center"
-                android:layout_marginStart="12dp"
-                android:layout_marginTop="8dp"
+                <RelativeLayout
+                    android:id="@+id/building_button_mainreserve"
+                    android:layout_width="250dp"
+                    android:layout_height="80dp"
+                    android:gravity="center_horizontal">
 
-                android:layout_marginEnd="12dp"
-                android:background="#52FFFFFF"
-                android:gravity="center"
-                android:onClick="@{()->viewmodel.functionblock()}"
-                android:padding="6dp"
-                android:text="@string/operationblock" />
+                    <ImageButton
+                        android:layout_width="250dp"
+                        android:layout_height="80dp"
+                        android:layout_gravity="center"
+                        android:adjustViewBounds="true"
+                        android:background="@color/transparent"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/datablock" />
 
+                    <com.example.fanp.utils.Shabnammid
+                        android:id="@+id/txtdatablock"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="40dp"
+                        android:gravity="center"
+                        android:onClick="@{()->viewmodel.datablockplc()}"
+                        android:text="@string/datablock"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
 
-        </LinearLayout>
+                </RelativeLayout>
 
+                <RelativeLayout
+                    android:layout_width="250dp"
+                    android:layout_height="80dp"
+                    android:gravity="center_horizontal">
 
+                <ImageButton
+                    android:layout_width="250dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"
+                    android:adjustViewBounds="true"
+                    android:background="@color/transparent"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/fb" />
 
+                    <com.example.fanp.utils.Shabnammid
+                        android:id="@+id/txtfunctionclock"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:onClick="@{()->viewmodel.functionblock()}"
+                        android:text="@string/operationblock"
+                        android:textColor="@color/white"
+                        android:layout_marginEnd="40dp"
+                        android:textSize="18sp" />
+                </RelativeLayout>
 
+            </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"

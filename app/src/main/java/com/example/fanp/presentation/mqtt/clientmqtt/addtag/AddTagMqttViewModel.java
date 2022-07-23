@@ -1,5 +1,6 @@
 package com.example.fanp.presentation.mqtt.clientmqtt.addtag;
 
+import android.content.Context;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.EditText;
@@ -10,7 +11,10 @@ import androidx.lifecycle.ViewModel;
 import com.example.fanp.domain.local.data.I4AllSettingDao;
 import com.example.fanp.domain.local.repository.I4AllSetting;
 import com.example.fanp.presentation.mqtt.clientmqtt.taglist.TagListMqttClient;
+import com.example.fanp.utils.IdEdt;
+import com.example.fanp.utils.IpEdt;
 import com.example.fanp.utils.NameEdt;
+import com.example.fanp.utils.PortEdt;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -27,7 +31,8 @@ public class AddTagMqttViewModel extends ViewModel {
 
     AddTagMqttClient main;
 
-
+    @Inject
+    Context ctx;
 
     @Inject
     I4AllSettingDao db;
@@ -46,17 +51,31 @@ public class AddTagMqttViewModel extends ViewModel {
 
     }
 
-    public void savedata(NameEdt item) {
+    public void validation(IdEdt id, NameEdt name){
+
+        if (!name.valid){
+            Toast.makeText(ctx, "Name is not valid.", Toast.LENGTH_SHORT).show();
+            return ;
+
+        }
+
+        if (!id.valid){
+            Toast.makeText(ctx, "ID is not valid.", Toast.LENGTH_SHORT).show();
+            return ;
+        }
+
+        savedata();
+    }
+
+
+    public void savedata() {
         try{
             new JSONObject(json);
         }catch (JSONException ex){
             Toast.makeText(main, "json is not Valid", Toast.LENGTH_SHORT).show();
             return;
         }
-        if (!item.valid){
-            Toast.makeText(main, "validation failed", Toast.LENGTH_SHORT).show();
-            return;
-        }
+
         JSONObject object = new JSONObject();
         try {
             object.put("tagname", tagname);

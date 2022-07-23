@@ -1,11 +1,16 @@
 package com.example.fanp.presentation.modbus.tcp.addserver;
 
+import android.content.Context;
 import android.widget.Toast;
 
 import androidx.lifecycle.ViewModel;
 
 import com.example.fanp.domain.local.data.I4AllSettingDao;
 import com.example.fanp.domain.local.repository.I4AllSetting;
+import com.example.fanp.utils.IdEdt;
+import com.example.fanp.utils.IpEdt;
+import com.example.fanp.utils.NameEdt;
+import com.example.fanp.utils.PortEdt;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -24,6 +29,8 @@ public class AddServeTcpViewModel extends ViewModel {
     public String deviceid;
     public String ip;
     public String port;
+    @Inject
+    Context ctx;
 
     @Inject
     public AddServeTcpViewModel() {
@@ -40,6 +47,26 @@ public class AddServeTcpViewModel extends ViewModel {
 
     public void exit() {
         main.finish();
+    }
+
+    public void validation(IpEdt ip, IdEdt id, PortEdt port, NameEdt name){
+        if (!name.valid){
+            Toast.makeText(ctx, "Name is not valid.", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        if (!id.valid){
+            Toast.makeText(ctx, "ID is not valid.", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        if (!ip.valid){
+            Toast.makeText(ctx, "IP is not valid.", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        if (!port.valid){
+            Toast.makeText(ctx, "Port is not valid.", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        savedata();
     }
 
     public void savedata() {

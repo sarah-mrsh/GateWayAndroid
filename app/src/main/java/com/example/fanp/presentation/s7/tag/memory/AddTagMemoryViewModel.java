@@ -1,12 +1,16 @@
 package com.example.fanp.presentation.s7.tag.memory;
 
+import android.content.Context;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Toast;
 
 import androidx.lifecycle.ViewModel;
 
 import com.example.fanp.domain.local.data.I4AllSettingDao;
 import com.example.fanp.domain.local.repository.I4AllSetting;
+import com.example.fanp.utils.IdEdt;
+import com.example.fanp.utils.NameEdt;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -32,13 +36,30 @@ public class AddTagMemoryViewModel extends ViewModel {
     public AddTagMemory main;
 
     @Inject
+    Context ctx;
+
+    @Inject
     I4AllSettingDao db;
 
     @Inject
     public AddTagMemoryViewModel(){}
 
 
+    public void validation(IdEdt id, NameEdt name){
 
+        if (!name.valid){
+            Toast.makeText(ctx, "Name is not valid.", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        if (!id.valid){
+            Toast.makeText(ctx, "ID is not valid.", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        savedata();
+
+    }
 
     public void savedata() {
         JSONObject object = new JSONObject();

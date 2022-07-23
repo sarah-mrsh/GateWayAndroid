@@ -9,6 +9,10 @@ import androidx.lifecycle.ViewModel;
 
 import com.example.fanp.domain.local.data.I4AllSettingDao;
 import com.example.fanp.domain.local.repository.I4AllSetting;
+import com.example.fanp.utils.IdEdt;
+import com.example.fanp.utils.IpEdt;
+import com.example.fanp.utils.NameEdt;
+import com.example.fanp.utils.PortEdt;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -78,6 +82,21 @@ public class AddDataBlockPlcViewModel extends ViewModel {
 //    public String id;
 //    public String functionblock;
 //    public String description;
+
+    public void validation(IdEdt id, NameEdt name){
+
+        if (!name.valid){
+            Toast.makeText(ctx, "Name is not valid.", Toast.LENGTH_SHORT).show();
+            return ;
+
+        }
+        if (!id.valid){
+            Toast.makeText(ctx, "id is not valid.", Toast.LENGTH_SHORT).show();
+            return ;
+        }
+
+        savedata();
+    }
 
     public void savedata() {
         JSONObject object = new JSONObject();
