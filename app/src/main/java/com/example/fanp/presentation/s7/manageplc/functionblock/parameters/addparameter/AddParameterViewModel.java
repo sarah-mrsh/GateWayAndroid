@@ -10,6 +10,7 @@ import androidx.lifecycle.ViewModel;
 import com.example.fanp.domain.local.data.I4AllSettingDao;
 import com.example.fanp.domain.local.repository.I4AllSetting;
 import com.example.fanp.presentation.s7.manageplc.functionblock.parameters.AdapterPrameterFunctionBloc;
+import com.example.fanp.utils.NameEdt;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -58,6 +59,14 @@ public class AddParameterViewModel extends ViewModel {
         type = parent.getAdapter().getItem(pos).toString();
     }
 
+
+    public void validation (NameEdt name){
+        if(!name.valid){
+            Toast.makeText(xcs, "Name is not valid.", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        savedata();
+    }
 
     public void savedata() {
 

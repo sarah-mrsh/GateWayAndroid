@@ -4,6 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/pc/AndroidStudioProjects/GateWayAndroid/app/src/main/res/layout/activity_add_client.xml" value="0.2" />
+        <entry key="..\:/Users/pc/AndroidStudioProjects/GateWayAndroid/app/src/main/res/layout/activity_add_parameter_function_block.xml" value="0.15" />
         <entry key="..\:/Users/pc/AndroidStudioProjects/GateWayAndroid/app/src/main/res/layout/activity_add_tag_io.xml" value="0.1203125" />
         <entry key="..\:/Users/pc/AndroidStudioProjects/GateWayAndroid/app/src/main/res/layout/activity_add_tag_tcp.xml" value="0.12" />
         <entry key="..\:/Users/pc/AndroidStudioProjects/GateWayAndroid/app/src/main/res/layout/activity_main_modbus_tcp.xml" value="0.2191780821917808" />
