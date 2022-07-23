@@ -16,6 +16,7 @@ public class IntervalEdt extends androidx.appcompat.widget.AppCompatEditText {
 
     public boolean valid = false;
 
+    // tapsel doshanbeh 4 bad az zohr
 
 
 

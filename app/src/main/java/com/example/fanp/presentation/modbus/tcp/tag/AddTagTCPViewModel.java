@@ -25,6 +25,7 @@ public class AddTagTCPViewModel extends ViewModel {
     public String tagid;
     public String serverid;
     public String modbusaddres;
+
     public String functioncode;
     public String datatype;
     public String interval;
