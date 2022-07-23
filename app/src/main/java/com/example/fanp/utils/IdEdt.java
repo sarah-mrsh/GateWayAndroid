@@ -27,13 +27,11 @@ public class IdEdt extends androidx.appcompat.widget.AppCompatEditText {
     @Override
     public void setTag(Object tag) {
         super.setTag(tag);
-
     }
 
     @Override
     public Object getTag() {
         return super.getTag();
-
     }
 
     TextWatcher watcher = new TextWatcher() {
@@ -41,6 +39,9 @@ public class IdEdt extends androidx.appcompat.widget.AppCompatEditText {
         public void onTextChanged(CharSequence s, int start, int before, int count) {
             //YOUR CODE
             String ss= "";
+            if (s.toString().equals("")){
+                s = new autoIdEdt().gen();
+            }
             //        setText(new autoIdEdt().gen(), TextView.BufferType.EDITABLE);
 
         }
@@ -49,10 +50,17 @@ public class IdEdt extends androidx.appcompat.widget.AppCompatEditText {
         public void beforeTextChanged(CharSequence s, int start, int count, int after) {
             //YOUR CODE
             String ss= "";
+            if (s.toString().equals("")){
+                s = new autoIdEdt().gen();
+            }
         }
 
         @Override
         public void afterTextChanged(Editable s) {
+            if (s.toString().equals("")){
+                setText(new autoIdEdt().gen());
+                return;
+            }
             String ss= "";
             String outputedText = s.toString();
             if (outputedText.length() < 64 && outputedText.length() > 2) {
@@ -61,6 +69,7 @@ public class IdEdt extends androidx.appcompat.widget.AppCompatEditText {
             } else {
                 valid = false;
             }
+
         }
     };
 
@@ -69,9 +78,7 @@ public class IdEdt extends androidx.appcompat.widget.AppCompatEditText {
         addTextChangedListener(watcher);
         new Handler().postDelayed(new Runnable() {
             public void run() {
-
                 setText(new autoIdEdt().gen(), TextView.BufferType.EDITABLE);
-
             }
         }, 10);
 

@@ -22,8 +22,6 @@ public class AppModule {
 
     @Provides
     Context provideContext(Application application) {
-        Context context = MyContextWrapper.wrap(application/*in fragment use getContext() instead of this*/, "fa");
-        application.getResources().updateConfiguration(context.getResources().getConfiguration(), context.getResources().getDisplayMetrics());
         return application;
     }
 

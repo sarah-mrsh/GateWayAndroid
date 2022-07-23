@@ -4,6 +4,8 @@
     android:layout_height="match_parent"
     android:background="?attr/main_back">
 
+    <include layout="@layout/header" />
+
 
     <com.example.fanp.utils.Shabnamlight
         android:layout_width="wrap_content"

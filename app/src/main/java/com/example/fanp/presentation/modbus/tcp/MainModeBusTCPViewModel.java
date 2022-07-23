@@ -50,7 +50,7 @@ public class MainModeBusTCPViewModel extends ViewModel {
         }
         if (!id.valid){
             Toast.makeText(ctx, "ID is not valid.", Toast.LENGTH_SHORT).show();
-            return;
+            return ;
         }
         if (!ip.valid){
             Toast.makeText(ctx, "IP is not valid.", Toast.LENGTH_SHORT).show();

@@ -221,7 +221,7 @@
                                 android:text="@string/clientID" />
 
                             <com.example.fanp.utils.IdEdt
-                                android:id="@+id/IdEdt"
+                                android:id="@+id/edtclientid"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="0.7"
@@ -245,7 +245,7 @@
                                 android:text="@string/host" />
 
                             <com.example.fanp.utils.IpEdt
-                                android:id="@+id/IpEdt"
+                                android:id="@+id/edtip"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="0.7"

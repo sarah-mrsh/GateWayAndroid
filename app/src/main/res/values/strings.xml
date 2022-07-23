@@ -4,7 +4,7 @@
     <string name="setting">Setting</string>
     <string name="protocol">Protocol</string>
     <string name="report">Report</string>
-    <string name="manageprotocol">Manage Protocol</string>
+    <string name="manageprotocol">"Protocol Management "</string>
     <string name="managmentport">Port Management</string>
     <string name="memorymanagment">Memory Management</string>
     <string name="craeateshell">Create a shell</string>
@@ -150,8 +150,7 @@
     <string name="description">Description</string>
     <string name="modbusrtu">ModBus RTU</string>
     <string name="s7">S7</string>
-    <string name="manageplc">Manage PLC</string>
-    <string name="plcsetting">PLC Setting</string>
+    <string name="plcsetting">"PLC Configuration "</string>
     <string name="datablock">Data Block</string>
     <string name="operationblock">Function Block</string>
     <string name="plcname">PLC Name</string>
@@ -159,7 +158,7 @@
     <string name="test">Test</string>
     <string name="datablocksetting">DataBlock Tag Setting</string>
     <string name="iotagsetting">IO Tag Setting</string>
-    <string name="memorytagsetting">Memory tag settings</string>
+    <string name="memorytagsetting">Memory Tag Configuration</string>
     <string name="plc">PLC</string>
     <string name="datablockcount">DataBlock Count</string>
     <string name="tagtype">Tag Type</string>
@@ -175,7 +174,7 @@
     <string name="timeout">Time out</string>
     <string name="convertto">Convert to</string>
     <string name="s7setting">S7 Settings</string>
-    <string name="plclist">Plc List</string>
+    <string name="plclist">PLC List</string>
     <string name="deletedialog">Are you sure to delete  ?</string>
     <string name="deleteunavailable">In order to delete you have to delete tags and than try again later</string>
     <string name="fbname">FB Name</string>
@@ -203,7 +202,6 @@
     <string name="rtutagconf">RTU Tag Configuration</string>
     <string name="tagtcpconf">TCP Tag Configuration</string>
     <string name="iotagconf">I/O Tag Configuration</string>
-    <string name="memotagconf">Memory Tag Configuration</string>
     <string name="mqtttagconf">MQTT Tag Configuration</string>
     <string name="brokerconf">Broker Configuration</string>
     <string name="mqttclientlist">MQTT Client List</string>
@@ -228,9 +226,12 @@
     <string name="serialportactivation2">Active / Inactive Serial Port RS422</string>
     <string name="protocolconversion">Protocol Conversion</string>
     <string name="settings">Settings</string>
+    <string name="IntervalTimeHint" translatable="false">100ms-60min</string>
+    <string name="memotagconf">"Memory Tag Configuration "</string>
     <string name="timedate">Time and Date</string>
     <string name="location">Location</string>
     <string name="systeminformation">System Information</string>
+    <string name="manageplc">"PLC Management "</string>
     <string name="parameterid">Parameter Id</string>
     <string name="sharedb">Share Db</string>
 

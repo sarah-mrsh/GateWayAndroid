@@ -59,7 +59,7 @@ public class AddClient extends DaggerAppCompatActivity {
 
 
         if (update) {
-            binding.IdEdt.setEnabled(false);
+            binding.edtclientid.setEnabled(false);
             if (ddbdata != null)
                 try {
                     JSONObject data = new JSONObject(ddbdata.getItemsData());

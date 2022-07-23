@@ -50,55 +50,95 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="200dp"
-            android:layout_marginTop="110dp"
-            android:layout_marginRight="200dp"
-            android:orientation="horizontal">
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="20dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
 
-            <com.example.fanp.utils.Shabnammid
-                android:layout_width="170dp"
-                android:layout_height="55dp"
-                android:layout_gravity="center"
-                android:layout_marginStart="12dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="12dp"
-                android:background="#52FFFFFF"
-                android:gravity="center"
-                android:onClick="@{()->viewmodel.datablocklist()}"
-                android:padding="6dp"
-                android:text="@string/datablocktagsetting" />
+            <RelativeLayout
+                android:layout_width="250dp"
+                android:layout_height="80dp"
+                android:gravity="center_horizontal">
 
+                <ImageButton
+                    android:layout_width="250dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"
+                    android:adjustViewBounds="true"
+                    android:background="@color/transparent"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/dbtag" />
 
-            <com.example.fanp.utils.Shabnammid
-                android:layout_width="170dp"
-                android:layout_height="55dp"
-                android:layout_gravity="center"
-                android:layout_marginStart="12dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="12dp"
-                android:background="#52FFFFFF"
-                android:gravity="center"
-                android:onClick="@{()->viewmodel.tagio()}"
-                android:padding="6dp"
-                android:text="@string/iotagconf" />
+                <com.example.fanp.utils.Shabnammid
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="60dp"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:onClick="@{()->viewmodel.datablocklist()}"
+                    android:text="@string/datablocktagsetting" />
 
+            </RelativeLayout>
 
-            <com.example.fanp.utils.Shabnammid
-                android:layout_width="170dp"
-                android:layout_height="49dp"
-                android:layout_gravity="center"
-                android:layout_marginStart="12dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="12dp"
-                android:background="#52FFFFFF"
-                android:gravity="center"
-                android:onClick="@{()->viewmodel.memoryTag()}"
-                android:padding="6dp"
-                android:text="@string/memorytagsetting" />
+            <RelativeLayout
+                android:layout_width="250dp"
+                android:layout_height="80dp"
+                android:gravity="center_horizontal">
+
+                <ImageButton
+                    android:layout_width="250dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"
+                    android:adjustViewBounds="true"
+                    android:background="@color/transparent"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/iotag" />
+
+                <com.example.fanp.utils.Shabnammid
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="60dp"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:layout_gravity="center"
+                    android:onClick="@{()->viewmodel.tagio()}"
+                    android:text="@string/iotagconf" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="250dp"
+                android:layout_height="80dp"
+                android:gravity="center_horizontal">
+
+                <ImageButton
+                    android:layout_width="250dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"
+                    android:adjustViewBounds="true"
+                    android:background="@color/transparent"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/memotag" />
+
+                <com.example.fanp.utils.Shabnammid
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:layout_marginEnd="60dp"
+                    android:textSize="14sp"
+                    android:onClick="@{()->viewmodel.memoryTag()}"
+                    android:text="@string/memorytagsetting" />
+            </RelativeLayout>
 
         </LinearLayout>
+
 
     </LinearLayout>
 
