@@ -62,23 +62,14 @@ public class AddDataBlockPlc extends DaggerAppCompatActivity {
         binding.setViewmodel(viewmodel);
 
 
-        List<I4AllSetting> spdata = db.getplc();
-        List<String> plcs = new ArrayList<>();
-        for (I4AllSetting item : spdata) {
-            try {
-                JSONObject object = new JSONObject(item.getItemsData());
-                plcs.add(object.getString("devicename"));
-            } catch (JSONException e) {
-                e.printStackTrace();
+        binding.chbsharedb.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            if (isChecked){
+                binding.linfunction.setVisibility(View.INVISIBLE);
+            }else{
+                binding.linfunction.setVisibility(View.VISIBLE);
             }
-        }
-        if (plcs.size() == 0) {
-            Toast.makeText(xcs, "PLC IS NULL", Toast.LENGTH_SHORT).show();
-            finish();
-        }
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(
-                this, android.R.layout.simple_spinner_item, plcs);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        });
+
 
 
         List<String> functions = new ArrayList<>();
@@ -107,7 +98,6 @@ public class AddDataBlockPlc extends DaggerAppCompatActivity {
 
 
         binding.spfunctionblock.setAdapter(adapterfunction);
-        binding.spplc.setAdapter(adapter);
 
 
         viewmodel.main=this;
@@ -126,7 +116,6 @@ public class AddDataBlockPlc extends DaggerAppCompatActivity {
             try {
                 JSONObject object = new JSONObject(item.getItemsData());
                 viewmodel.id = object.getString("id");
-                viewmodel.plcname = object.getString("plcname");
                 viewmodel.name = object.getString("name");
                 viewmodel.functionblock = object.getString("functionblock");
                 viewmodel.description = object.getString("description");

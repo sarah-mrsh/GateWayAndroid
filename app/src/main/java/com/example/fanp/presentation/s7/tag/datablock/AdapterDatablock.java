@@ -58,7 +58,7 @@ public class AdapterDatablock extends RecyclerView.Adapter<AdapterDatablock.View
             JSONObject item = new JSONObject(model.getItemsData());
             holder.name.setText(item.getString("tagname"));
             holder.tagid.setText(item.getString("tagid"));
-            holder.plcid.setText(item.getString("plc"));
+            holder.plcid.setText(item.getString("functionblocknumber"));
         } catch (JSONException e) {
             e.printStackTrace();
         }

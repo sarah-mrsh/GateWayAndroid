@@ -64,30 +64,30 @@ public class TagListDatablock extends DaggerAppCompatActivity implements Datablo
 
 
     public void refresh() {
-        List<I4AllSetting> data = new ArrayList<>();
-        List<I4AllSetting> spdata = db.getplc();
-        List<String> plcs = new ArrayList<>();
-        for (I4AllSetting item : spdata) {
-            try {
-                JSONObject object = new JSONObject(item.getItemsData());
-                plcs.add(object.getString("deviceid"));
-            } catch (JSONException e) {
-                e.printStackTrace();
-            }
-        }
-        for (String item : plcs) {
-            List<I4AllSetting> items = db.getitembyitesref(Integer.parseInt(item));
-            for (I4AllSetting dataitem : items) {
-                try {
-                    JSONObject object = new JSONObject(dataitem.getItemsData());
-                    if (!object.has("iotype")) {
-                        data.add(dataitem);
-                    }
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                }
-            }
-        }
+        List<I4AllSetting> data = db.getitembyitesref(630);
+//        List<I4AllSetting> spdata = db.getplc();
+//        List<String> plcs = new ArrayList<>();
+//        for (I4AllSetting item : spdata) {
+//            try {
+//                JSONObject object = new JSONObject(item.getItemsData());
+//                plcs.add(object.getString("deviceid"));
+//            } catch (JSONException e) {
+//                e.printStackTrace();
+//            }
+//        }
+//        for (String item : plcs) {
+//            List<I4AllSetting> items = db.getitembyitesref(Integer.parseInt(item));
+//            for (I4AllSetting dataitem : items) {
+//                try {
+//                    JSONObject object = new JSONObject(dataitem.getItemsData());
+//                    if (!object.has("iotype")) {
+//                        data.add(dataitem);
+//                    }
+//                } catch (JSONException e) {
+//                    e.printStackTrace();
+//                }
+//            }
+//        }
 
         LinearLayoutManager manager = new LinearLayoutManager(this);
         adapter = new AdapterDatablock(this, this, data);

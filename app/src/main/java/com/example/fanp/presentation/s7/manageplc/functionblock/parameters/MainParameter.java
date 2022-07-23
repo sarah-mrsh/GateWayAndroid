@@ -68,6 +68,8 @@ public class MainParameter extends DaggerAppCompatActivity implements ListParame
         binding.btnadd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                AddParameterFunctionBlock.item=item;
+                AddParameterFunctionBlock.update=false;
                 startActivity(new Intent(getApplicationContext(),AddParameterFunctionBlock.class));
             }
         });
@@ -82,9 +84,6 @@ public class MainParameter extends DaggerAppCompatActivity implements ListParame
 
     public void refresh(){
         try {
-
-
-
             JSONObject object = new JSONObject(item.getItemsData());
             List<I4AllSetting> items = db.getitembyitesref(object.getInt("functionblocknumber"));
             LinearLayoutManager manager = new LinearLayoutManager(this);

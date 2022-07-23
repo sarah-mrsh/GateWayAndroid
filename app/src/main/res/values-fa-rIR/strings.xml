@@ -209,6 +209,8 @@
     <string name="timedate">تاریخ و زمان</string>
     <string name="location">موقعیت</string>
     <string name="systeminformation">اطلاعات سیستم</string>
+    <string name="parameterid">Parameter Id</string>
+    <string name="sharedb">Share Db</string>
 
 
 </resources>

@@ -55,10 +55,18 @@ public class AddTagMqttClient extends DaggerAppCompatActivity {
                         viewmodel.tagname = (data.getString("tagname"));
                     }
                     if (data.has("type")) {
+                        switch (data.getString("type")){
+                            case "Json":binding.sptype.setSelection(1);break;
+                            case "CSV":binding.sptype.setSelection(2);break;
+                            case "Plain Text":binding.sptype.setSelection(0);break;
+                        }
                         viewmodel.type = (data.getString("type"));
                     }
                     if (data.has("topicname")) {
                         viewmodel.topicname = (data.getString("topicname"));
+                    }
+                    if (data.has("json")) {
+                        viewmodel.json = (data.getString("json"));
                     }
                 } catch (JSONException e) {
                     e.printStackTrace();
