@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="350dp"
+    android:background="?attr/main_back"
+    android:orientation="vertical"
+
+    android:layout_height="match_parent">
+
+
+
+    <com.example.fanp.utils.Shabnambold
+        android:layout_width="350dp"
+        android:text="@string/parameterlist"
+        android:gravity="center"
+        android:padding="12dp"
+        android:layout_height="wrap_content"/>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rec_parameter"
+        android:layout_width="350dp"
+        android:layout_height="match_parent"/>
+
+
+
+
+
+</LinearLayout>

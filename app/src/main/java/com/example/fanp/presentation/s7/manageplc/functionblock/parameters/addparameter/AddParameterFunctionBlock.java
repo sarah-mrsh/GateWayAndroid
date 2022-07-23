@@ -11,6 +11,7 @@ import com.example.fanp.R;
 import com.example.fanp.databinding.ActivityAddParameterFunctionBlockBinding;
 import com.example.fanp.di.injector.ViewModelProviderFactory;
 import com.example.fanp.domain.local.data.I4AllSettingDao;
+import com.example.fanp.domain.local.repository.I4AllSetting;
 import com.example.fanp.presentation.s7.manageplc.functionblock.addfunctionblock.AddFunctionBlockPlcViewModel;
 
 import javax.inject.Inject;
@@ -33,6 +34,10 @@ public class AddParameterFunctionBlock extends DaggerAppCompatActivity {
 
     @Inject
     I4AllSettingDao db;
+
+
+    public static I4AllSetting item;
+    public static boolean update=false;
 
 
     public ActivityAddParameterFunctionBlockBinding binding;

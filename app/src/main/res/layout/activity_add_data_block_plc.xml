@@ -80,28 +80,20 @@
                         android:text="@={viewmodel.id}" />
                 </LinearLayout>
 
-
-
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="12dp">
 
-                    <com.example.fanp.utils.Shabnambold
+
+                    <CheckBox
+                        android:id="@+id/chbsharedb"
+                        android:text="@string/sharedb"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="0.0"
-                        android:text="@string/plc" />
-
-                    <Spinner
-                        android:id="@+id/spplc"
-                        android:layout_width="wrap_content"
-                        android:layout_height="50dp"
-                        android:layout_weight="0.7"
-                        android:onItemSelected="@{(parent,view,pos,id)->viewmodel.onSelectPlc(parent,view,pos,id)}"
+                        android:layout_marginStart="12dp"
                         android:gravity="center" />
                 </LinearLayout>
-
 
 
             </LinearLayout>
@@ -117,6 +109,7 @@
 
 
                 <LinearLayout
+                    android:id="@+id/linfunction"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="12dp">

@@ -28,6 +28,7 @@ public class AddTagMqttViewModel extends ViewModel {
     AddTagMqttClient main;
 
 
+
     @Inject
     I4AllSettingDao db;
 
@@ -36,6 +37,7 @@ public class AddTagMqttViewModel extends ViewModel {
     public String tagid;
     public String type;
     public String topicname;
+    public String json;
     public String subpub;
 
 
@@ -45,6 +47,12 @@ public class AddTagMqttViewModel extends ViewModel {
     }
 
     public void savedata(NameEdt item) {
+        try{
+            new JSONObject(json);
+        }catch (JSONException ex){
+            Toast.makeText(main, "json is not Valid", Toast.LENGTH_SHORT).show();
+            return;
+        }
         if (!item.valid){
             Toast.makeText(main, "validation failed", Toast.LENGTH_SHORT).show();
             return;
@@ -55,6 +63,7 @@ public class AddTagMqttViewModel extends ViewModel {
             object.put("tagid", tagid);
             object.put("type", type);
             object.put("topicname", topicname);
+            object.put("json", json);
             object.put("subpub", subpub);
 
 
@@ -101,6 +110,13 @@ public class AddTagMqttViewModel extends ViewModel {
         //parent.getSelectedItem()            get selected item
 
         type = parent.getAdapter().getItem(pos).toString();
+        if (type.equals("Json")){
+            main.binding.linjson.setVisibility(View.VISIBLE);
+            main.binding.scsample.setVisibility(View.VISIBLE);
+        }else{
+            main.binding.linjson.setVisibility(View.GONE);
+            main.binding.scsample.setVisibility(View.GONE);
+        }
     }
 
     public void onSelectSubOrPub(AdapterView<?> parent, View view, int pos, long id) {

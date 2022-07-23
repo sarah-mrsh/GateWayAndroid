@@ -230,7 +230,7 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:visibility="visible"
+                android:visibility="invisible"
                 android:layout_gravity="center_vertical"
                 android:layout_marginBottom="10dp"
                 android:layout_weight="0.5">
