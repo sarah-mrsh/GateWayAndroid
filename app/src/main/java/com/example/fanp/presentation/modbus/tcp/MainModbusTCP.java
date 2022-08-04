@@ -27,7 +27,6 @@ public class MainModbusTCP extends DaggerAppCompatActivity {
     @Inject
     ViewModelProviderFactory providerFactory;
 
-
     @Inject
     I4AllSettingDao db;
 

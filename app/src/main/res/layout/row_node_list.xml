@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <LinearLayout
+        android:id="@+id/header_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.example.fanp.utils.Shabnammid
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:gravity="center"
+            android:padding="12dp"
+            android:text="@string/nodename"
+            />
+
+        <com.example.fanp.utils.Shabnammid
+            android:id="@+id/type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:gravity="center"
+            android:padding="12dp"
+            android:text="@string/type"
+            />
+
+        <com.example.fanp.utils.Shabnammid
+            android:id="@+id/destination"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:gravity="center"
+            android:padding="12dp"
+            android:text="@string/destination"
+            />
+
+        <com.example.fanp.utils.Shabnammid
+            android:id="@+id/tagcount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:gravity="center"
+            android:padding="12dp"
+            android:text="@string/tagcount"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_weight="0.5"
+            android:gravity="center"
+
+            android:textSize="21sp" >
+            <ImageView
+                android:id="@+id/imgdelete"
+                android:layout_width="35dp"
+                android:layout_weight="0.5"
+                android:src="@drawable/delete"
+                android:layout_height="32dp"/>
+            <ImageView
+                android:id="@+id/imgedit"
+                android:layout_width="35dp"
+                android:layout_weight="0.5"
+                android:visibility="invisible"
+                android:src="@drawable/edit"
+                android:layout_height="32dp"/>
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+</RelativeLayout>

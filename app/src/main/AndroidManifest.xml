@@ -157,6 +157,12 @@
             android:name=".presentation.ble.BleActivity"
             android:exported="false" />
         <activity
+            android:name=".presentation.node.add.AddNode"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.node.NodeList"
+            android:exported="false" />
+        <activity
             android:name=".presentation.account.AccountUser"
             android:exported="false" />
         <activity

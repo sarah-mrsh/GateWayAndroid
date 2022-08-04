@@ -27,20 +27,19 @@ import dagger.android.support.DaggerAppCompatActivity;
 
 public class AddClient extends DaggerAppCompatActivity {
 
-
     @Inject
     ViewModelProviderFactory providerFactory;
-
 
     @Inject
     I4AllSettingDao db;
 
     ActivityAddClientBinding binding;
+
     AddClientViewModel viewmodel;
 
     public static I4AllSetting ddbdata;
-    public static boolean update;
 
+    public static boolean update;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

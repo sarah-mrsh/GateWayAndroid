@@ -74,8 +74,7 @@ public class TaglistTcp extends DaggerAppCompatActivity {
         try {
             array = new JSONArray(TaglistTcp.item.getItemsData());
             JSONObject jsonObject = array.getJSONObject(TaglistTcp.index);
-            int deviceid = jsonObject.getInt("deviceid");
-            List<I4AllSetting> data = db.getitembyitesref(deviceid);
+            List<I4AllSetting> data = db.getitembyitesref(jsonObject.getInt("deviceid"));
             LinearLayoutManager manager = new LinearLayoutManager(this);
             adapter = new TagListTCPViewAdapter(data, this);
             binding.recTaglist.setLayoutManager(manager);

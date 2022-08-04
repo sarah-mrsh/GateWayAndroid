@@ -18,6 +18,7 @@ import com.example.fanp.presentation.modbus.tcp.MainModbusTCP;
 import com.example.fanp.presentation.mport.MportActivity;
 import com.example.fanp.presentation.mqtt.broker.brokersetting.BrokerSetting;
 import com.example.fanp.presentation.mqtt.clientmqtt.MainMqttClient;
+import com.example.fanp.presentation.node.NodeList;
 import com.example.fanp.presentation.protocolmanagment.MProtocolManagment;
 import com.example.fanp.presentation.s7.MainS7;
 import com.example.fanp.utils.BasicFragment;
@@ -41,6 +42,7 @@ public class SpecificSettingFragment extends BasicFragment {
 
 
         ImageButton building_button_port_button = (ImageButton) view.findViewById(R.id.building_button_port_button);
+
         building_button_port_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -55,6 +57,16 @@ public class SpecificSettingFragment extends BasicFragment {
                 getActivity().startActivity(new Intent(getActivity(), MProtocolManagment.class));
             }
         });
+
+        ImageButton imgbtncreatenode = (ImageButton) view.findViewById(R.id.imgbtncreatenode);
+        imgbtncreatenode.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getActivity().startActivity(new Intent(getActivity(), NodeList.class));
+            }
+        });
+
+
         //Now specific components here (you can initialize Buttons etc)
 
 
