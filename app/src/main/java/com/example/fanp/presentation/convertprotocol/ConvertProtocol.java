@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Spinner;
 
@@ -83,6 +84,7 @@ public class ConvertProtocol extends BasicFragment {
         View view = inflater.inflate(R.layout.fragment_convertprotocol, parent, false);
 
         recyclerView = (RecyclerView) view.findViewById(R.id.recrtu);
+        Button btnsave = (Button) view.findViewById(R.id.btnsave);
         imgaddfree = (ImageView) view.findViewById(R.id.imgaddfree);
         data = db.getconvertprotocols();
         imgaddfree.setOnClickListener(new View.OnClickListener() {
@@ -94,6 +96,12 @@ public class ConvertProtocol extends BasicFragment {
         });
         //Now specific components here (you can initialize Buttons etc)
 
+        btnsave.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                save();
+            }
+        });
 
         setdata();
         return view;

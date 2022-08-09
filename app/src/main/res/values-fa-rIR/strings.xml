@@ -211,6 +211,13 @@
     <string name="systeminformation">اطلاعات سیستم</string>
     <string name="parameterid">Parameter Id</string>
     <string name="sharedb">Share Db</string>
+    <string name="nodelist">لیست Node</string>
+    <string name="nodename">نام نود</string>
+    <string name="destination">مقصد</string>
+    <string name="nodeid">شناسه نود</string>
+    <string name="rs485port">RS 485 Port</string>
+    <string name="rs232port">RS 232 Port</string>
+    <string name="tagcount">تعداد تگ</string>
 
 
 </resources>

@@ -234,5 +234,12 @@
     <string name="manageplc">"PLC Management "</string>
     <string name="parameterid">Parameter Id</string>
     <string name="sharedb">Share Db</string>
+    <string name="nodelist">Node List</string>
+    <string name="nodename">Node name</string>
+    <string name="destination">Destination</string>
+    <string name="nodeid">Node Id</string>
+    <string name="rs232port">RS 232 Port</string>
+    <string name="rs485port">RS 485 Port</string>
+    <string name="tagcount">Tag Count</string>
 
 </resources>

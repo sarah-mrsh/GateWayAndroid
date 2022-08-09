@@ -24,6 +24,8 @@ import com.example.fanp.presentation.mqtt.clientmqtt.MainMqttClient;
 import com.example.fanp.presentation.mqtt.clientmqtt.addclient.AddClient;
 import com.example.fanp.presentation.mqtt.clientmqtt.addtag.AddTagMqttClient;
 import com.example.fanp.presentation.mqtt.clientmqtt.taglist.TagListMqttClient;
+import com.example.fanp.presentation.node.NodeList;
+import com.example.fanp.presentation.node.add.AddNode;
 import com.example.fanp.presentation.protocolmanagment.MProtocolManagment;
 import com.example.fanp.presentation.s7.MainS7;
 import com.example.fanp.presentation.s7.addplc.AddPlc;
@@ -253,5 +255,14 @@ public abstract class ActivityBindingModule {
     @ActivityScope
     @ContributesAndroidInjector
     abstract MainParameter mainParameter();
+
+    @ActivityScope
+    @ContributesAndroidInjector
+    abstract NodeList nodeList();
+
+    @ActivityScope
+    @ContributesAndroidInjector
+    abstract AddNode addNode();
+
 
 }

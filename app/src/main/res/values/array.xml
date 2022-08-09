@@ -29,6 +29,11 @@
     </string-array>
 
 
+    <string-array name="accessibility">
+        <item>Public</item>
+        <item>Private</item>
+    </string-array>
+
     <string-array name="tagtype">
         <item>Plain Text</item>
         <item>Json</item>
@@ -43,29 +48,30 @@
     </string-array>
 
     <string-array name="functioncode">
-       <item> RRAD_COIL  </item>
-       <item> READ_DISCRETE_INPUTS  </item>
-       <item> READ_MULTIPLE_HOLDING_REGISTERS  </item>
-       <item> READ_INPUT_REGISTERS  </item>
-       <item> WRITE_SINGLE_COIL  </item>
-       <item> WRITE_SINGLE_HOLDING_REGISTER  </item>
-       <item> WRITE_MULTIPLE_COILS  </item>
-       <item> WRITE_MULTIPLE_HLDING_REGISTERS  </item>
+       <item>(1) Read Coil</item>
+       <item>(2) Read Discrete Inputs</item>
+       <item>(3) Read Multiple Holding Registers</item>
+       <item>(4) Read Input Registers</item>
+       <item>(5) Write Single Coil</item>
+       <item>(6) Write single Holding Register</item>
+       <item>(15) Write Multiple Coils</item>
+       <item>(16) Wite Multiple Holding Registers</item>
+       <item>(23) Read and Write Multiple Registers</item>
     </string-array>
 
     <string-array name="datattype">
-       <item>  MBOOLEAN   </item>
-       <item>  MINT8  </item>
-       <item>  MUINT8  </item>
-       <item>  MINT16  </item>
-       <item>  MUINT16  </item>
-       <item>  MINT32  </item>
-       <item>  MUINT32  </item>
-       <item>  MINT64  </item>
-       <item>  MUINT64  </item>
-       <item>  MFLOAT32  </item>
-       <item>  MFLOAT64  </item>
-       <item>  MSTRING  </item>
+       <item>BOOLEAN </item>
+       <item>INT8</item>
+       <item>UINT8</item>
+       <item>INT16</item>
+       <item>UINT16</item>
+       <item>INT32</item>
+       <item>UINT32</item>
+       <item>INT64</item>
+       <item>UINT64</item>
+       <item>FLOAT32</item>
+       <item>FLOAT64</item>
+       <item>STRING</item>
     </string-array>
 
 

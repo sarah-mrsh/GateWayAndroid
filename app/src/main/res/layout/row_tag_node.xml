@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/header_main"
+    android:layout_width="match_parent"
+    android:gravity="center_vertical"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+
+
+
+    <EditText
+        android:id="@+id/edtname"
+        android:layout_width="match_parent"
+        android:layout_weight="0.5"
+        android:layout_height="wrap_content"/>
+
+    <Spinner
+        android:id="@+id/sptag"
+        android:layout_width="match_parent"
+        android:textAlignment="center"
+        android:layout_weight="0.5"
+        android:padding="12dp"
+        android:layout_height="wrap_content"/>
+    <Spinner
+        android:id="@+id/spmode"
+        android:entries="@array/accessibility"
+        android:textAlignment="center"
+        android:layout_width="match_parent"
+        android:layout_weight="0.5"
+        android:padding="12dp"
+        android:layout_height="wrap_content"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_weight="0.5"
+        android:gravity="center"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/imgadd"
+            android:layout_width="40dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:src="@drawable/ic_add"
+            android:layout_height="40dp"/>
+        <ImageView
+            android:id="@+id/imgdelete"
+            android:layout_width="40dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:src="@drawable/delete"
+            android:layout_height="40dp"/>
+    </LinearLayout>
+</LinearLayout>

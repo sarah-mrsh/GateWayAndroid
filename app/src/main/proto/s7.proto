@@ -6,6 +6,23 @@ option java_outer_classname = "s7proto";
 option objc_class_prefix = "HLW";
 
 
+
+enum ParameterDataType{
+    BOOLEAN = 0;
+    INT8=1;
+    UINT8=2;
+    INT16=3;
+    UINT16=4;
+    INT32=5;
+    UINT32=6;
+    INT64=7;
+    UINT64=8;
+    FLOAT32=9;
+    FLOAT64=10;
+    STRING=11;
+}
+
+
 message SnapSevenConfigResponse {
     bool Success = 1;
     int32 errorCode = 2;
@@ -36,6 +53,10 @@ message ConfigSnapSeven{
             string tagId=2;
             string functionCode=3;
             int32 count=4;
+            ParameterDataType parameter=5;
+            int32 startAddress=6;
+            int32 bitNumber=7;
+            int32 dbNumber=8;
         }
         message MemoryTag{
             string tagName=1;

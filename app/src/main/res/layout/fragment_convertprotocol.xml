@@ -16,14 +16,8 @@
         android:layout_marginTop="90dp"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="20dp"
-        android:background="@color/purple_200" />
+        android:background="@drawable/ic_add" />
 
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-
-        android:orientation="vertical">
 
 
         <com.example.fanp.utils.Shabnambold
@@ -47,27 +41,23 @@
         <!--            android:background="#c0c0c0" />-->
 
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recrtu"
+                android:layout_below="@+id/title_engineering_fragment"
+                android:layout_above="@+id/lin_operation"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
 
-        </LinearLayout>
 
-
-    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/lin_operation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:visibility="gone"
+        android:visibility="visible"
         android:layout_alignParentBottom="true"
         android:orientation="horizontal">
 
@@ -81,13 +71,13 @@
             android:visibility="visible">
 
             <Button
+                android:id="@+id/btnsave"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginStart="15dp"
                 android:layout_marginTop="5dp"
                 android:layout_marginEnd="15dp"
                 android:background="@drawable/transparent_yellow_border"
-                android:onClick="@{()->viewmodel.savedata()}"
                 android:textColor="@color/white" />
 
             <com.example.fanp.utils.Shabnammid
@@ -95,7 +85,7 @@
                 android:layout_height="50dp"
                 android:gravity="center|center_vertical"
                 android:maxLines="1"
-                android:text="@string/add"
+                android:text="@string/save"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
                 android:textColor="@color/white"
                 android:textSize="16sp" />
@@ -164,6 +154,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="50dp"
+            android:visibility="invisible"
             android:layout_gravity="center_vertical"
             android:layout_marginBottom="10dp"
             android:layout_weight="0.5">
@@ -175,7 +166,6 @@
                 android:layout_marginTop="5dp"
                 android:layout_marginEnd="15dp"
                 android:background="@drawable/transparent_yellow_border"
-                android:onClick="@{()->viewmodel.finish()}"
                 android:textColor="@color/white" />
 
             <com.example.fanp.utils.Shabnammid

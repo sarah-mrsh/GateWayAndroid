@@ -25,6 +25,8 @@ import com.example.fanp.presentation.mqtt.clientmqtt.MainMqttViewModel;
 import com.example.fanp.presentation.mqtt.clientmqtt.addclient.AddClientViewModel;
 import com.example.fanp.presentation.mqtt.clientmqtt.addtag.AddTagMqttViewModel;
 import com.example.fanp.presentation.mqtt.clientmqtt.taglist.TagListMqttViweModel;
+import com.example.fanp.presentation.node.NodeListViewModel;
+import com.example.fanp.presentation.node.add.AddNodeViewModel;
 import com.example.fanp.presentation.porthistory.PortHistoryViewModel;
 import com.example.fanp.presentation.protocolmanagment.MprotocolManagmentViewModel;
 import com.example.fanp.presentation.s7.MainS7ViewModel;
@@ -286,5 +288,16 @@ public abstract class ViewModelModule {
     @IntoMap
     @ViewModelKey(AddTagMemoryViewModel.class)
     public abstract ViewModel bindsAddTagMemoryViewModel(AddTagMemoryViewModel viewModel);
+
+
+    @Binds
+    @IntoMap
+    @ViewModelKey(NodeListViewModel.class)
+    public abstract ViewModel bindsNodeListViewModel(NodeListViewModel viewModel);
+
+    @Binds
+    @IntoMap
+    @ViewModelKey(AddNodeViewModel.class)
+    public abstract ViewModel bindsAddNodeViewModel(AddNodeViewModel viewModel);
 
 }

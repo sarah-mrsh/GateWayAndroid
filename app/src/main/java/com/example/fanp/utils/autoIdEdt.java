@@ -15,8 +15,7 @@ public class autoIdEdt {
 
     public String gen(){
         Timestamp timestamp = new Timestamp(System.currentTimeMillis());
-        String tm =  timestamp.toString().replaceAll(" ","").replaceAll("-","").replaceAll(":","").replaceAll("\\.","").substring(10,16);
-        return tm;
+        return timestamp.toString().replaceAll(" ","").replaceAll("-","").replaceAll(":","").replaceAll("\\.","").substring(10,16);
     }
 
 

@@ -28,8 +28,7 @@ import javax.inject.Inject;
 public class AddTagMqttViewModel extends ViewModel {
 
 
-
-    AddTagMqttClient main;
+    public AddTagMqttClient main;
 
     @Inject
     Context ctx;
@@ -51,17 +50,17 @@ public class AddTagMqttViewModel extends ViewModel {
 
     }
 
-    public void validation(IdEdt id, NameEdt name){
+    public void validation(IdEdt id, NameEdt name) {
 
-        if (!name.valid){
+        if (!name.valid) {
             Toast.makeText(ctx, "Name is not valid.", Toast.LENGTH_SHORT).show();
-            return ;
+            return;
 
         }
 
-        if (!id.valid){
+        if (!id.valid) {
             Toast.makeText(ctx, "ID is not valid.", Toast.LENGTH_SHORT).show();
-            return ;
+            return;
         }
 
         savedata();
@@ -69,11 +68,13 @@ public class AddTagMqttViewModel extends ViewModel {
 
 
     public void savedata() {
-        try{
-            new JSONObject(json);
-        }catch (JSONException ex){
-            Toast.makeText(main, "json is not Valid", Toast.LENGTH_SHORT).show();
-            return;
+        if (main.binding.sptype.getSelectedItem().toString().equals("Json")) {
+            try {
+                new JSONObject(json);
+            } catch (JSONException ex) {
+                Toast.makeText(main, "json is not Valid", Toast.LENGTH_SHORT).show();
+                return;
+            }
         }
 
         JSONObject object = new JSONObject();
@@ -117,9 +118,10 @@ public class AddTagMqttViewModel extends ViewModel {
         }
     }
 
-    public void exit(){
+    public void exit() {
         main.finish();
     }
+
     public void onSelectItempdatattype(AdapterView<?> parent, View view, int pos, long id) {
         //pos                                 get selected item position
         //view.getText()                      get label of selected item
@@ -129,10 +131,10 @@ public class AddTagMqttViewModel extends ViewModel {
         //parent.getSelectedItem()            get selected item
 
         type = parent.getAdapter().getItem(pos).toString();
-        if (type.equals("Json")){
+        if (type.equals("Json")) {
             main.binding.linjson.setVisibility(View.VISIBLE);
             main.binding.scsample.setVisibility(View.VISIBLE);
-        }else{
+        } else {
             main.binding.linjson.setVisibility(View.GONE);
             main.binding.scsample.setVisibility(View.GONE);
         }

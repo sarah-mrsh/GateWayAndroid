@@ -10,6 +10,7 @@ import androidx.lifecycle.ViewModel;
 import com.example.fanp.domain.local.data.I4AllSettingDao;
 import com.example.fanp.domain.local.repository.I4AllSetting;
 import com.example.fanp.utils.IdEdt;
+import com.example.fanp.utils.IntervalEdt;
 import com.example.fanp.utils.NameEdt;
 
 import org.json.JSONArray;
@@ -82,7 +83,7 @@ public class AddTagTCPViewModel extends ViewModel {
 //    public String description;
 
 
-    public void validation(IdEdt id, IdEdt idserver, NameEdt name){
+    public void validation(IdEdt id, IdEdt idserver, NameEdt name, IntervalEdt interval){
         if(!name.valid){
             Toast.makeText(ctx, "Name is not valid.", Toast.LENGTH_SHORT).show();
             return;
@@ -93,6 +94,10 @@ public class AddTagTCPViewModel extends ViewModel {
         }
         if (!idserver.valid){
             Toast.makeText(ctx, "Server ID is not valid.", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        if (!interval.valid){
+            Toast.makeText(ctx, "Interval is not valid.", Toast.LENGTH_SHORT).show();
             return;
         }
         savedata();
