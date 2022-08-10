@@ -15,7 +15,10 @@
         <entry key="..\:/Users/pc/AndroidStudioProjects/GateWayAndroid/app/src/main/res/layout/activity_mport.xml" value="0.25" />
         <entry key="..\:/Users/pc/AndroidStudioProjects/GateWayAndroid/app/src/main/res/layout/fragment_general_setting.xml" value="0.2191780821917808" />
         <entry key="..\:/Users/pc/AndroidStudioProjects/GateWayAndroid/app/src/main/res/layout/fragment_special_setting.xml" value="0.13932291666666666" />
-        <entry key="app/src/main/res/layout/activity_add_client.xml" value="0.25" />
+        <entry key="app/src/main/res/layout-sw600dp/activity_main_mqtt_client.xml" value="0.2671875" />
+        <entry key="app/src/main/res/layout/activity_add_business.xml" value="0.19036458333333334" />
+        <entry key="app/src/main/res/layout/activity_add_client.xml" value="0.14" />
+        <entry key="app/src/main/res/layout/activity_add_datat_block_tag.xml" value="0.12" />
         <entry key="app/src/main/res/layout/activity_add_node.xml" value="0.2" />
         <entry key="app/src/main/res/layout/activity_add_parameter_function_block.xml" value="0.35625" />
         <entry key="app/src/main/res/layout/activity_add_servertcp.xml" value="0.2171875" />
@@ -23,8 +26,9 @@
         <entry key="app/src/main/res/layout/activity_add_tag_mqtt_client.xml" value="0.16" />
         <entry key="app/src/main/res/layout/activity_add_tag_tcp.xml" value="0.203125" />
         <entry key="app/src/main/res/layout/activity_ble.xml" value="0.31232876712328766" />
+        <entry key="app/src/main/res/layout/activity_main_business.xml" value="0.12" />
         <entry key="app/src/main/res/layout/activity_main_modbus_tcp.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/activity_main_mqtt_client.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_main_mqtt_client.xml" value="0.2" />
         <entry key="app/src/main/res/layout/activity_node_list.xml" value="0.2" />
         <entry key="app/src/main/res/layout/activity_plclist.xml" value="0.21796875" />
         <entry key="app/src/main/res/layout/activity_serial.xml" value="0.14" />
@@ -32,10 +36,13 @@
         <entry key="app/src/main/res/layout/activity_tag_list_mqtt_client.xml" value="0.2171875" />
         <entry key="app/src/main/res/layout/activity_taglist_tcp.xml" value="0.17161458333333332" />
         <entry key="app/src/main/res/layout/fragment_convertprotocol.xml" value="0.18" />
-        <entry key="app/src/main/res/layout/fragment_special_setting.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/fragment_special_setting.xml" value="0.16" />
         <entry key="app/src/main/res/layout/row_brokers_list.xml" value="0.22578125" />
+        <entry key="app/src/main/res/layout/row_business.xml" value="0.16" />
         <entry key="app/src/main/res/layout/row_convert_protocol.xml" value="0.22578125" />
         <entry key="app/src/main/res/layout/row_datablock_plc_list.xml" value="0.22578125" />
+        <entry key="app/src/main/res/layout/row_functionblock_plc_list.xml" value="0.23229166666666667" />
+        <entry key="app/src/main/res/layout/row_mqtt_client.xml" value="0.23229166666666667" />
         <entry key="app/src/main/res/layout/row_node_list.xml" value="0.18" />
         <entry key="app/src/main/res/layout/row_tag_mqtt.xml" value="0.21" />
         <entry key="app/src/main/res/layout/row_tag_node.xml" value="0.23151041666666666" />

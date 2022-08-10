@@ -296,6 +296,33 @@
                         android:textSize="18sp" />
                 </RelativeLayout>
 
+
+                <RelativeLayout
+                    android:layout_width="250dp"
+                    android:layout_height="80dp"
+                    android:gravity="center_horizontal">
+
+                    <ImageButton
+                        android:id="@+id/imgbtnmanagebusiness"
+                        android:layout_width="250dp"
+                        android:layout_height="80dp"
+                        android:layout_gravity="center"
+                        android:adjustViewBounds="true"
+                        android:background="@color/transparent"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/settings" />
+
+                    <com.example.fanp.utils.Shabnammid
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="40dp"
+                        android:layout_marginTop="25dp"
+                        android:text="@string/managementbusiness"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+                </RelativeLayout>
+
+
             </LinearLayout>
 
 

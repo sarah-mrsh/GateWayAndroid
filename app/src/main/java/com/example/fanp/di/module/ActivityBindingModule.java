@@ -3,6 +3,8 @@ package com.example.fanp.di.module;
 import com.example.fanp.di.scope.ActivityScope;
 import com.example.fanp.presentation.account.AccountUser;
 import com.example.fanp.presentation.ble.BleActivity;
+import com.example.fanp.presentation.business.MainBusiness;
+import com.example.fanp.presentation.business.add.AddBusiness;
 import com.example.fanp.presentation.lan.LanActivity;
 import com.example.fanp.presentation.main.MainActivity;
 import com.example.fanp.presentation.modbus.rtu.MainModBusRTU;
@@ -264,5 +266,12 @@ public abstract class ActivityBindingModule {
     @ContributesAndroidInjector
     abstract AddNode addNode();
 
+    @ActivityScope
+    @ContributesAndroidInjector
+    abstract MainBusiness mainBusiness();
+
+    @ActivityScope
+    @ContributesAndroidInjector
+    abstract AddBusiness addBusiness();
 
 }

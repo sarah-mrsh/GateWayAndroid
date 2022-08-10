@@ -11,11 +11,15 @@ public class SerialViewModel extends ViewModel {
 
 //todo
 
+    public SerialActivity main;
     @Inject
     public SerialViewModel(){}
 
 
 
+    public void exit(){
+        main.finish();
+    }
 
 
 

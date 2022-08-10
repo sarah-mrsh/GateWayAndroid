@@ -13,6 +13,7 @@ import android.widget.ImageButton;
 import androidx.annotation.NonNull;
 
 import com.example.fanp.R;
+import com.example.fanp.presentation.business.MainBusiness;
 import com.example.fanp.presentation.modbus.rtu.MainModBusRTU;
 import com.example.fanp.presentation.modbus.tcp.MainModbusTCP;
 import com.example.fanp.presentation.mport.MportActivity;
@@ -63,6 +64,13 @@ public class SpecificSettingFragment extends BasicFragment {
             @Override
             public void onClick(View view) {
                 getActivity().startActivity(new Intent(getActivity(), NodeList.class));
+            }
+        });
+        ImageButton imgbtnmanagebusiness = (ImageButton) view.findViewById(R.id.imgbtnmanagebusiness);
+        imgbtnmanagebusiness.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getActivity().startActivity(new Intent(getActivity(), MainBusiness.class));
             }
         });
 

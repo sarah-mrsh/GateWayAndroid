@@ -152,7 +152,6 @@
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="YOUR_API_KEY" />
-
         <activity
             android:name=".presentation.ble.BleActivity"
             android:exported="false" />
@@ -167,6 +166,12 @@
             android:exported="false" />
         <activity
             android:name=".presentation.mqtt.broker.topic.Addtopic"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.business.add.AddBusiness"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.business.MainBusiness"
             android:exported="false" />
         <activity
             android:name=".presentation.main.MainActivity"

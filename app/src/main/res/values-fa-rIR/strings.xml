@@ -218,6 +218,13 @@
     <string name="rs485port">RS 485 Port</string>
     <string name="rs232port">RS 232 Port</string>
     <string name="tagcount">تعداد تگ</string>
+    <string name="managementbusiness">سرویس گیرنده</string>
+    <string name="businessname">نام سرویس گیرنده</string>
+    <string name="businessid">شناسه سرویس گیرنده</string>
+    <string name="addbusiness">اضافه کردن سرویس گیرنده</string>
+    <string name="transactionpersecond">تعداد بسته در ثانیه</string>
+    <string name="packetsize">حداکثر حجم هر بسته</string>
+    <string name="latestdata">آخرین داده</string>
 
 
 </resources>
