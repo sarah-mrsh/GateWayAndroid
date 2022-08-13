@@ -52,22 +52,17 @@ public class AddPlcViewModel extends ViewModel {
             Toast.makeText(ctx, "IP is not valid.", Toast.LENGTH_SHORT).show();
             return;
         }
-
-        if (!name.valid){
-            Toast.makeText(ctx, "Name is not valid.", Toast.LENGTH_SHORT).show();
-            return ;
-
+        if (!name.confirm()){
+            return;
         }
         if (!port.valid){
             Toast.makeText(ctx, "Port is not valid.", Toast.LENGTH_SHORT).show();
             return;
-
         }
         if (!id.valid){
             Toast.makeText(ctx, "ID is not valid.", Toast.LENGTH_SHORT).show();
             return ;
         }
-
         savedata();
     }
 

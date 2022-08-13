@@ -241,5 +241,13 @@
     <string name="rs232port">RS 232 Port</string>
     <string name="rs485port">RS 485 Port</string>
     <string name="tagcount">Tag Count</string>
+    <string name="managementbusiness">client</string>
+    <string name="businessname">client Name</string>
+    <string name="businessid">client ID</string>
+    <string name="addbusiness">Add client</string>
+    <string name="transactionpersecond">Packet per second</string>
+    <string name="packetsize">Maximum Packet Size</string>
+    <string name="latestdata">Latest Data</string>
+    <string name="destinationid">Destination Id</string>
 
 </resources>

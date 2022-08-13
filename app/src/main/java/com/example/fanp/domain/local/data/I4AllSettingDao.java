@@ -81,6 +81,9 @@ public interface I4AllSettingDao {
     @Query("SELECT * FROM i4AllSetting where itemsRef=640")
     List<I4AllSetting> getconvertprotocols();
 
+    @Query("SELECT * FROM i4AllSetting where itemsRef=523")
+    List<I4AllSetting> get_businesses();
+
 
 
 }

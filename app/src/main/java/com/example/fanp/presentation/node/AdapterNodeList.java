@@ -1,8 +1,6 @@
 package com.example.fanp.presentation.node;
 
-{
-        "parameter_name":"sample_name"
-        }import android.app.Dialog;
+import android.app.Dialog;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;

@@ -116,7 +116,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="0.0"
-                                android:text="@string/plc" />
+                                android:text="@string/datablock" />
 
                             <com.example.fanp.utils.FixSpinner
                                 android:id="@+id/spplc"

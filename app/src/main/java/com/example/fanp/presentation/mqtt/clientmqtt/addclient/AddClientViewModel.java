@@ -39,6 +39,7 @@ public class AddClientViewModel extends ViewModel {
     public String protocol;
     public String reconnect;
     public String qos;
+    public String businessid;
     public String willtopic;
     public String clientid;
     public String ip;
@@ -51,6 +52,7 @@ public class AddClientViewModel extends ViewModel {
     public boolean compatibleversion;
     public boolean maintainewill;
     public boolean willcardsub;
+    public String destinationId;
 
 
     @Inject
@@ -85,31 +87,52 @@ public class AddClientViewModel extends ViewModel {
         qos = parent.getAdapter().getItem(pos).toString();
     }
 
+    public void onSelectBusiness(AdapterView<?> parent, View view, int pos, long id) {
+        //pos                                 get selected item position
+        //view.getText()                      get label of selected item
+        //parent.getAdapter().getItem(pos)    get item by pos
+        //parent.getAdapter().getCount()      get item count
+        //parent.getCount()                   get item count
+        //parent.getSelectedItem()            get selected item
+        try {
+            String tmp = parent.getAdapter().getItem(pos).toString();
+            List<I4AllSetting> bu = db.get_businesses();
+            for (I4AllSetting item : bu) {
+                JSONObject obj = new JSONObject(item.getItemsData());
+                if (obj.getString("name").equals(tmp)){
+                    businessid = obj.getString("id");
+                    break;
+                }
+            }
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+    }
 
 
-
-    public void validation(IpEdt ip, IdEdt id, PortEdt port, NameEdt name){
+    public void validation(IpEdt ip, IdEdt id, PortEdt port, NameEdt name) {
         if (!ip.valid) {
             Toast.makeText(ctx, "IP is not valid.", Toast.LENGTH_SHORT).show();
             return;
         }
 
-        if (!name.valid){
+        if (!name.valid) {
             Toast.makeText(ctx, "Name is not valid.", Toast.LENGTH_SHORT).show();
-            return ;
+            return;
 
         }
-        if (!port.valid){
+        if (!port.valid) {
             Toast.makeText(ctx, "Port is not valid.", Toast.LENGTH_SHORT).show();
             return;
 
         }
-        if (!id.valid){
+        if (!id.valid) {
             Toast.makeText(ctx, "ID is not valid.", Toast.LENGTH_SHORT).show();
-            return ;
+            return;
         }
 
-       savedata();
+        savedata();
     }
 
 
@@ -121,6 +144,7 @@ public class AddClientViewModel extends ViewModel {
             object.put("protocol", protocol);
             object.put("reconnect", reconnect);
             object.put("qos", qos);
+            object.put("businessid", businessid);
             object.put("willtopic", willtopic);
             object.put("clientid", clientid);
             object.put("ip", ip);

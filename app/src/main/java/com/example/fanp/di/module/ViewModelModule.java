@@ -4,6 +4,8 @@ import androidx.lifecycle.ViewModel;
 
 import com.example.fanp.di.key.ViewModelKey;
 import com.example.fanp.presentation.account.AccountUserViewmodel;
+import com.example.fanp.presentation.business.MainBusinessViewModel;
+import com.example.fanp.presentation.business.add.AddBusinessViewModel;
 import com.example.fanp.presentation.lan.LanViewModel;
 import com.example.fanp.presentation.main.MainViewModel;
 import com.example.fanp.presentation.modbus.rtu.MainModbudRtuViewModel;
@@ -299,5 +301,16 @@ public abstract class ViewModelModule {
     @IntoMap
     @ViewModelKey(AddNodeViewModel.class)
     public abstract ViewModel bindsAddNodeViewModel(AddNodeViewModel viewModel);
+
+
+    @Binds
+    @IntoMap
+    @ViewModelKey(MainBusinessViewModel.class)
+    public abstract ViewModel bindsMainBusinessViewModel(MainBusinessViewModel viewModel);
+
+    @Binds
+    @IntoMap
+    @ViewModelKey(AddBusinessViewModel.class)
+    public abstract ViewModel bindsAddBusinessViewModel(AddBusinessViewModel viewModel);
 
 }

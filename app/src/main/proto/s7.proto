@@ -49,14 +49,14 @@ message ConfigSnapSeven{
             int32 byteCount= 7;
         }
         message DataBlockTag{
-            string tagName=1;
-            string tagId=2;
-            string functionCode=3;
-            int32 count=4;
-            ParameterDataType parameter=5;
-            int32 startAddress=6;
-            int32 bitNumber=7;
-            int32 dbNumber=8;
+            string tagName=1;// TAG NAME
+            string tagId=2;// TAG ID
+            string functionCode=3;// TAG FUNCTION
+            int32 count=4;// FREE
+            ParameterDataType parameter=5;// PARAMETER TYPE
+            int32 startAddress=6;// PARAMETER ADDRESS
+            int32 bitNumber=7;// PARAMETER BIT NUMBER
+            int32 dbNumber=8;// TAG NUMBER
         }
         message MemoryTag{
             string tagName=1;
