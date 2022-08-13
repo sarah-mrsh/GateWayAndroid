@@ -161,6 +161,20 @@ public class MainMqttViewModel extends ViewModel {
                     client.setPublishInterval(500);
                     client.setRetain(object.getBoolean("willcardsub"));
 
+                    // set business
+                    MqttClients.MqttClient.Business.Builder business = MqttClients.MqttClient.Business.newBuilder();
+                    List<I4AllSetting> businesses = db.get_businesses();
+                    for (I4AllSetting item : businesses){
+                        JSONObject obj = new JSONObject(item.getItemsData());
+                        if (obj.getString("id").equals(object.getString("businessid"))){
+                            business.setName(obj.getString("name"));
+                            business.setSize(obj.getInt("size"));
+                            business.setTrpersec(obj.getInt("trpersec"));
+                            break;
+                        }
+                    }
+                    client.setBusiness(business);
+                    // end business
 
                     List<I4AllSetting> tags = db.getitembyitesref(object.getInt("clientid"));
                     for (int j = 0; j < tags.size(); j++) {

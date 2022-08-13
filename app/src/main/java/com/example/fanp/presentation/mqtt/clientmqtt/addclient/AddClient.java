@@ -5,6 +5,7 @@ import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.ViewModelProviders;
 
 import android.os.Bundle;
+import android.widget.ArrayAdapter;
 import android.widget.EditText;
 
 import com.example.fanp.R;
@@ -48,7 +49,7 @@ public class AddClient extends DaggerAppCompatActivity {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_add_client);
         viewmodel = ViewModelProviders.of(this, providerFactory).get(AddClientViewModel.class);
         binding.setViewmodel(viewmodel);
-        viewmodel.main=this;
+        viewmodel.main = this;
 
         List<EditText> list = new ArrayList<>();
         list.add(binding.edtip);
@@ -56,6 +57,25 @@ public class AddClient extends DaggerAppCompatActivity {
 
         Toaster<?> tt = new Toaster<>(list);
 
+
+        List<I4AllSetting> businesses = db.get_businesses();
+        List<String> items = new ArrayList<>();
+        items.add("-");
+        try {
+            for (I4AllSetting item : businesses) {
+                JSONObject object = new JSONObject(item.getItemsData());
+                items.add(object.getString("name"));
+            }
+        } catch (JSONException e) {
+            e.printStackTrace();
+
+        }
+
+        ArrayAdapter<String> adapterfunction = new ArrayAdapter<String>(
+                this, android.R.layout.simple_spinner_item, items);
+        adapterfunction.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+        binding.spbusiness.setAdapter(adapterfunction);
 
         if (update) {
             binding.edtclientid.setEnabled(false);

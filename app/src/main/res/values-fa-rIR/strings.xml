@@ -225,6 +225,7 @@
     <string name="transactionpersecond">تعداد بسته در ثانیه</string>
     <string name="packetsize">حداکثر حجم هر بسته</string>
     <string name="latestdata">آخرین داده</string>
+    <string name="destinationid">شناسه مقصد</string>
 
 
 </resources>

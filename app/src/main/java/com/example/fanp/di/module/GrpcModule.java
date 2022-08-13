@@ -13,7 +13,7 @@ import io.grpc.ManagedChannelBuilder;
 @Module
 public class GrpcModule {
 
-    String host =  "192.168.1.3";
+    String host =  "192.168.0.251";
     int portStr = 50051;
 
 

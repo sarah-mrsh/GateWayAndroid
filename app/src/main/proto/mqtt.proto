@@ -68,11 +68,18 @@ message MqttClients {
       bool onOff = 4;
       string systemName = 5;
       ClientActions clientActions = 6;
+
+    }
+    message Business{
+      string name=1;
+      int32 size=2;
+      float trpersec=3;
     }
     repeated ClientTag clientTag = 19;
     Qos qos = 20;
     int32 publishInterval = 21;
     bool retain = 22;
+    Business business=23;
 
   }
 

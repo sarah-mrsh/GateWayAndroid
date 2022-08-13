@@ -248,5 +248,6 @@
     <string name="transactionpersecond">Packet per second</string>
     <string name="packetsize">Maximum Packet Size</string>
     <string name="latestdata">Latest Data</string>
+    <string name="destinationid">Destination Id</string>
 
 </resources>
