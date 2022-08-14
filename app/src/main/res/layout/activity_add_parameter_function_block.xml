@@ -167,18 +167,21 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.0"
+                        android:layout_gravity="center"
                         android:text="@string/bitcount" />
 
-                    <EditText
+                    <Spinner
+                        android:id="@+id/edtbitnumber"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.7"
                         android:gravity="center"
-                        android:hint="@string/bitcount"
-                        android:imeOptions="actionNext"
-                        android:inputType="text"
-                        android:maxLines="1"
-                        android:text="@={viewmodel.bitnumber}" />
+                        android:onItemSelected="@{(parent,view,pos,id)->viewmodel.onSelectBit(parent,view,pos,id)}"
+
+                        android:padding="12dp"
+                        android:layout_gravity="center"
+                        android:textAlignment="center"
+                        android:entries="@array/bitNumber" />
                 </LinearLayout>
 
 

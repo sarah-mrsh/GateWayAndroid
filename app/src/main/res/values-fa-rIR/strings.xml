@@ -226,6 +226,7 @@
     <string name="packetsize">حداکثر حجم هر بسته</string>
     <string name="latestdata">آخرین داده</string>
     <string name="destinationid">شناسه مقصد</string>
+    <string name="dbname">نام db</string>
 
 
 </resources>

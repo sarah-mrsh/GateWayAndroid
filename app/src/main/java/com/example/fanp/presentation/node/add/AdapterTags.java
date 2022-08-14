@@ -99,6 +99,9 @@ public class AdapterTags extends RecyclerView.Adapter<AdapterTags.ViewHolder> {
         }
 
 
+        if (position+1!=data.size()){
+            holder.imgadd.setVisibility(View.INVISIBLE);
+        }
         holder.imgadd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

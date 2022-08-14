@@ -1,6 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/linearLayout"
@@ -18,24 +16,25 @@
         android:text="@string/parametername" />
 
     <com.example.fanp.utils.Shabnambold
-        android:id="@+id/txtparametertype"
+        android:id="@+id/parametertype"
         android:layout_width="wrap_content"
+        android:visibility="visible"
         android:layout_height="55dp"
         android:layout_weight="0.5"
         android:gravity="center"
         android:text="@string/parametertype" />
 
     <com.example.fanp.utils.Shabnambold
-        android:id="@+id/txtplcname"
+        android:id="@+id/txtparameterbytecount"
         android:layout_width="wrap_content"
         android:layout_height="55dp"
         android:layout_weight="0.5"
+        android:visibility="visible"
         android:gravity="center"
-        android:text="@string/plcname"
-        android:visibility="visible" />
+        android:text="@string/bytecount" />
 
     <com.example.fanp.utils.Shabnambold
-        android:id="@+id/txtbitnumber"
+        android:id="@+id/txtparameterBitNumber"
         android:layout_width="wrap_content"
         android:layout_height="55dp"
         android:layout_weight="0.5"
@@ -62,7 +61,13 @@
             android:layout_height="32dp"/>
 
 
-
+        <ImageView
+            android:id="@+id/imgparameter"
+            android:layout_width="35dp"
+            android:layout_weight="0.5"
+            android:src="@drawable/topic"
+            android:layout_height="32dp"/>
     </LinearLayout>
+
 
 </LinearLayout>
