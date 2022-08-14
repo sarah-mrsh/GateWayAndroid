@@ -24,7 +24,10 @@
             android:id="@+id/mainheader"
             android:layout_height="wrap_content">
 
-            <include layout="@layout/header"/>
+            <include
+                android:id="@+id/header"
+                layout="@layout/header"
+                app:title="@{@string/serverlist}"/>
 
             <LinearLayout
                 android:layout_width="match_parent"

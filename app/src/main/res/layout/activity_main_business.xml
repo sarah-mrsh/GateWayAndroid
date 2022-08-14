@@ -27,7 +27,7 @@
             <include
                 android:id="@+id/header"
                 layout="@layout/header"
-                app:title="@{@string/mqttclient}"/>
+                app:title="@{@string/managementbusinesslist}"/>
 
             <LinearLayout
                 android:layout_width="match_parent"

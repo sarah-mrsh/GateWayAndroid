@@ -19,22 +19,10 @@
 
         <include
             android:id="@+id/header"
-            layout="@layout/header" />
+            layout="@layout/header"
+            app:title="@{@string/wifi}"/>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center"
-            android:layout_marginTop="90dp">
 
-            <com.example.fanp.utils.Shabnambold
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.0"
-                android:text="@string/wifi"
-                android:textSize="20sp" />
-        </LinearLayout>
 
         <Switch
             android:id="@+id/ckON_Off"

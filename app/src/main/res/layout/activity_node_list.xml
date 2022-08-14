@@ -16,22 +16,11 @@
         android:layoutDirection="rtl"
         android:layout_height="match_parent">
 
-        <include layout="@layout/header" />
+        <include
+            android:id="@+id/header"
+            layout="@layout/header"
+            app:title="@{@string/nodelist}"/>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="90dp"
-            android:gravity="center"
-            android:orientation="horizontal">
-
-            <com.example.fanp.utils.Shabnambold
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.0"
-                android:text="@string/nodelist"
-                android:textSize="20dp" />
-        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"

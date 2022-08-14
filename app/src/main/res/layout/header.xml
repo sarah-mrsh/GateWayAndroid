@@ -8,14 +8,14 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="79dp"
+        android:layout_height="wrap_content"
         android:background="?attr/main_back"
         android:orientation="vertical">
 
         <ImageView
             android:id="@+id/imgHeader"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="79dp"
             android:scaleType="fitXY"
             android:src="@drawable/header" />
 
@@ -24,7 +24,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
             android:gravity="center"
-            android:text="@{title}" />
+            android:text="@{title}"
+            android:textSize="23sp"/>
 
 
     </LinearLayout>

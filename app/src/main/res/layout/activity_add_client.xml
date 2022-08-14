@@ -19,7 +19,8 @@
 
         <include
             android:id="@+id/header"
-            layout="@layout/header" />
+            layout="@layout/header"
+            app:title="@{@string/MQTTConf}"/>
 
         <ScrollView
             android:layout_width="match_parent"
@@ -31,20 +32,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center">
-                <com.example.fanp.utils.Shabnambold
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.0"
-                    android:text="@string/MQTTConf"
-                    android:textSize="20dp"
-                    android:layout_marginBottom="10dp"/>
-            </LinearLayout>
-
                 <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"

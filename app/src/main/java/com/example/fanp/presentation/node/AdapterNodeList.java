@@ -41,6 +41,7 @@ public class AdapterNodeList extends RecyclerView.Adapter<AdapterNodeList.ViewHo
         LayoutInflater mInflater = LayoutInflater.from(context);
         View view = mInflater.inflate(R.layout.row_node_list, parent, false);
         return new ViewHolder(view);
+
     }
 
     @Override

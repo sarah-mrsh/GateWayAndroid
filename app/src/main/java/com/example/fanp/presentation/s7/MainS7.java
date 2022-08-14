@@ -49,8 +49,6 @@ public class MainS7 extends DaggerAppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main_s7);
-
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main_s7);
         viewmodel = ViewModelProviders.of(this, providerFactory).get(MainS7ViewModel.class);
         binding.setViewmodel(viewmodel);

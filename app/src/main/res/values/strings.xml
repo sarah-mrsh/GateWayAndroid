@@ -69,7 +69,7 @@
     <string name="enterlansetting">Please enter the LAN port settings on this page.</string>
     <string name="protocolmanagement">Protocol management</string>
     <string name="history">History</string>
-    <string name="serialsetting">Serial Port Configuration</string>
+    <string name="serialsetting">Serial Port Confiiguration</string>
     <string name="specifystatusRS485port">Please specify the status of the RS485 port.</string>
     <string name="cancel">Cancel</string>
     <string name="addprotocol">Add Protocol</string>
@@ -250,5 +250,6 @@
     <string name="latestdata">Latest Data</string>
     <string name="destinationid">Destination Id</string>
     <string name="dbname">Db name</string>
+    <string name="managementbusinesslist">Client List</string>
 
 </resources>
