@@ -104,6 +104,8 @@ public class MainParameter extends DaggerAppCompatActivity implements ListParame
 
     @Override
     public void edit(I4AllSetting item) {
-
+        AddParameterFunctionBlock.item=item;
+        AddParameterFunctionBlock.update=true;
+        startActivity(new Intent(getApplicationContext(),AddParameterFunctionBlock.class));
     }
 }

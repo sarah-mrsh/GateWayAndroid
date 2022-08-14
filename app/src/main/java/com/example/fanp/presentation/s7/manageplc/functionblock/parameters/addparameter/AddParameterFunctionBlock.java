@@ -6,6 +6,7 @@ import androidx.lifecycle.ViewModelProviders;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.widget.Toast;
 
 import com.example.fanp.R;
 import com.example.fanp.databinding.ActivityAddParameterFunctionBlockBinding;
@@ -51,6 +52,12 @@ public class AddParameterFunctionBlock extends DaggerAppCompatActivity {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_add_parameter_function_block);
         viewmodel = ViewModelProviders.of(this, providerFactory).get(AddParameterViewModel.class);
         binding.setViewmodel(viewmodel);
+
+
+        if (update){
+            Toast.makeText(xcs, "This function need to repair", Toast.LENGTH_SHORT).show();
+            finish();
+        }
 
     }
 

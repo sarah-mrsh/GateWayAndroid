@@ -46,8 +46,8 @@ public class AdapterPrameterFunctionBloc extends RecyclerView.Adapter<AdapterPra
 
         try {
             JSONObject object = new JSONObject(model.getItemsData());
-            holder.plcname.setText(object.getString("plcname"));
-            holder.txtfbnumber.setText(object.getString("functionblocknumber"));
+            holder.txtparametername.setText(object.getString("name"));
+            holder.parametertype.setText(object.getString("functionblocknumber"));
 
 
             holder.imgedit.setOnClickListener(new View.OnClickListener() {
@@ -76,15 +76,15 @@ public class AdapterPrameterFunctionBloc extends RecyclerView.Adapter<AdapterPra
 
     public class ViewHolder extends RecyclerView.ViewHolder {
 
-        TextView plcname,txtfbname,txtfbnumber,txtparametername;
+        TextView txtparametername,parametertype,txtparameterbytecount,txtparameterBitNumber;
         ImageView imfdelete,imgedit;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            plcname=(TextView)itemView.findViewById(R.id.txtplcname);
-            txtfbname=(TextView)itemView.findViewById(R.id.txtfbname);
-            txtfbnumber=(TextView)itemView.findViewById(R.id.txtfbnumber);
             txtparametername=(TextView)itemView.findViewById(R.id.txtparametername);
+            parametertype=(TextView)itemView.findViewById(R.id.parametertype);
+            txtparameterbytecount=(TextView)itemView.findViewById(R.id.txtparameterbytecount);
+            txtparameterBitNumber=(TextView)itemView.findViewById(R.id.txtparameterBitNumber);
 
             imfdelete = (ImageView) itemView.findViewById(R.id.imgdelete);
             imgedit = (ImageView) itemView.findViewById(R.id.imgedit);

@@ -24,20 +24,7 @@
             layout="@layout/header"
             app:title="@{@string/s7setting}"/>
 
-        <LinearLayout
-            android:id="@+id/linearLayout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="100dp"
-            android:gravity="center">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.0"
-                android:text="@string/s7setting"
-                android:textSize="23dp" />
-        </LinearLayout>
 
         <RelativeLayout
             android:layout_width="match_parent"

@@ -157,6 +157,7 @@ public class AddClientViewModel extends ViewModel {
             object.put("compatibleversion", compatibleversion);
             object.put("maintainewill", maintainewill);
             object.put("willcardsub", willcardsub);
+            object.put("destinationId", destinationId);
         } catch (JSONException e) {
             e.printStackTrace();
         }

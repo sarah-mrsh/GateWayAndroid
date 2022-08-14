@@ -33,8 +33,8 @@ public class AddTagDataBlockViewModel extends ViewModel {
     public String datablockparameter;//parameter id
     public String functionblocknumber;//functionblocknumber id
     public String dbid;//datablockid id
-    public String function;
-    public String datablockcount;
+//    public String function;// removed by Hamid Refactoring
+//    public String datablockcount; // removed by Hamid Refactoring
     public String description;
 
     public String name;
@@ -42,7 +42,7 @@ public class AddTagDataBlockViewModel extends ViewModel {
     public String address;
     public String bitnumber;
     public String parameterid;
-    public String paramdescription;
+//    public String paramdescription; // removed by Hamid
 
     @Inject
     Context ctx;
@@ -73,7 +73,7 @@ public class AddTagDataBlockViewModel extends ViewModel {
         //parent.getCount()                   get item count
         //parent.getSelectedItem()            get selected item
 
-        function = parent.getAdapter().getItem(pos).toString();
+        // removed by Hamid Refactoring function = parent.getAdapter().getItem(pos).toString();
     }
 
     public void validation(IdEdt id, NameEdt name){
@@ -102,8 +102,8 @@ public class AddTagDataBlockViewModel extends ViewModel {
             object.put("parameter_id", datablockparameter);
             object.put("functionblock_id", functionblocknumber);
             object.put("dbid", dbid);
-            object.put("function", function);
-            object.put("datablockcount", datablockcount);
+//            object.put("function", function);// removed by Hamid Refactoring
+//            object.put("datablockcount", datablockcount);// This item removed by Hamid opinion
             object.put("description", description);
 
 
@@ -112,7 +112,7 @@ public class AddTagDataBlockViewModel extends ViewModel {
             object.put("address", address);
             object.put("bitnumber", bitnumber);
             object.put("parameterid", parameterid);
-            object.put("paramdescription", paramdescription);
+//            object.put("paramdescription", paramdescription);
 
 
             List<I4AllSetting> datablocks = db.getitembyitesref(600);
@@ -120,7 +120,7 @@ public class AddTagDataBlockViewModel extends ViewModel {
             int dbid = 0;
             for (I4AllSetting blocks : datablocks) {
                 JSONObject tmp = new JSONObject(blocks.getItemsData());
-                if (tmp.getString("name").equals(main.binding.spplc.getSelectedItem().toString())) {// on select datablock
+                if (tmp.getString("name").equals(main.binding.spdatablock.getSelectedItem().toString())) {// on select datablock
                     dbid = tmp.getInt("id");
                     break;
                 }

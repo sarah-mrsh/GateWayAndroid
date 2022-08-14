@@ -68,7 +68,7 @@ public class AddDatatBlockTag extends DaggerAppCompatActivity {
         binding.edtbitnumber.setEnabled(false);
         binding.sptype.setEnabled(false);
         binding.edtparameterid.setEnabled(false);
-        binding.edtparamdescription.setEnabled(false);
+//        binding .edtparamdescription.setEnabled(false);
 
         List<I4AllSetting> spdata = db.getitembyitesref(600);
 
@@ -89,8 +89,8 @@ public class AddDatatBlockTag extends DaggerAppCompatActivity {
 
 
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        binding.spplc.setAdapter(adapter);
-        binding.spplc.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        binding.spdatablock.setAdapter(adapter);
+        binding.spdatablock.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {//on select dataBlock
                 try {
@@ -110,38 +110,38 @@ public class AddDatatBlockTag extends DaggerAppCompatActivity {
 
                     for (I4AllSetting blocks : datablocks) {
                         JSONObject tmp = new JSONObject(blocks.getItemsData());
-                        if (tmp.getString("name").equals(binding.spplc.getSelectedItem().toString())) {// on select datablock
+                        if (tmp.getString("name").equals(binding.spdatablock.getSelectedItem().toString())) {// on select datablock
 
                             viewmodel.dbid = tmp.getString("id");
 
                             if (tmp.getString("functionblock").equals("0")) {
                                 binding.edtname.setText("");
                                 binding.edtaddress.setText("");
-                                binding.edtbitnumber.setText("");
+//                                binding.edtbitnumber.setText("");
                                 binding.edtparameterid.setText("");
-                                binding.edtparamdescription.setText("");
+//                                binding.edtparamdescription.setText("");
                                 binding.edtname.setEnabled(true);
                                 binding.edtaddress.setEnabled(true);
                                 binding.edtbitnumber.setEnabled(true);
                                 binding.sptype.setEnabled(true);
                                 binding.edtparameterid.setEnabled(true);
-                                binding.edtparamdescription.setEnabled(true);
+//                                binding.edtparamdescription.setEnabled(true);
                                 viewmodel.datablockparameter = "0";
                                 viewmodel.functionblocknumber = "0";
                                 return;
                             } else {
                                 binding.edtname.setText("");
                                 binding.edtaddress.setText("");
-                                binding.edtbitnumber.setText("");
+//                                binding.edtbitnumber.setText("");
                                 binding.edtparameterid.setText("");
-                                binding.edtparamdescription.setText("");
+//                                binding.edtparamdescription.setText("");
 
                                 binding.edtname.setEnabled(false);
                                 binding.edtaddress.setEnabled(false);
                                 binding.edtbitnumber.setEnabled(false);
                                 binding.sptype.setEnabled(false);
                                 binding.edtparameterid.setEnabled(false);
-                                binding.edtparamdescription.setEnabled(false);
+//                                binding.edtparamdescription.setEnabled(false);
                             }
 
 
@@ -161,14 +161,9 @@ public class AddDatatBlockTag extends DaggerAppCompatActivity {
                             adapterParameter = new AdapterParameter(getApplicationContext(), new ParameterImpl() {
                                 @Override
                                 public void onSelectParameter(I4AllSetting selected) {
-//                                    binding.spplc.setOnItemSelectedListener(null);
                                     try {
-
-
                                         fill_parameter(selected);
-
                                         parameter.dismiss();
-
                                     } catch (JSONException e) {
                                         e.printStackTrace();
                                     }
@@ -199,7 +194,7 @@ public class AddDatatBlockTag extends DaggerAppCompatActivity {
 
         if (update) {
             binding.tagid.setEnabled(false);
-            binding.spplc.setEnabled(false);
+            binding.spdatablock.setEnabled(false);
             try {
                 JSONObject object = new JSONObject(item.getItemsData());
                 if (object.has("tagname")) {
@@ -220,7 +215,7 @@ public class AddDatatBlockTag extends DaggerAppCompatActivity {
                     for (int i = 0; i < plcs.size(); i++) {
                         if (plcs.get(i).equals(dbname)) {
                             FixSpinner.forc_disable = true;
-                            binding.spplc.setSelection(i);
+                            binding.spdatablock.setSelection(i);
                             FixSpinner.forc_disable = false;
                             break;
                         }
@@ -228,10 +223,10 @@ public class AddDatatBlockTag extends DaggerAppCompatActivity {
 //                    viewmodel.plc = object.getString("plc");
                 }
                 if (object.has("function")) {
-                    viewmodel.function = object.getString("function");
+//                    viewmodel.function = object.getString("function");
                 }
                 if (object.has("datablockcount")) {
-                    viewmodel.datablockcount = object.getString("datablockcount");
+//                    viewmodel.datablockcount = object.getString("datablockcount");
                 }
                 if (object.has("description")) {
                     viewmodel.description = object.getString("description");
@@ -256,11 +251,11 @@ public class AddDatatBlockTag extends DaggerAppCompatActivity {
                     viewmodel.name = object.getString("name");
                     binding.edtaddress.setText(object.getString("address"));
                     viewmodel.address = object.getString("address");
-                    binding.edtbitnumber.setText(object.getString("bitnumber"));
+//                    binding.edtbitnumber.setText(object.getString("bitnumber"));
                     viewmodel.bitnumber = object.getString("bitnumber");
                     binding.edtparameterid.setText(object.getString("parameterid"));
                     viewmodel.parameterid = object.getString("parameterid");
-                    binding.edtparamdescription.setText(object.getString("description"));
+//                    binding.edtparamdescription.setText(object.getString("description"));
                     viewmodel.description = object.getString("description");
                     viewmodel.datablockparameter = object.getString("parameterid");
                     JSONObject obj = new JSONObject(item.getItemsData());
@@ -270,7 +265,7 @@ public class AddDatatBlockTag extends DaggerAppCompatActivity {
                     binding.edtbitnumber.setEnabled(true);
                     binding.sptype.setEnabled(true);
                     binding.edtparameterid.setEnabled(true);
-                    binding.edtparamdescription.setEnabled(true);
+//                    binding.edtparamdescription.setEnabled(true);
                 }
 
 
@@ -297,11 +292,11 @@ public class AddDatatBlockTag extends DaggerAppCompatActivity {
                     viewmodel.name = object.getString("name");
                     binding.edtaddress.setText(object.getString("address"));
                     viewmodel.address = object.getString("address");
-                    binding.edtbitnumber.setText(object.getString("bitnumber"));
+//                    binding.edtbitnumber.setText(object.getString("bitnumber"));
                     viewmodel.bitnumber = object.getString("bitnumber");
                     binding.edtparameterid.setText(object.getString("parameterid"));
                     viewmodel.parameterid = object.getString("parameterid");
-                    binding.edtparamdescription.setText(object.getString("description"));
+//                    binding.edtparamdescription.setText(object.getString("description"));
                     viewmodel.description = object.getString("description");
                     viewmodel.datablockparameter = object.getString("parameterid");
                     if (update){
@@ -315,7 +310,7 @@ public class AddDatatBlockTag extends DaggerAppCompatActivity {
                     binding.edtbitnumber.setEnabled(false);
                     binding.sptype.setEnabled(false);
                     binding.edtparameterid.setEnabled(false);
-                    binding.edtparamdescription.setEnabled(false);
+//                    binding.edtparamdescription.setEnabled(false);
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }

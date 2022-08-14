@@ -115,8 +115,9 @@
                             <com.example.fanp.utils.Shabnambold
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:layout_gravity="center"
                                 android:layout_weight="0.0"
-                                android:text="@string/datablock" />
+                                android:text="@string/plc" />
 
                             <com.example.fanp.utils.FixSpinner
                                 android:id="@+id/spplc"
@@ -127,6 +128,57 @@
                         </LinearLayout>
 
 
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp">
+
+                            <com.example.fanp.utils.Shabnambold
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="0.0"
+                                android:text="@string/dbname" />
+
+                            <com.example.fanp.utils.FixSpinner
+                                android:id="@+id/spdatablock"
+                                android:layout_width="wrap_content"
+                                android:layout_height="50dp"
+                                android:layout_weight="0.7"
+                                android:gravity="center" />
+                        </LinearLayout>
+
+
+                        <com.example.fanp.utils.Shabnamlight
+                            android:layout_width="match_parent"
+                            android:text="@string/description"
+                            android:layout_height="wrap_content"/>
+
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp">
+
+                            <com.example.fanp.utils.Shabnambold
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="0.0"
+                                android:text="@string/operation" />
+
+                            <com.example.fanp.utils.FixSpinner
+                                android:id="@+id/spoperation"
+                                android:layout_width="wrap_content"
+                                android:layout_height="50dp"
+                                android:entries="@array/DataBlockOperation"
+                                android:layout_weight="0.7"
+                                android:gravity="center" />
+                        </LinearLayout>
+
+
+
                     </LinearLayout>
 
                     <LinearLayout
@@ -139,71 +191,209 @@
                         android:paddingTop="35dp">
 
 
+<!--                        <LinearLayout-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginTop="12dp">-->
+
+<!--                            <com.example.fanp.utils.Shabnambold-->
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:layout_weight="0.0"-->
+<!--                                android:text="@string/Function" />-->
+
+<!--                            <Spinner-->
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="50dp"-->
+<!--                                android:onItemSelected="@{(parent,view,pos,id)->viewmodel.onSelectfunctioncode(parent,view,pos,id)}"-->
+<!--                                android:layout_weight="0.7"-->
+<!--                                android:entries="@array/functioncode"-->
+<!--                                android:gravity="center" />-->
+
+<!--                        </LinearLayout>-->
+
+
+<!--                        <LinearLayout-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginTop="12dp">-->
+
+<!--                            <com.example.fanp.utils.Shabnambold-->
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:layout_weight="0.0"-->
+<!--                                android:text="@string/datablockcount" />-->
+
+<!--                            <EditText-->
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="50dp"-->
+<!--                                android:layout_weight="0.7"-->
+<!--                                android:gravity="center"-->
+<!--                                android:hint="@string/datablockcount"-->
+<!--                                android:inputType="number"-->
+<!--                                android:text="@={viewmodel.datablockcount}" />-->
+<!--                        </LinearLayout>-->
+
+
+
+
+
                         <LinearLayout
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="12dp">
+                            android:background="@drawable/yellowborder"
+                            android:layout_height="wrap_content">
 
-                            <com.example.fanp.utils.Shabnambold
-                                android:layout_width="wrap_content"
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_weight="0.0"
-                                android:text="@string/Function" />
-
-                            <Spinner
-                                android:layout_width="wrap_content"
-                                android:layout_height="50dp"
-                                android:onItemSelected="@{(parent,view,pos,id)->viewmodel.onSelectfunctioncode(parent,view,pos,id)}"
-                                android:layout_weight="0.7"
-                                android:entries="@array/functioncode"
-                                android:gravity="center" />
-
-                        </LinearLayout>
+                                android:orientation="horizontal">
 
 
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="12dp">
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginStart="20dp"
+                                    android:layout_weight="0.5"
+                                    android:orientation="vertical"
+                                    android:paddingTop="35dp">
 
-                            <com.example.fanp.utils.Shabnambold
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="0.0"
-                                android:text="@string/datablockcount" />
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="12dp">
 
-                            <EditText
-                                android:layout_width="wrap_content"
-                                android:layout_height="50dp"
-                                android:layout_weight="0.7"
-                                android:gravity="center"
-                                android:hint="@string/datablockcount"
-                                android:inputType="number"
-                                android:text="@={viewmodel.datablockcount}" />
-                        </LinearLayout>
+                                        <com.example.fanp.utils.Shabnambold
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="0.0"
+                                            android:text="@string/parametername" />
+
+                                        <com.example.fanp.utils.NameEdt
+                                            android:id="@+id/edtname"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="0.7"
+                                            android:gravity="center"
+                                            android:hint="@string/parametername"
+                                            android:imeOptions="actionNext"
+                                            android:inputType="text"
+                                            android:maxLines="1"
+                                            android:text="@={viewmodel.name}" />
+                                    </LinearLayout>
 
 
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="12dp">
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:visibility="gone"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="12dp">
 
-                            <com.example.fanp.utils.Shabnambold
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="0.0"
-                                android:text="@string/description" />
+                                        <com.example.fanp.utils.Shabnambold
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="0.0"
+                                            android:text="@string/parameterid" />
 
-                            <EditText
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="0.7"
-                                android:gravity="center"
-                                android:hint="@string/description"
-                                android:imeOptions="actionNext"
-                                android:inputType="text"
-                                android:maxLines="1"
-                                android:text="@={viewmodel.description}" />
+                                        <com.example.fanp.utils.IdEdt
+                                            android:layout_width="wrap_content"
+                                            android:id="@+id/edtparameterid"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="0.7"
+                                            android:gravity="center"
+                                            android:hint="@string/parameterid"
+                                            android:imeOptions="actionNext"
+                                            android:inputType="text"
+                                            android:maxLines="1"
+                                            android:text="@={viewmodel.parameterid}" />
+                                    </LinearLayout>
+
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="12dp">
+
+                                        <com.example.fanp.utils.Shabnambold
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="0.0"
+                                            android:text="@string/parametertype" />
+
+                                        <Spinner
+                                            android:id="@+id/sptype"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="50dp"
+                                            android:layout_weight="0.7"
+                                            android:entries="@array/datattype"
+                                            android:gravity="center"
+                                            android:onItemSelected="@{(parent,view,pos,id)->viewmodel.onSelectType(parent,view,pos,id)}" />
+                                    </LinearLayout>
+
+
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="12dp">
+
+                                        <com.example.fanp.utils.Shabnambold
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="0.0"
+                                            android:text="@string/bytecount" />
+
+                                        <com.example.fanp.utils.AddressEdt
+                                            android:id="@+id/edtaddress"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="0.7"
+                                            android:gravity="center"
+                                            android:hint="@string/bytecount"
+                                            android:imeOptions="actionNext"
+                                            android:inputType="text"
+                                            android:maxLines="1"
+                                            android:text="@={viewmodel.address}" />
+                                    </LinearLayout>
+
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="12dp">
+
+                                        <com.example.fanp.utils.Shabnambold
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="0.0"
+                                            android:layout_gravity="center"
+                                            android:text="@string/bitcount" />
+
+                                        <Spinner
+                                            android:id="@+id/edtbitnumber"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="0.7"
+                                            android:gravity="center"
+                                            android:padding="12dp"
+                                            android:layout_gravity="center"
+                                            android:textAlignment="center"
+                                            android:entries="@array/bitNumber" />
+                                    </LinearLayout>
+
+
+
+                                </LinearLayout>
+
+
+
+
+
+
+
+
+
+                            </LinearLayout>
                         </LinearLayout>
 
 
@@ -211,190 +401,38 @@
 
 
                 </LinearLayout>
-                <com.example.fanp.utils.Shabnambold
-                    android:layout_width="match_parent"
-                    android:text="@string/Parameterdef"
-                    android:gravity="center"
-                    android:layout_marginTop="12dp"
-                    android:padding="12dp"
-                    android:layout_height="wrap_content"/>
+
+
+
                 <LinearLayout
+                    android:layout_marginStart="25sp"
+                    android:layout_marginEnd="25sp"
+                    android:layout_marginBottom="12dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:layout_marginTop="12dp">
 
-
-                    <LinearLayout
+                    <com.example.fanp.utils.Shabnambold
                         android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_marginStart="20dp"
-                        android:layout_weight="0.5"
-                        android:orientation="vertical"
-                        android:paddingTop="35dp">
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.0"
+                        android:text="@string/description" />
 
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="12dp">
-
-                            <com.example.fanp.utils.Shabnambold
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="0.0"
-                                android:text="@string/parametername" />
-
-                            <com.example.fanp.utils.NameEdt
-                                android:id="@+id/edtname"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="0.7"
-                                android:gravity="center"
-                                android:hint="@string/parametername"
-                                android:imeOptions="actionNext"
-                                android:inputType="text"
-                                android:maxLines="1"
-                                android:text="@={viewmodel.name}" />
-                        </LinearLayout>
-
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="12dp">
-
-                            <com.example.fanp.utils.Shabnambold
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="0.0"
-                                android:text="@string/parameterid" />
-
-                            <com.example.fanp.utils.IdEdt
-                                android:layout_width="wrap_content"
-                                android:id="@+id/edtparameterid"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="0.7"
-                                android:gravity="center"
-                                android:hint="@string/parameterid"
-                                android:imeOptions="actionNext"
-                                android:inputType="text"
-                                android:maxLines="1"
-                                android:text="@={viewmodel.parameterid}" />
-                        </LinearLayout>
-
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="12dp">
-
-                            <com.example.fanp.utils.Shabnambold
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="0.0"
-                                android:text="@string/parametertype" />
-
-                            <Spinner
-                                android:id="@+id/sptype"
-                                android:layout_width="wrap_content"
-                                android:layout_height="50dp"
-                                android:layout_weight="0.7"
-                                android:entries="@array/datattype"
-                                android:gravity="center"
-                                android:onItemSelected="@{(parent,view,pos,id)->viewmodel.onSelectType(parent,view,pos,id)}" />
-                        </LinearLayout>
-
-
-                    </LinearLayout>
-
-                    <LinearLayout
+                    <EditText
                         android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_marginStart="20dp"
-                        android:layout_marginEnd="20dp"
-                        android:layout_weight="0.5"
-                        android:orientation="vertical"
-                        android:paddingTop="35dp">
-
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="12dp">
-
-                            <com.example.fanp.utils.Shabnambold
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="0.0"
-                                android:text="@string/address" />
-
-                            <com.example.fanp.utils.AddressEdt
-                                android:id="@+id/edtaddress"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="0.7"
-                                android:gravity="center"
-                                android:hint="@string/address"
-                                android:imeOptions="actionNext"
-                                android:inputType="text"
-                                android:maxLines="1"
-                                android:text="@={viewmodel.address}" />
-                        </LinearLayout>
-
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="12dp">
-
-                            <com.example.fanp.utils.Shabnambold
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="0.0"
-                                android:text="@string/bitcount" />
-
-                            <EditText
-                                android:id="@+id/edtbitnumber"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="0.7"
-                                android:gravity="center"
-                                android:hint="@string/bitcount"
-                                android:imeOptions="actionNext"
-                                android:inputType="text"
-                                android:maxLines="1"
-                                android:text="@={viewmodel.bitnumber}" />
-                        </LinearLayout>
-
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="12dp">
-
-                            <com.example.fanp.utils.Shabnambold
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="0.0"
-                                android:text="@string/description" />
-
-                            <EditText
-                                android:id="@+id/edtparamdescription"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="0.7"
-                                android:gravity="center"
-                                android:hint="@string/description"
-                                android:imeOptions="actionNext"
-                                android:inputType="text"
-                                android:maxLines="1"
-                                android:text="@={viewmodel.paramdescription}" />
-                        </LinearLayout>
-
-
-                    </LinearLayout>
-
-
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.7"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginEnd="12dp"
+                        android:gravity="center"
+                        android:hint="@string/description"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:text="@={viewmodel.description}" />
                 </LinearLayout>
+
+
 
                 <LinearLayout
                     android:layout_width="match_parent"

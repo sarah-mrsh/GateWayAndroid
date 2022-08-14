@@ -62,7 +62,7 @@ public class AddNode extends DaggerAppCompatActivity implements tagImp {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_add_node);
         viewmodel = ViewModelProviders.of(this, providerFactory).get(AddNodeViewModel.class);
         binding.setViewmodel(viewmodel);
-        viewmodel.main=this;
+        viewmodel.main = this;
 
 
         try {
@@ -83,6 +83,7 @@ public class AddNode extends DaggerAppCompatActivity implements tagImp {
                     e.printStackTrace();
                 }
             }
+
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
 
@@ -110,7 +111,7 @@ public class AddNode extends DaggerAppCompatActivity implements tagImp {
                     case "MQTT": {
                         for (I4AllSetting obj : item.tags) {
                             for (I4AllSetting convert : converts) {
-                                if (new JSONObject(obj.getItemsData()).getString("tagname").equals(new JSONObject(convert.getItemsData()).getString("to"))){
+                                if (new JSONObject(obj.getItemsData()).getString("tagname").equals(new JSONObject(convert.getItemsData()).getString("to"))) {
                                     tags.add(new JSONObject(obj.getItemsData()).getString("tagname"));
                                     break;
                                 }
@@ -220,8 +221,8 @@ public class AddNode extends DaggerAppCompatActivity implements tagImp {
         list.clear();
         for (int i = 0; i < binding.recTags.getChildCount(); i++) {
             AdapterTags.ViewHolder holder = (AdapterTags.ViewHolder) binding.recTags.findViewHolderForAdapterPosition(i);
-            assert holder != null;
-            list.add(new NodeTagModel(holder.edtname.getText().toString(), holder.sptag.getSelectedItem().toString(), holder.spmode.getSelectedItem().toString()));
+            if (holder != null)
+                list.add(new NodeTagModel(holder.edtname.getText().toString(), holder.sptag.getSelectedItem().toString(), holder.spmode.getSelectedItem().toString()));
         }
         refresh();
     }
@@ -231,8 +232,8 @@ public class AddNode extends DaggerAppCompatActivity implements tagImp {
         list.clear();
         for (int i = 0; i < binding.recTags.getChildCount() - 1; i++) {
             AdapterTags.ViewHolder holder = (AdapterTags.ViewHolder) binding.recTags.findViewHolderForAdapterPosition(i);
-            assert holder != null;
-            list.add(new NodeTagModel(holder.edtname.getText().toString(), holder.sptag.getSelectedItem().toString(), holder.spmode.getSelectedItem().toString()));
+            if (holder != null)
+                list.add(new NodeTagModel(holder.edtname.getText().toString(), holder.sptag.getSelectedItem().toString(), holder.spmode.getSelectedItem().toString()));
         }
         refresh();
     }

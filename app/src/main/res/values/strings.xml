@@ -249,5 +249,6 @@
     <string name="packetsize">Maximum Packet Size</string>
     <string name="latestdata">Latest Data</string>
     <string name="destinationid">Destination Id</string>
+    <string name="dbname">Db name</string>
 
 </resources>

@@ -109,7 +109,7 @@ public class MainMqttViewModel extends ViewModel {
                     JSONObject object = new JSONObject(items.get(i).getItemsData());
                     MqttClients.MqttClient.Builder client = MqttClients.MqttClient.newBuilder();
                     client.setClientName(object.getString("clientname"));
-                    client.setClientID(object.getString("clientid"));
+                    client.setClientID(object.getString("destinationId"));
                     switch (object.getString("protocol")) {
                         case "WS":
                             client.setProtocol(Protocol.WS);

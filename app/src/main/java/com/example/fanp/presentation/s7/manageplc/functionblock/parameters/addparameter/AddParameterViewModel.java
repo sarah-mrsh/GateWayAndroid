@@ -60,6 +60,18 @@ public class AddParameterViewModel extends ViewModel {
     }
 
 
+    public void onSelectBit(AdapterView<?> parent, View view, int pos, long id) {
+        //pos                                 get selected item position
+        //view.getText()                      get label of selected item
+        //parent.getAdapter().getItem(pos)    get item by pos
+        //parent.getAdapter().getCount()      get item count
+        //parent.getCount()                   get item count
+        //parent.getSelectedItem()            get selected item
+
+        bitnumber = parent.getAdapter().getItem(pos).toString();
+    }
+
+
     public void validation (NameEdt name){
         if(!name.valid){
             Toast.makeText(xcs, "Name is not valid.", Toast.LENGTH_SHORT).show();
